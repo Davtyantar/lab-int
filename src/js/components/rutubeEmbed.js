@@ -32,6 +32,7 @@ export const rutubeEmbed = () => {
         });
     });
 
+    // удалить
     const formattedLinks = [];
 
     fancyboxLinks.forEach(link => {
@@ -47,4 +48,5 @@ export const rutubeEmbed = () => {
     });
 
     console.log("Переформатированные ссылки рутуб:", formattedLinks);
+    // удалить
 };
