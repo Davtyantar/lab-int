@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="ru">
+		@include("./../common/head.html", { "title": "Главная" })
+	<body>
+		<div class="page-wrapper">
+			<!-- Шапка -->
+			@include("./../common/header.html")
+			<!-- Шапка -->
+
+			<main class="main homepage">
+				<!-- Первый экран -->
+					@include("./../sections/hero.html")
+				<!-- Первый экран -->
+
+				<!-- Хроника -->
+					@include("./../sections/chronicle.html")
+				<!-- Хроника -->
+
+				<!-- Проекты -->
+					@include("./../sections/projects.html")
+				<!-- Проекты -->
+
+				<!-- Обратная связь -->
+					@include("./../sections/feedback.html")
+				<!-- Обратная связь -->
+			</main>
+
+			<!-- Подвал -->
+				@include("./../common/footer.html")
+			<!-- Подвал -->
+		</div>
+	</body>
+</html>

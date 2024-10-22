@@ -1,0 +1,35 @@
+.pagination {
+    margin-top: 60px;
+    justify-content: center;
+    display: flex;
+    list-style: none;
+    padding: 0;
+    .icon {
+        width: 16px;
+        height: 16px;
+    }
+}
+
+.pagination {
+    &__link {
+        width: 40px;
+        height: 40px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        justify-content: center;
+        &:not(.to-prev):not(.to-next):not(.is-active):not(:hover) {
+            color: $clr-gray-light;
+        }
+    }
+    &.is-active {
+        font-weight: bold;
+    }
+}
+
+.pagination .disabled {
+    pointer-events: none;
+    .icon {
+        stroke: $clr-gray-light;
+    }
+}

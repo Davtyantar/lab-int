@@ -1,0 +1,37 @@
+@import './helpers/variables.scss';
+
+body .fancybox {
+  &__backdrop {
+    background-color: rgba($color: $clr-primary-dark, $alpha: .95);
+    backdrop-filter: blur(2px);
+  }
+  &__toolbar {
+    padding: 16px;
+  }
+  &__nav,
+  &__toolbar {
+    --f-button-border-radius: 50%;
+    --f-button-bg: rgba(22, 62, 115, 0.65);
+    --f-button-hover-bg: rgba(22, 62, 115, 0.75);
+    --f-button-active-bg: rgba(22, 62, 115, 0.85);
+  }
+  &__nav {
+    --f-button-svg-width: 22px;
+    --f-button-svg-height: 22px;
+  }
+  &__thumbs.is-classic {
+    --f-thumb-width: 48px;
+    --f-thumb-height: 48px;
+    --f-thumb-gap: 16px;
+  
+    --f-thumb-border-radius: 0px;
+    --f-thumb-outline: 0;
+  }
+}
+
+body .fancybox__content>.f-button.is-close-btn {
+  --f-button-border-radius: 50%;
+  --f-button-bg: rgba(22, 62, 115, 0.65);
+  --f-button-hover-bg: rgba(22, 62, 115, 0.75);
+  --f-button-active-bg: rgba(22, 62, 115, 0.85);
+}

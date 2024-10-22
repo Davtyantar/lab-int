@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="ru">
+		@include("./../common/head.html", { "title": "Председатели ВЦСПС" })
+	<body>
+		<div class="page-wrapper">
+			<!-- Шапка -->
+			@include("./../common/header.html")
+			<!-- Шапка -->
+
+			<main class="main">
+				<div class="page-heading">
+					<div class="container">
+						<div class="breadcrumbs" itemscope itemtype="https://schema.org/BreadcrumbList">
+							<ul class="breadcrumbs__list">
+								<li class="breadcrumbs__item" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+									<a href="/" class="breadcrumbs__item-content" itemprop="item" itemprop="url" title="Перейти на главную страницу" aria-label="Главная">
+										<span itemprop="name">Главная</span>
+									</a>
+									<meta itemprop="position" content="1" />
+								</li>
+								<li class="breadcrumbs__item" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+									<a href="/organization" class="breadcrumbs__item-content" itemprop="item" itemprop="url" title="Перейти в раздел организация" aria-label="Организация">
+										<span itemprop="name">Организация</span>
+									</a>
+									<meta itemprop="position" content="2" />
+								</li>
+								<li class="breadcrumbs__item" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+									<a href="/organization" class="breadcrumbs__item-content" itemprop="item" itemprop="url" title="Перейти в раздел организация" aria-label="Организация">
+										<span itemprop="name">История профсоюза</span>
+									</a>
+									<meta itemprop="position" content="3" />
+								</li>
+								<li class="breadcrumbs__item" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+									<span class="breadcrumbs__item-content" itemprop="name">
+										Председатели ВЦСПС
+									</span>
+									<meta itemprop="position" content="4" />
+								</li>
+							</ul>
+						</div>
+						<div class="page-title__wrapper">
+							<h1 class="page-title">
+								Председатели ВЦСПС
+							</h1>
+						</div>
+					</div>
+				</div>
+				<section class="chairmans">
+					<div class="container">
+                        <div class="section_content">
+                            <div class="chairmans__descr text-content items w-50">
+                                <p>
+                                    ВЦСПС – орган профессиональных союзов СССР, осуществлявший руководство всей их деятельностью в промежутках между съездами профсоюзов СССР. Избирался съездом сроком на 4 года в составе, им определяемом, и состоял из членов и кандидатов в члены ВЦСПС.
+                                </p>
+
+                               <p>Возникновение профсоюзов в России было вызвано всем ходом экономического и политического развития страны, явилось результатом длительного развития российского рабочего движения по защите своих интересов и заняло целый исторический период.</p>
+                                
+                                <p>Еще в конце 80-х годов прошлого столетия в ходе стачечного движения в России на отдельных заводах возникали временные комиссии, делегатские собрания и другие представительные органы рабочих. Эти объединения были малочисленные, действовали разрозненно, создавались, как правило, на период отдельных акций. Они явились предшественниками массовых профессиональных союзов, которые стали образовываться в период первой русской революции 1905-1907 годов в целях организации борьбы трудящихся за улучшение условий труда и экономического положения рабочих.</p>
+                            </div>
+                            <div class="chairmans__items items grid grid--4 mobile-slider">
+                                <script>
+                                    chairmansData = [
+                                        { 
+                                            title: "Зиновьев<br>Григорий  Евсеевич", 
+                                            imgSrc: "./../../img/chairmans-img-empty.png",
+                                            date: "(1918-1918)"
+                                        },
+                                        { 
+                                            title: "Томский<br>Михаил Павлович", 
+                                            imgSrc: "./../../img/chairmans-img-empty.png",
+                                            date: "(1918-1921, 1922-1929)"
+                                        },
+                                        { 
+                                            title: "Шверник<br>Николай Михайлович", 
+                                            imgSrc: "./../../img/chairmans-img-1.png", 
+                                            date: "(1929-1944)"
+                                        },
+                                        { 
+                                            title: "Кузнецов<br>Василий Васильевич", 
+                                            imgSrc: "./../../img/chairmans-img-2.png", 
+                                            date: "(1944-1953)"
+                                        },
+                                        { 
+                                            title: "Шверник<br>Николай Михайлович", 
+                                            imgSrc: "./../../img/chairmans-img-1.png", 
+                                            date: "(1953-1956)"
+                                        },
+                                        { 
+                                            title: "Гришин<br>Виктор Васильевич", 
+                                            imgSrc: "./../../img/chairmans-img-3.png", 
+                                            date: "(1956-1967)"
+                                        },
+                                        { 
+                                            title: "Шелепин<br>Александр&nbsp;Николаевич", 
+                                            imgSrc: "./../../img/chairmans-img-4.png", 
+                                            date: "(1967-1975)"
+                                        },
+                                        { 
+                                            title: "Шибаев<br>Алексей Иванович", 
+                                            imgSrc: "./../../img/chairmans-img-5.png", 
+                                            date: "(1976-1982)"
+                                        },
+                                        { 
+                                            title: "Шалаев<br>Степан Алексеевич", 
+                                            imgSrc: "./../../img/chairmans-img-empty.png", 
+                                            date: "(1982-1990)"
+                                        },
+                                        { 
+                                            title: "Янаев<br>Геннадий Иванович", 
+                                            imgSrc: "./../../img/chairmans-img-empty.png", 
+                                            date: "(1990)"
+                                        }
+                                    ];
+    
+                                
+                                    const chairmansContent = document.querySelector('.chairmans__items');
+                                
+                                    chairmansData.forEach(item => {
+                                        const meritItem = `
+                                            <div class="chairmans__item">
+                                                <div class="chairmans__item-img img">
+                                                    <img src="${item.imgSrc}" title="${item.title}" alt="${item.title}" />
+                                                </div>
+                                                <div class="chairmans__item-info">
+                                                    <div class="chairmans__item-title">${item.title}</div>
+                                                    <span class="chairmans__item-date">${item.date}</span>
+                                                </div>
+                                            </div>
+                                        `;
+                                        chairmansContent.innerHTML += meritItem;
+                                    });
+                                </script>
+                            </div>
+                        </div>
+                    </div>
+				</section>
+			</main>
+			
+			<!-- Подвал -->
+				@include("./../common/footer.html")
+			<!-- Подвал -->
+		</div>
+	</body>
+</html>

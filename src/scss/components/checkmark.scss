@@ -1,0 +1,28 @@
+$size: 100px;
+$color: $clr-primary;
+
+.form__success svg {
+  display: block;
+  height: $size;
+  width: $size;
+  color: $color;
+}
+
+.form__success .circle {
+  stroke-dasharray: 76;
+  stroke-dashoffset: 76;
+  animation: draw 0.5s forwards;
+}
+
+.form__success .tick {
+  stroke-dasharray: 18;
+  stroke-dashoffset: 18;
+  animation: draw 0.5s forwards 0.5s;
+}
+
+@keyframes draw { 
+  to { stroke-dashoffset: 0 } 
+}
+
+
+

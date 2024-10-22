@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="ru">
+		@include("./../common/head.html", { "title": "Заслуги" })
+	<body>
+		<div class="page-wrapper">
+			<!-- Шапка -->
+			@include("./../common/header.html")
+			<!-- Шапка -->
+
+			<main class="main">
+				<div class="page-heading">
+					<div class="container">
+						<div class="breadcrumbs" itemscope itemtype="https://schema.org/BreadcrumbList">
+							<ul class="breadcrumbs__list">
+								<li class="breadcrumbs__item" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+									<a href="/" class="breadcrumbs__item-content" itemprop="item" itemprop="url" title="Перейти на главную страницу" aria-label="Главная">
+										<span itemprop="name">Главная</span>
+									</a>
+									<meta itemprop="position" content="1" />
+								</li>
+								<li class="breadcrumbs__item" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+									<a href="/organization" class="breadcrumbs__item-content" itemprop="item" itemprop="url" title="Перейти в раздел организация" aria-label="Организация">
+										<span itemprop="name">Организация</span>
+									</a>
+									<meta itemprop="position" content="2" />
+								</li>
+								<li class="breadcrumbs__item" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+									<span class="breadcrumbs__item-content" itemprop="name">
+										Заслуги
+									</span>
+									<meta itemprop="position" content="3" />
+								</li>
+							</ul>
+						</div>
+						<div class="page-title__wrapper">
+							<h1 class="page-title">
+								Заслуги
+							</h1>
+						</div>
+					</div>
+				</div>
+				<section class="merits">
+					<div class="container">
+                        <div class="section_content">
+                            <div class="merits__items items grid grid--4">
+                                <script>
+                                    const meritsData = [
+                                        { 
+                                            title: "Благодарность", 
+                                            description: "педагога-психолога МБДОУ \"Детский сад №404\" А.А.Коробейниковой за помощь в сборе игрушек для кабинета песочной терапии", 
+                                            imgSrc: "./../../img/merits-img-1.png",
+                                            date: "2016 год"
+                                        },
+                                        { 
+                                            title: "Почётный диплом", 
+                                            description: "Профсоюза работников АСМ РФ за 1 место в конкурсе \"На лучшую постановку работы с молодежью в организациях Профсоюза АСМ РФ\" в 2014 года", 
+                                            imgSrc: "./../../img/merits-img-2.png", 
+                                            date: "2015 год"
+                                        },
+                                        { 
+                                            title: "Благодарственное письмо", 
+                                            description: "Нижегородского автомеханического техникума за вклад в развитие плодотворных отношений и реализации проекта \"Аллея памяти\" в рамках празднования 70-летия Победы в Великой Отечественной войне", 
+                                            imgSrc: "./../../img/merits-img-3.png", 
+                                            date: "2015 год"
+                                        },
+                                        { 
+                                            title: "Благодарственная грамота", 
+                                            description: "Настоятеля и Приходского собрания Благовещенской церкви п.Желнино г.Дзержинска за усердные труды и заботу о возраждении святого храма", 
+                                            imgSrc: "./../../img/merits-img-4.png", 
+                                            date: "2015 год"
+                                        },
+                                        { 
+                                            title: "Диплом", 
+                                            description: "Педагога-психолога МБДОУ \"Детский сад №404\" А.А.Коробейниковой за помощь в сборе игрушек для кабинета песочной терапии", 
+                                            imgSrc: "./../../img/merits-img-5.png", 
+                                            date: "2015 год"
+                                        },
+                                        { 
+                                            title: "Грамота", 
+                                            description: "Учителю математики МБОУ \"Школа №15\" Н.П. Смирновой за помощь в подготовке к олимпиадам.", 
+                                            imgSrc: "./../../img/merits-img-6.png", 
+                                            date: "2014 год"
+                                        },
+                                        { 
+                                            title: "Почётный диплом", 
+                                            description: "Социальному работнику МБДОУ \"Детский сад №404\" Л.Г. Петровой за активное участие в жизни детей.", 
+                                            imgSrc: "./../../img/merits-img-7.png", 
+                                            date: "2014 год"
+                                        },
+                                        { 
+                                            title: "Почётная грамота", 
+                                            description: "Педагогу дополнительного образования МБОУ \"Центр внешкольной работы\" И.В. Сидоровой за организацию интересных мероприятий.", 
+                                            imgSrc: "./../../img/merits-img-8.png", 
+                                            date: "2014 год"
+                                        }
+                                    ];
+    
+                                
+                                    const meritsContent = document.querySelector('.merits__items');
+                                
+                                    meritsData.forEach(item => {
+                                        const meritItem = `
+                                            <div class="merits__item">
+                                                <a class="merits__item-img hover-img" data-caption="${item.title}" data-fancybox="gallery" href="${item.imgSrc}">
+                                                    <img src="${item.imgSrc}" title="${item.title}" alt="${item.title}" />
+                                                </a>
+                                                <div class="merits__item-info">
+                                                    <div class="merits__item-info-head">
+                                                        <div class="merits__item-title">${item.title}</div>
+                                                        <div class="merits__item-descr">${item.description}</div>
+                                                    </div>
+                                                    <span class="merits__item-date">${item.date}</span>
+                                                </div>
+                                            </div>
+                                        `;
+                                        meritsContent.innerHTML += meritItem;
+                                    });
+                                </script>
+                            </div>
+                            @include("./../common/pagination.html")
+                        </div>
+                    </div>
+				</section>
+			</main>
+			
+			<!-- Подвал -->
+				@include("./../common/footer.html")
+			<!-- Подвал -->
+		</div>
+	</body>
+</html>

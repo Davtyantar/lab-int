@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="ru">
+		@include("./../common/head.html", { "title": "История профсоюза" })
+	<body>
+		<div class="page-wrapper">
+			<!-- Шапка -->
+			@include("./../common/header.html")
+			<!-- Шапка -->
+
+			<main class="main">
+				<div class="page-heading">
+					<div class="container">
+						<div class="breadcrumbs" itemscope itemtype="https://schema.org/BreadcrumbList">
+							<ul class="breadcrumbs__list">
+								<li class="breadcrumbs__item" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+									<a href="/" class="breadcrumbs__item-content" itemprop="item" itemprop="url" title="Перейти на главную страницу" aria-label="Главная">
+										<span itemprop="name">Главная</span>
+									</a>
+									<meta itemprop="position" content="1" />
+								</li>
+								<li class="breadcrumbs__item" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+									<a href="/organization" class="breadcrumbs__item-content" itemprop="item" itemprop="url" title="Перейти в раздел организация" aria-label="Организация">
+										<span itemprop="name">Организация</span>
+									</a>
+									<meta itemprop="position" content="2" />
+								</li>
+								<li class="breadcrumbs__item" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+									<span class="breadcrumbs__item-content" itemprop="name">
+										История профсоюза
+									</span>
+									<meta itemprop="position" content="3" />
+								</li>
+							</ul>
+						</div>
+						<div class="page-title__wrapper">
+							<h1 class="page-title">
+								История профсоюза
+							</h1>
+						</div>
+					</div>
+				</div>
+				<section class="history">
+					<div class="container">
+						<div class="section_content">
+							<div class="has-sidebar">
+								<aside class="sidebar">
+								  <nav class="sidebar__nav" aria-label="Основное меню">
+									<ul class="sidebar__nav-list items">
+										<li class="sidebar__nav-item">
+											<a href="/" class="sidebar__nav-link is-active">История Профсоюза</a>
+										</li>
+										<li class="sidebar__nav-item">
+											<a href="/" class="sidebar__nav-link">Вехи истории профсоюзной организации горьковского автозавода</a>
+										</li>
+										<li class="sidebar__nav-item">
+											<a href="/" class="sidebar__nav-link">Съезды, пленумы, конференции </a>
+										</li>
+										<li class="sidebar__nav-item">
+											<a href="/" class="sidebar__nav-link">Из учебников о профсоюзах</a>
+										</li>
+										<li class="sidebar__nav-item">
+											<a href="/" class="sidebar__nav-link">Профсоюзный архив</a>
+										</li>
+										<li class="sidebar__nav-item">
+											<a href="/" class="sidebar__nav-link">Профсоюзные книги</a>
+										</li>
+										<li class="sidebar__nav-item">
+											<a href="/" class="sidebar__nav-link">История Горьковского автомобильного завода</a>
+										</li>
+									</ul>
+								  </nav>
+								</aside>
+								<div class="content-area">
+                                    <div class="history__items items grid grid--3 mobile-slider ">
+                                        <script>
+                                            const historyData = [
+                                                { 
+                                                    title: "Санаторий ”Городецкий”",
+                                                    link: "/ссылка" 
+                                                },
+                                                { 
+                                                    title: "Санаторий им.ВЦСПС",
+                                                    link: "/ссылка" 
+                                                },
+                                                { 
+                                                    title: "”АВТОМОБИЛИСТ”",
+                                                    link: "/ссылка" 
+                                                },
+                                                { 
+                                                    title: "База отдыха ”СУРСКИЕ ЗОРИ”",
+                                                    link: "/ссылка" 
+                                                },
+                                                { 
+                                                    title: "Санаторий ”ЧУВАШИЯ”",
+                                                    link: "/ссылка" 
+                                                },
+                                                { 
+                                                    title: "ДОЛ ”КРАСНЫЙ ПЛЕС”",
+                                                    link: "/ссылка" 
+                                                },
+                                                { 
+                                                    title: "СОЛ ”РОМАНТИКА”",
+                                                    link: "/ссылка" 
+                                                },
+                                            ];
+                                        
+                                            const historyContent = document.querySelector('.history__items');
+                                        
+                                            historyData.forEach(project => {
+                                                const projectItem = `
+                                                    <article class="history__item" role="article">
+                                                        <a href="${project.link}" class="history__link" target="_blank" title="${project.title}">
+                                                            <h3 class="history__subtitle item__title">${project.title}</h3>
+                                                        </a>
+                                                    </article>
+                                                `;
+                                                historyContent.innerHTML += projectItem;
+                                            });
+                                        </script>
+                                    </div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</section>
+			</main>
+			
+			<!-- Подвал -->
+				@include("./../common/footer.html")
+			<!-- Подвал -->
+		</div>
+	</body>
+</html>

@@ -1,0 +1,23 @@
+// Стили плагинов (сторонние стили)
+@import './libs/fancybox.scss';
+@import './libs/swiper.scss';
+
+// Вспомогательные стили
+@import './helpers/variables.scss';
+@import './helpers/mixins.scss';
+@import './helpers/fonts.scss';
+@import './helpers/reset.scss';
+@import './helpers/global.scss';
+@import './helpers/text-content.scss';
+
+// Стили компонентов
+@import './components/*.scss';
+
+// Стили секций
+@import './sections/*.scss';
+
+// Стили базовых компонентов
+@import './common/base.scss';
+@import './common/header.scss';
+@import './common/main.scss';
+@import './common/footer.scss';

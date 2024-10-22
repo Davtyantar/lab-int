@@ -1,0 +1,80 @@
+<header class="header" id="mainHeader" role="banner" aria-label="Основная навигация">
+    <div class="header__container container">
+        <div class="header__inner">
+            <a href="/" class="header__logo-link" aria-label="На главную">
+                <img src="./../../img/logo.svg" alt="Логотип организации" class="header__logo">
+            </a>
+            <div class="header__nav-wrapper">
+                <span class="header__title">первичная профсоюзная организация горьковского автозавода</span>
+                <nav class="header__nav nav" role="navigation" aria-label="Главное меню" data-move="991" data-to="mobile-menu_nav">
+                    <ul class="nav__list">
+                        <li class="nav__item">
+                            <a href="./organization.html" class="nav__link nav__link--current" title="Перейти к разделу Организация" aria-label="Раздел Организация">Организация</a>
+                        </li>
+                        <li class="nav__item">
+                            <a href="#" class="nav__link" title="Перейти к разделу Проекты" aria-label="Раздел Проекты">Проекты</a>
+                        </li>
+                        <li class="nav__item">
+                            <a href="#" class="nav__link" title="Перейти к разделу Пресс-центр" aria-label="Раздел Пресс-центр">Пресс-центр</a>
+                        </li>
+                        <li class="nav__item">
+                            <a href="#" class="nav__link" title="Перейти к разделу Акции" aria-label="Раздел Акции">Акции</a>
+                        </li>
+                        <li class="nav__item">
+                            <a href="#" class="nav__link" title="Перейти к разделу Музей" aria-label="Раздел Музей">Музей</a>
+                        </li>
+                        <li class="nav__item">
+                            <a href="#" class="nav__link" title="Перейти к разделу Профсоюз в лицах" aria-label="Раздел Профсоюз в лицах">Профсоюз в лицах</a>
+                        </li>
+                        <li class="nav__item">
+                            <a href="#" class="nav__link" title="Перейти к разделу Контакты" aria-label="Раздел Контакты">Контакты</a>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+            <div class="header__actions">
+                <a href="mailto:" data-move="576" data-to="mobile-menu__email" class="header__btn btn btn-primary" title="Написать нам" aria-label="Написать нам">
+					<svg class="icon"><use xlink:href="./img/sprite.svg#email"></use></svg>
+					<span>Напишите нам</span>
+				</a>
+                <div class="header__search header-search">
+                    <form action="" class="header-search__form" role="search" aria-label="Поиск по сайту">
+                        <input type="text" class="header-search__input" placeholder="Поиск по сайту" aria-label="Введите текст для поиска">
+						<button type="submit"><svg class="icon"><use xlink:href="./img/sprite.svg#search"></use></svg></button>
+                    </form>
+                </div>
+                <div class="header__search-mobile-icon v576">
+                    <svg class="icon"><use xlink:href="./img/sprite.svg#search"></use></svg>
+                </div>
+                <div class="burger" id="burger" aria-label="Открыть меню" aria-expanded="false">
+                    <span>МЕНЮ</span>
+                    <svg class="burger-icon" width="35" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 10 10" stroke="#252B33" stroke-width=".6" fill="rgba(0,0,0,0)" stroke-linecap="round" style="cursor: pointer">
+                        <path d="M2,3L5,3L8,3M2,5L8,5M2,7L5,7L8,7">
+                          <animate dur="0.2s" attributeName="d" values="M2,3L5,3L8,3M2,5L8,5M2,7L5,7L8,7;M3,3L5,5L7,3M5,5L5,5M3,7L5,5L7,7" fill="freeze" begin="start.begin" />
+                          <animate dur="0.2s" attributeName="d" values="M3,3L5,5L7,3M5,5L5,5M3,7L5,5L7,7;M2,3L5,3L8,3M2,5L8,5M2,7L5,7L8,7" fill="freeze" begin="reverse.begin" />
+                        </path>
+                        <rect width="10" height="10" stroke="none">
+                          <animate dur="2s" id="reverse" attributeName="width" begin="click" />
+                        </rect>
+                        <rect width="10" height="10" stroke="none">
+                          <animate dur="0.001s" id="start" attributeName="width" values="10;0" fill="freeze" begin="click" />
+                          <animate dur="0.001s" attributeName="width" values="0;10" fill="freeze" begin="reverse.begin" />
+                        </rect>
+                      </svg>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+
+<ul class="fixed-menu">
+    <div class="title">Навигация</div>
+    <li><a href="index.html">Главная</a></li>
+    <li><a href="./organization.html">Организация</a></li>
+    <li><a href="./zaslugi.html">Заслуги</a></li>
+    <li><a href="./predsedateli.html">Председатели</a></li>
+    <li><a href="./otdyx.html">Отдохните</a></li>
+    <li><a href="./history.html">История профсоюза</a></li>
+    <li><a href="./prof-tv.html">Проф-тв</a></li>
+    <li><a href="./sanatory.html">Санаторий "Городецкий"</a></li>
+</ul>

@@ -1,0 +1,30 @@
+
+.see-more {
+    position: relative;
+    font-weight: 700;
+    font-size: 12px;
+    line-height: 100%;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+  
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    &::after {
+      content: "";
+      display: block;
+      width: 14px;
+      height: 14px;
+      background-image: url("data:image/svg+xml,%3Csvg width='15' height='14' viewBox='0 0 15 14' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M5.75 10.5L9.25 7L5.75 3.5' stroke='%23252B33' stroke-width='2' stroke-linecap='round' stroke-linejoin='round' /%3E%3C/svg%3E");
+      transition: transform .3s ease-in-out;
+    }
+    &:hover::after {
+      transform: translateX(5px);
+    }
+    @include mobile {
+      & > span {
+        display: none;
+      }
+    }
+  }
+  

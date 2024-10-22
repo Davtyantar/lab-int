@@ -1,0 +1,24 @@
+.main {
+    flex: 1 auto;
+    
+    display: flex;
+    flex-direction: column;
+    overflow-x: hidden;
+
+    @include min-small-tablet {
+        &:has(.sidebar) {
+            overflow: visible;
+        }
+    }
+
+    --spacing: clamp(3.125rem, 2.367rem + 3.24vw, 6.25rem);
+    
+    &.homepage {
+        margin-top: var(--header-height);
+        row-gap: var(--spacing);
+    }
+    padding-bottom: var(--spacing);
+    &:not(.homepage) {
+        padding-top: calc(var(--header-height) + 40px);
+    }
+}

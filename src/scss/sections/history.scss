@@ -1,0 +1,35 @@
+.history {
+    @include grid-items-with-arrow;
+    &__items {
+        @include desktop {
+            --cols: 2 !important;
+        }
+    }
+    &__item {
+        background-color: $clr-white;
+        border: 1px solid $clr-gray-border;
+        &::after {
+            display: none;
+        }
+        .item__title {
+            color: inherit;
+        }
+        &:hover {
+            background-color: $clr-primary;
+            border-color: $clr-primary;
+            .item__title {
+                color: $clr-white;
+            }
+            .history__link {
+                border-color: $clr-primary;
+            }
+        }
+    }
+    &__link {
+        &::after {
+            border: 1px solid $clr-gray-border;
+        }
+    }
+
+    
+}

@@ -1,0 +1,46 @@
+
+.page-heading {
+    margin-bottom: 50px;
+    @include mobile {
+        margin-bottom: 30px;
+    }
+    .page-title__wrapper {
+        overflow: hidden;
+        line-height: 130%;
+    }
+    .page-title {
+        font-size: clamp(2rem, 1.636rem + 1.55vw, 3.5rem);
+        // 32 - 56 375 - 1920
+    }
+}
+  
+.section__heading {
+    margin-bottom: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    overflow: hidden;
+    @include mobile {
+        margin-bottom: 25px;
+        align-items: baseline;
+    }
+}
+
+  
+h1, h2, h3, h4, h5, h6 {
+    font-weight: 700;
+    line-height: 130%;
+}
+  
+h1, .h1 {
+// 32 - 80 375 - 1920
+    &:not(.page-title) {
+        font-size: clamp(2rem, 1.272rem + 3.11vw, 5rem);
+    }
+}
+
+h2, .h2, .section__title {
+    // 24 - 32 375 - 1920
+    font-size: clamp(1.5rem, 1.379rem + 0.52vw, 2rem);
+}
+  

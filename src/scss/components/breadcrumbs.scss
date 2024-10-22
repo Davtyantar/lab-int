@@ -1,0 +1,25 @@
+.breadcrumbs {
+    margin-bottom: 5px;
+    &__list {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 5px;
+    }
+    &__item {
+        position: relative;
+        font-size: 16px;
+        @include mobile {
+            font-size: 12px;
+        }
+        &:has(a) {
+            &::after {
+                content: "/";
+                color: #9d9d9d;
+            }
+        }
+    }
+    &__item-content {
+        font-family: $second-family;
+        color: #9d9d9d;
+    }
+}

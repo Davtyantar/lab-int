@@ -1,0 +1,39 @@
+<section class="projects" aria-labelledby="projects-title">
+    <div class="projects__container container">
+        <div class="projects__heading section__heading">
+            <h2 class="projects__title section__title" id="projects-title">Проекты</h2>
+        </div>
+        <div class="projects__content section__content">
+            <div class="projects__grid projects__items grid grid--4 mobile-slider items">
+                <script>
+                    const projectsData = [
+                        { title: "Выставки участников проектов", imgSrc: "./../../img/projects__image-1.png", altText: "Изображение выставки участников проектов", link: "/" },
+                        { title: "Голос профсоюза", imgSrc: "./../../img/projects__image-2.png", altText: "Изображение проекта 'Голос профсоюза'", link: "/" },
+                        { title: "Репертуар театра на Счастливой", imgSrc: "./../../img/projects__image-3.png", altText: "Изображение репертуара театра на Счастливой", link: "/" },
+                        { title: "Скидки и акции для членов профсоюза", imgSrc: "./../../img/projects__image-4.png", altText: "Изображение акций для членов профсоюза", link: "/" },
+                        { title: "Скидки и акции для членов профсоюза", imgSrc: "./../../img/projects__image-4.png", altText: "Изображение акций для членов профсоюза", link: "/" },
+                        { title: "Репертуар театра на Счастливой", imgSrc: "./../../img/projects__image-3.png", altText: "Изображение репертуара театра на Счастливой", link: "/" },
+                        { title: "Голос профсоюза", imgSrc: "./../../img/projects__image-2.png", altText: "Изображение проекта 'Голос профсоюза'", link: "/" },
+                        { title: "Выставки участников проектов", imgSrc: "./../../img/projects__image-1.png", altText: "Изображение выставки участников проектов", link: "/" },
+                    ];
+                
+                    const projectsContent = document.querySelector('.projects__items');
+                
+                    projectsData.forEach(project => {
+                        const projectItem = `
+                            <article class="projects__item" role="article">
+                                <div class="projects__image">
+                                    <img src="${project.imgSrc}" class="" alt="${project.altText}">
+                                </div>
+                                <a href="${project.link}" class="projects__link" target="_blank" title="${project.title}">
+                                    <h3 class="projects__subtitle item__title">${project.title}</h3>
+                                </a>
+                            </article>
+                        `;
+                        projectsContent.innerHTML += projectItem;
+                    });
+                </script>
+            </div>
+        </div>
+    </div>
+</section>
