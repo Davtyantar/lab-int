@@ -2,6 +2,7 @@ import { initFancybox } from './libs/fancyboxInit.js';
 import { initSwiper } from './libs/swiperInit.js';
 import { initGsap } from './libs/gsapInit.js';
 import { initInputMask } from './libs/inputMask.js';
+import { rutubeEmbed } from './components/rutubeEmbed.js'
 
 
 import { initMoveElements } from './components/moveElements.js';
@@ -44,7 +45,7 @@ document.addEventListener('DOMContentLoaded', function () {
     // updateActiveNavLink();
     setupFormValidation();
     
-    
+    rutubeEmbed();
     initSwiper();
     initFancybox();
     initGsap();
