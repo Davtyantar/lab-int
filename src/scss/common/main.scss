@@ -21,4 +21,7 @@
     &:not(.homepage) {
         padding-top: calc(var(--header-height) + 40px);
     }
+    &:not(.homepage) > section:not(:last-child) {
+        margin-bottom: var(--spacing);
+    }
 }

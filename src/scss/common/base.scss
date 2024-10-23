@@ -82,3 +82,12 @@ a {
   -webkit-line-clamp: 6;
   overflow: hidden;
 }
+
+@media (min-width: 1199px) and (max-width: 1660px) {
+  html {
+    zoom: 0.85;
+  }
+  .hero {
+    height: calc((100* var(--vh)) - var(--header-height));
+  }
+}
