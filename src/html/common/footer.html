@@ -2,7 +2,7 @@
     <div class="container">
         <div class="footer__inner">
             <a href="/" class="footer__logo-link" aria-label="На главную">
-                <img src="./../../img/logo.svg" alt="Логотип организации" class="footer__logo">
+                <img data-src="./../../img/logo.svg" alt="Логотип организации" class="footer__logo lazyload">
             </a>
             <div class="footer__nav-wrapper">
                 <nav class="footer__nav nav" role="navigation" aria-label="Главное меню">
@@ -36,7 +36,7 @@
                 <div class="footer__socials-items">
                     <div class="footer__socials-item">
                         <div class="item_qr">
-                            <img src="./../../img/qr-vk.png" alt="QR-код ВКонтакте" title="QR-код ВКонтакте" data-src="./../../img/qr-vk.png">
+                            <img data-src="./../../img/qr-vk.png" class="lazyload" alt="QR-код ВКонтакте" title="QR-код ВКонтакте">
                         </div>
                         <a href="https://vk.com" class="icon item__icon animate-link" target="_blank" rel="noopener noreferrer" aria-label="Перейти в социальную сеть ВКонтакте">
                             <svg class="icon"><use xlink:href="./img/sprite.svg#vk"></use></svg>
@@ -44,7 +44,7 @@
                     </div>
                     <div class="footer__socials-item">
                         <div class="item_qr">
-                            <img src="./../../img/qr-tg.png" alt="QR-код Telegram" title="QR-код Telegram" data-src="./../../img/qr-tg.png">
+                            <img data-src="./../../img/qr-tg.png" class="lazyload" alt="QR-код Telegram" title="QR-код Telegram">
                         </div>
                         <a href="https://t.me" class="icon item__icon animate-link" target="_blank" rel="noopener noreferrer" aria-label="Перейти в социальную сеть Telegram">
                             <svg class="icon"><use xlink:href="./img/sprite.svg#tg"></use></svg>
@@ -60,5 +60,5 @@
     <div class="pageup" id="pageup"></div>
 </footer>
 
-
+<script src="https://cdnjs.cloudflare.com/ajax/libs/lazysizes/5.3.2/lazysizes.min.js" async=""></script>
 <script src="./js/build.js" defer></script>

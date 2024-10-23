@@ -102,7 +102,7 @@
                                         const meritItem = `
                                             <div class="merits__item">
                                                 <a class="merits__item-img hover-img" data-caption="${item.title}" data-fancybox="gallery" href="${item.imgSrc}">
-                                                    <img src="${item.imgSrc}" title="${item.title}" alt="${item.title}" />
+                                                    <img data-src="${item.imgSrc}" class="lazyload" title="${item.title}" alt="${item.title}" />
                                                 </a>
                                                 <div class="merits__item-info">
                                                     <div class="merits__item-info-head">
