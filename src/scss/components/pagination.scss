@@ -15,7 +15,6 @@
         display: flex;
         justify-content: center;
         align-items: center;
-
         &:not(.to-prev):not(.to-next):not(.is-active):not(:hover) {
             color: $clr-gray-light;
         }
@@ -30,7 +29,5 @@
 
 .pagination .disabled {
     pointer-events: none;
-    .icon {
-        stroke: $clr-gray-light;
-    }
+    color: $clr-gray-light;
 }
