@@ -3,19 +3,19 @@
 
 export const loader = () => {
 	window.addEventListener("load", function() {
-        var loaderWrapper = document.querySelector(".loader");
-        var loader = document.querySelector(".spinner");
+        var loader = document.querySelector(".loader");
+        var spinner = loader.querySelector(".spinner");
       
-        if (loaderWrapper) {
-          loaderWrapper.style.transition = "opacity 1s ease";
-          loaderWrapper.style.opacity = "0";
+        if (loader) {
+          loader.style.transition = "opacity 1s ease";
+          loader.style.opacity = "0";
           setTimeout(function() {
-            loaderWrapper.style.display = "none";
+            loader.style.display = "none";
           }, 500);
         }
       
         if (loader) {
-          loader.style.display = "block";
+          spinner.style.display = "block";
         }
     });
 };

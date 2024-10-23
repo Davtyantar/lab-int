@@ -18,6 +18,3 @@ export function updateActiveNavLink() {
         }
     });
 }
-
-// Обернем в DOMContentLoaded
-document.addEventListener('DOMContentLoaded', updateActiveNavLink);
