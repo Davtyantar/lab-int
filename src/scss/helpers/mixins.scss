@@ -252,11 +252,6 @@
             line-height: 130%;
             color: $clr-gray-light;
         }
-        @include mobile {
-            &:nth-child(n+5) {
-                display: none;
-            }
-        }
         @include any-hover {
             &:not(.prof-tv__item):hover {
                 transform: translateY(-15px);
