@@ -14,14 +14,16 @@
         .item__title {
             color: inherit;
         }
-        &:hover {
-            background-color: $clr-primary;
-            border-color: $clr-primary;
-            .item__title {
-                color: $clr-white;
-            }
-            .history__link {
+        @include any-hover {
+            &:hover {
+                background-color: $clr-primary;
                 border-color: $clr-primary;
+                .item__title {
+                    color: $clr-white;
+                }
+                .history__link {
+                    border-color: $clr-primary;
+                }
             }
         }
     }

@@ -28,8 +28,7 @@
             flex-direction: column-reverse;
         }
         &.mobile-col {
-            display: flex;
-            flex-direction: column;
+            --cols: 1 !important;
         }
     }
 }
