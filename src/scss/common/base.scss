@@ -71,8 +71,8 @@ body {
 
 a {
   transition: color .3s ease-in-out;
-  &:not(.btn):not(.footer a):hover {
-    color: $clr-text;
+  &:not(.btn):not(.footer a):not(.pagination__link):hover {
+    color: $clr-primary;
   }
 }
 
