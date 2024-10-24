@@ -16,6 +16,9 @@
         @include small-tablet {
             display: none;
         }
+        body:has(.header.is-hidden) & {
+            top: 20px;
+        }
     }
     .sidebar__nav {
         &-list {
@@ -44,8 +47,4 @@
             border: 1px solid #ccc;
         }
     }
-}
-
-body:has(.header.is-hidden) .sidebar{
-    top: 20px;
 }

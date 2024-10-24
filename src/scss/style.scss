@@ -18,6 +18,12 @@
 
 // Стили базовых компонентов
 @import './common/base.scss';
+
 @import './common/header.scss';
 @import './common/main.scss';
 @import './common/footer.scss';
+
+@import './common/sidebar.scss';
+
+@import './common/breadcrumbs.scss';
+@import './common/pagination.scss';
