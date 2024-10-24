@@ -1,7 +1,6 @@
 .merits {
     &__items {
-        row-gap: clamp(1.875rem, 1.022rem + 3.64vw, 3.75rem);
-        // 30 - 60 375 - 1199
+        row-gap: 60px;
     }
     &__item {
         min-height: 250px;
