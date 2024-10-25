@@ -1,25 +1,24 @@
-// moveElements.js
-
 export function moveElements() {
-    const preffix = 'movedIn';
+    const prefix = 'movedIn';
+    const windowWidth = window.innerWidth;
+    
     for (let moveElement of document.querySelectorAll('[data-move]')) {
-        let data = moveElement.dataset,
-            windowWidth = window.innerWidth,
-            dataSize = data.move ? +data.move : 576,
-            dataBreak = data.break ? +data.break : false,
-            toElement = data.to ? document.getElementById(data.to) : false,
-            oldPosition = document.getElementById(preffix + data.to);
+        const data = moveElement.dataset,
+              minWidthToMove = data.move ? +data.move : 576,
+              maxWidthToMove = data.break ? +data.break : false,
+              toElement = data.to ? document.getElementById(data.to) : null,
+              oldPosition = document.getElementById(prefix + data.to);
         
         if (!toElement) return;
         
-        if (windowWidth < dataSize && !oldPosition && windowWidth >= dataBreak) {
-            let newOldPosition = document.createElement('div');
-            newOldPosition.id = preffix + data.to;
-            newOldPosition.style.display = 'none';
-            moveElement.before(newOldPosition);
+        if (windowWidth < minWidthToMove && !oldPosition && windowWidth >= maxWidthToMove) {
+            const placeholder = document.createElement('div');
+            placeholder.id = prefix + data.to;
+            placeholder.style.display = 'none';
+            moveElement.before(placeholder);
             toElement.append(moveElement);
         }
-        else if ((windowWidth >= dataSize || (dataBreak && dataBreak > windowWidth)) && oldPosition) {
+        else if ((windowWidth >= minWidthToMove || (maxWidthToMove && maxWidthToMove > windowWidth)) && oldPosition) {
             oldPosition.after(moveElement);
             oldPosition.remove();
         }
