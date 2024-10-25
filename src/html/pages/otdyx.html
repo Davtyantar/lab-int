@@ -90,7 +90,7 @@
                                     const restContent = document.querySelector('.rest__items');
                                 
                                     restData.forEach(project => {
-                                        const projectItem = `
+                                        const restItem = `
                                             <article class="rest__item" role="article">
                                                 <div class="rest__image">
                                                     <img data-src="${project.imgSrc}" class="lazyload" alt="${project.altText}">
@@ -100,7 +100,7 @@
                                                 </a>
                                             </article>
                                         `;
-                                        restContent.innerHTML += projectItem;
+                                        restContent.innerHTML += restItem;
                                     });
                                 </script>
                             </div>
