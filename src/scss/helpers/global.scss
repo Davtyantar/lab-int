@@ -102,10 +102,9 @@
   width: 100%;
 }
 
-.w-50 {
-  width: 50%;
-  @include small-tablet {
-    width: 100%;
+@include min-tablet {
+  .w-50 {
+    width: 50%;
   }
 }
 
@@ -114,7 +113,7 @@
   @include desktop {
     width: 50%;
   }
-  @include small-tablet {
+  @include tablet {
     width: 100%;
   }
 }
