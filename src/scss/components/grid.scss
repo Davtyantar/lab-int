@@ -8,7 +8,9 @@
     &.grid--4 { --elem-width: 255px; }
     
     &.grid--3 { 
-        --elem-width: 325px;
+        &:not(.content-area &) {
+            --elem-width: 325px;
+        }
         @include small-tablet {
             --elem-width: 235px;
         }

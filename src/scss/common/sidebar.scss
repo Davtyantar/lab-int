@@ -1,20 +1,17 @@
 .has-sidebar {
-    display: flex;
-    align-items: start;
-    column-gap: clamp(1.25rem, -2.076rem + 6.94vw, 6.25rem);
-    // 20 - 100 767 - 1920
-    .content-area {
-        width: 100%;
+    @include min-small-tablet {
+        display: grid;
+        grid-template-columns: 245px 1fr;
+        align-items: start;
+        column-gap: clamp(3.125rem, 1.046rem + 4.34vw, 6.25rem);
+        // 50 - 100 767 - 1920
     }
     .sidebar {
         position: sticky;
         top: calc(var(--header-height) + 20px);
-        width: 245px;
-        flex-shrink: 0;
-
         transition: top $t-base;
         @include small-tablet {
-            display: none;
+            margin-bottom: 30px;
         }
         body:has(.header.is-hidden) & {
             top: 20px;
@@ -25,6 +22,11 @@
             display: flex;
             flex-direction: column;
             row-gap: 20px;
+            @include mobile {
+                gap: 10px;
+                flex-direction: row;
+                flex-wrap: wrap;
+            }
         }
         &-link {
             display: block;
@@ -35,6 +37,21 @@
             &:hover,
             &.is-active {
                 color: $clr-primary;
+            }
+            @include mobile {
+                font-size: 12px;
+                padding: 5px 10px;
+                border: 1px solid $clr-primary;
+                color: inherit;
+                border-radius: $border-radius;
+                display: -webkit-box;
+                -webkit-box-orient: vertical;
+                -webkit-line-clamp: 1;
+                overflow: hidden;
+                &.is-active {
+                    color: $clr-white;
+                    background-color: $clr-primary;
+                }
             }
         }
     }
