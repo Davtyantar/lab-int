@@ -1,31 +1,27 @@
 <section class="feedback hidden">
     <div class="container">
-        <div class="form-wrapper">
-            <form class="form">
-                <div class="form-group">
-                    <label for="name" class="form-label">Имя:</label>
-                    <input type="text" id="name" name="name" class="form-input" data-minlength="3">
-                </div>
-                <div class="form-group">
-                    <label for="email" class="form-label">Электронная почта:</label>
-                    <input type="email" id="email" name="email" class="form-input">
-                </div>
-                <div class="form-group">
-                    <label for="tel" class="form-label">Телефон:</label>
-                    <input type="tel" id="tel" name="tel" class="form-input">
-                </div>
-
-                <button type="submit" class="btn btn-primary">Отправить</button>
-                <div id="messageContainer" class="message-container"></div>
-            </form>
-            <div class="form__success">
-                <svg viewBox="0 0 26 26" xmlns="http://www.w3.org/2000/svg">
-                    <g stroke="currentColor" stroke-width="1" fill="none" fill-rule="evenodd" stroke-linecap="round" stroke-linejoin="round">
-                    <path class="circle" d="M13 1C6.372583 1 1 6.372583 1 13s5.372583 12 12 12 12-5.372583 12-12S19.627417 1 13 1z"/>
-                    <path class="tick" d="M6.5 13.5L10 17 l8.808621-8.308621"/>
-                    </g>
-                </svg>
-                <div class="success__title">Ваша заявка успешно отправлена</div>
+        <div id="feedback_form">
+            <div class="form-wrapper">
+                <form class="form">
+                    <input type="hidden" name="page" value="Страница">
+                    <input type="hidden" name="theme" value="Заявка с сайта">
+                    <div class="form-group">
+                        <label for="name" class="form-label">Имя:</label>
+                        <input type="text" id="name" name="name" class="form-input" data-minlength="3">
+                    </div>
+                    <div class="form-group">
+                        <label for="email" class="form-label">Электронная почта:</label>
+                        <input type="email" id="email" name="email" class="form-input">
+                    </div>
+                    <div class="form-group">
+                        <label for="tel" class="form-label">Телефон:</label>
+                        <input type="tel" id="tel" name="tel" class="form-input">
+                    </div>
+    
+                    <button type="submit" class="btn btn-primary">Отправить</button>
+                    <div id="messageContainer" class="message-container"></div>
+                </form>
+                @include("./../components/formSuccess.html")
             </div>
         </div>
     </div>

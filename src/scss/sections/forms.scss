@@ -1,0 +1,106 @@
+
+.form {
+    position: relative;
+    background-color: $clr-white;
+    &:not(#callback_form  &) {
+        padding: 40px;
+    }
+    margin: 0 auto;
+
+    &-wrapper {
+        position: relative;
+        max-width: 750px;
+        margin: 0 auto;
+        overflow: hidden;
+        border: 1px solid $clr-gray;
+        border-radius: $border-radius;
+    }
+    &-group {
+        margin-bottom: 15px;
+    }
+    &__success {
+        position: absolute;
+        inset: 0;
+        width: 100%;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
+        align-items: center;
+        justify-content: center;
+        padding: 40px;
+        background-color: $clr-white;
+        display: none;
+        transition: all .3s;
+        text-align: center;
+        .success__title {
+            font-size: 22px;
+        }
+        &.is-visible {
+            display: flex;
+        }
+    }
+    &-label {
+        display: block;
+        font-size: 14px;
+    }
+    &-input {
+        width: 100%;
+        padding: 10px 10px 10px 0px; 
+        border-bottom: 1px solid $clr-gray;
+        transition: border-color 0.3s;
+        font-size: 14px;
+        &:focus {
+            border-color: $clr-primary;
+            outline: none;
+        }
+    }
+    textarea {
+        height: 50px;
+    }
+}
+
+.just-validate-error-label {
+    margin-top: 5px;
+    font-size: 14px;
+}
+
+#callback_form {
+    padding: 0;
+    background-color: transparent;
+    @include min-mobile {
+        max-width: 450px;
+    }
+}
+
+#callback_form .form-wrapper {
+    position: relative;
+    border-radius: $border-radius;
+    background-color: $clr-white;
+    overflow: hidden;
+    padding: 30px;
+    
+    & > form {
+        width: 100%;
+    }
+    .modal__title {
+        font-size: 23px;
+        margin-bottom: 15px; 
+    }
+    .modal__subtitle {
+        font-family: $second-family;
+        margin-bottom: 15px;
+        padding-bottom: 15px;
+    }
+    form button[type="submit"] {
+        font-size: 16px;
+        padding: 15px 0;
+    }
+}
+
+
+.message-container {
+    margin-top: 10px;
+    color: green;
+    font-size: 14px;
+}

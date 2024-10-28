@@ -2,7 +2,7 @@
 
 body .fancybox {
   &__backdrop {
-    background-color: rgba($color: $clr-primary-dark, $alpha: .95);
+    background-color: rgba(0, 0, 0, .8);
     backdrop-filter: blur(2px);
   }
   &__toolbar {
@@ -30,8 +30,8 @@ body .fancybox {
 }
 
 body .fancybox__content>.f-button.is-close-btn {
-  --f-button-border-radius: 50%;
-  --f-button-bg: rgba(22, 62, 115, 0.65);
-  --f-button-hover-bg: rgba(22, 62, 115, 0.75);
-  --f-button-active-bg: rgba(22, 62, 115, 0.85);
+  --f-button-border-radius: 50% !important;
+  --f-button-bg: rgba(22, 62, 115, 0.65) !important;
+  --f-button-hover-bg: rgba(22, 62, 115, 0.75) !important;
+  --f-button-active-bg: rgba(22, 62, 115, 0.85) !important;
 }

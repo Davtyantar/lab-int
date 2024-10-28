@@ -30,7 +30,12 @@ body {
   &::-webkit-scrollbar-track {
       background-color: transparent;
   }
+  &.hide-scrollbar header {
+    left: -3px !important;
+  }
 }
+
+
 
 .page-wrapper {
   display: flex;

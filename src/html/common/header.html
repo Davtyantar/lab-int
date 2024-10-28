@@ -33,10 +33,20 @@
                 </nav>
             </div>
             <div class="header__actions">
-                <a href="mailto:" data-move="576" data-to="mobile-menu__email" class="header__btn btn btn-primary" title="Написать нам" aria-label="Написать нам">
+                <button class="header__btn btn btn-primary" data-fancybox="" data-src="#callback_form" data-move="576" data-to="mobile-menu__email" 
+                    title="Написать нам"
+                    aria-label="Написать нам"
+
+                    data-content='
+                    "title":"Напишите нам",
+                    "subtitle":"Оставьте сообщение, и мы ответим вам в кратчайшие сроки.",
+                    "theme":"Письмо"'
+                    >
+
 					<svg class="icon"><use xlink:href="./img/sprite.svg#email"></use></svg>
 					<span>Напишите нам</span>
-				</a>
+				</button>
+                
                 <div class="header__search header-search">
                     <form action="" class="header-search__form" role="search" aria-label="Поиск по сайту">
                         <input type="text" class="header-search__input" placeholder="Поиск по сайту" aria-label="Введите текст для поиска">
