@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="ru">
+		@include("./../common/head.html", { "title": "Профсоюзная хроника" })
+	<body>
+		<div class="page-wrapper">
+			<!-- Шапка -->
+			@include("./../common/header.html")
+			<!-- Шапка -->
+
+			<main class="main">
+				<div class="page-heading">
+					<div class="container">
+						<div class="breadcrumbs" itemscope itemtype="https://schema.org/BreadcrumbList">
+                            <ul class="breadcrumbs__list">
+                                <li class="breadcrumbs__item" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+                                    <a href="/" class="breadcrumbs__item-content" itemprop="item" title="Перейти на главную страницу" aria-label="Главная">
+                                        <span itemprop="name">Главная</span>
+                                    </a>
+                                    <meta itemprop="position" content="1" />
+                                </li>
+                                <li class="breadcrumbs__item" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+                                    <span class="breadcrumbs__item-content" itemprop="name">Профсоюзная хроника</span>
+                                    <meta itemprop="position" content="2" />
+                                </li>
+                            </ul>
+                        </div>
+						<div class="page-title__wrapper">
+							<h1 class="page-title">Профсоюзная хроника</h1>
+						</div>
+					</div>
+				</div>
+                <section class="chronicle">
+                    <div class="container">
+                        <div class="section__content">
+                            <div class="chronicle__grid chronicle__items grid grid--4 items mobile-col">
+                                <script>
+                                    const chronicleData = [
+                                        {   
+                                            title: "Приглашаем вас в ДК «ГАЗ» на спектакль «Дракула».", 
+                                            imgSrc: "./../../img/chronicle__image-page-16.png", date: "12.10.2024"  
+                                        },
+                                        {  
+                                            title: "Приглашаем вас в ДК ГАЗ на большой сольный концерт Дмитрия Колдуна со скидкой 20% по кодовому слову при покупке билетов здесь", 
+                                            imgSrc: "./../../img/chronicle__image-page-15.png", date: "11.10.2024"
+                                        },
+                                        {  
+                                            title: "Представляем вам нового участника проекта «Твои таланты, Профсоюз!» - Плескач Татьяну Михайловну (УЖТ)", 
+                                            imgSrc: "./../../img/chronicle__image-page-14.png", date: "12.10.2024" 
+                                        },
+                                        {  
+                                            title: "В штатном режиме работают следующие столовые...", 
+                                            imgSrc: "./../../img/chronicle__image-page-13.png", date: "07.10.2024"
+                                        },
+                                        {   
+                                            title: "На рабочую субботу Администрацией завода заказан электротранспорт.", 
+                                            imgSrc: "./../../img/chronicle__image-page-12.png", date: "05.10.2024"
+                                        },
+                                        {   
+                                            title: "На рабочую субботу администрацией завода организованы два дополнительных рейса автобуса по маршруту А-33: «Улица Дружаева — Станция метро «Кировская».", 
+                                            imgSrc: "./../../img/chronicle__image-page-11.png", date: "05.10.2024"
+                                        },
+                                        {   
+                                            title: "Приглашаем вас в ДК «ГАЗ» на спектакль «Стерпится - слюбится».", 
+                                            imgSrc: "./../../img/chronicle__image-page-10.png", date: "04.10.2024"
+                                        },
+                                        {   
+                                            title: "Приглашаем вас в ДК ГАЗ на юбилейный концерт народного коллектива вокального ансамбля «Ваталинка».", 
+                                            imgSrc: "./../../img/chronicle__image-page-9.png", date: "03.10.2024"
+                                        },
+                                        {   
+                                            title: "Исполнилось 90 лет со дня рождения Косогорова Мансура Хаснаддиновича, заслуженного автозаводца, ветерана Управления железнодорожного транспорта. Вся его жизнь была связана с железной дорогой.", 
+                                            imgSrc: "./../../img/chronicle__image-page-8.png", date: "12.10.2024" 
+                                        },
+                                        {   
+                                            title: "В Производстве грузовых автомобилей прошла экскурсия для ветеранов – бывших работников производства.", 
+                                            imgSrc: "./../../img/chronicle__image-page-7.png", date: "11.10.2024"
+                                        },
+                                        {   
+                                            title: "Представляем вам нового участника проекта «Твои таланты, Профсоюз!» - Макарову Светлану Юрьевну (ЗМА)", 
+                                            imgSrc: "./../../img/chronicle__image-page-6.png", date: "12.10.2024" 
+                                        },
+                                        {   
+                                            title: "в Нижегородском автомеханическом техникуме прошли профсоюзные уроки для всех первокурсников.", 
+                                            imgSrc: "./../../img/chronicle__image-page-5.png", date: "07.10.2024"
+                                        },
+                                        {   
+                                            title: "Профсоюзный актив встретился с Сазоновым Валерием Валерьевичем, начальником управления производственного контроля и охраны труда технической дирекции ООО «Нижегородские Автокомпоненты».", 
+                                            imgSrc: "./../../img/chronicle__image-page-4.png", date: "05.10.2024"
+                                        },
+                                        {   
+                                            title: "Вышел очередной номер газеты Профсоюза АСМ РФ «ГОЛОС ПРОФСОЮЗА»",
+                                            imgSrc: "./../../img/chronicle__image-page-3.png", date: "05.10.2024"
+                                        },
+                                        {   
+                                            title: "На расширенном заседании Совета НОСОП «Облсовпроф» состоялось награждение победителей конкурса на звание «Лучший уполномоченный по охране труда профобьединения».", 
+                                            imgSrc: "./../../img/chronicle__image-page-2.png", date: "04.10.2024"
+                                        },
+                                        {   
+                                            title: "Члены профсоюза КРЗ, подражая Александру Сергеевичу Пушкину, отправились на осеннюю экскурсию в село Большое Болдино.", 
+                                            imgSrc: "./../../img/chronicle__image-page-1.png", date: "03.10.2024"
+                                        }
+                                    ];
+                                
+                                    const chronicleContent = document.querySelector('main:not(.mainpage) .chronicle__items');
+                                
+                                    chronicleData.forEach(item => {
+                                        const chronicleItem = `
+                                            <article class="chronicle__item" role="article">
+                                                <a href="./profsoyuz-xronika-detail.html" class="item__link" title="${item.title}">
+                                                    <div class="item__img img">
+                                                        <img data-src="${item.imgSrc}" class="lazyload" alt="${item.title}">
+                                                    </div>
+                                                    <div class="item__description">
+                                                        <h3 class="item__title">${item.title}</h3>
+                                                        <span class="item__date">${item.date}</span>
+                                                    </div>
+                                                </a>
+                                            </article>
+                                        `;
+                                        chronicleContent.innerHTML += chronicleItem;
+                                    });
+                                </script>
+                            </div>
+                            @include("./../components/pagination.html")
+                        </div>
+                    </div>
+                </section>
+			</main>
+			
+			<!-- Подвал -->
+				@include("./../common/footer.html")
+			<!-- Подвал -->
+		</div>
+	</body>
+</html>

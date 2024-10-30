@@ -1,0 +1,6 @@
+.promotions {
+    @include grid-items-with-media;
+    .item__title {
+        -webkit-line-clamp: 9;
+    }
+}

@@ -1,4 +1,4 @@
-export const setCustomVh = () => {
+export const setVh = () => {
     const zoomLevel = parseFloat(getComputedStyle(document.documentElement).zoom) || 1;
     const viewportHeight = window.innerHeight;
     const adjustedVh = viewportHeight / zoomLevel * 0.01;
@@ -6,9 +6,5 @@ export const setCustomVh = () => {
     document.documentElement.style.setProperty('--vh', `${adjustedVh}px`);
 }
   
-setCustomVh();
-
-export function setVh() {
-    document.addEventListener('DOMContentLoaded', setCustomVh);
-    window.addEventListener('resize', setCustomVh);
-}
+document.addEventListener('DOMContentLoaded', setVh);
+window.addEventListener('resize', setVh);

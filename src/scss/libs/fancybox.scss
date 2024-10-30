@@ -11,9 +11,9 @@ body .fancybox {
   &__nav,
   &__toolbar {
     --f-button-border-radius: 50%;
-    --f-button-bg: rgba(22, 62, 115, 0.65);
-    --f-button-hover-bg: rgba(22, 62, 115, 0.75);
-    --f-button-active-bg: rgba(22, 62, 115, 0.85);
+    --f-button-bg: rgba(22, 62, 115, 0.8);
+    --f-button-hover-bg: rgba(22, 62, 115, 0.9);
+    --f-button-active-bg: rgba(22, 62, 115, 1);
   }
   &__nav {
     --f-button-svg-width: 22px;
@@ -31,7 +31,10 @@ body .fancybox {
 
 body .fancybox__content>.f-button.is-close-btn {
   --f-button-border-radius: 50% !important;
-  --f-button-bg: rgba(22, 62, 115, 0.65) !important;
-  --f-button-hover-bg: rgba(22, 62, 115, 0.75) !important;
-  --f-button-active-bg: rgba(22, 62, 115, 0.85) !important;
+  --f-button-bg: rgba(22, 62, 115, 0.8) !important;
+  --f-button-hover-bg: rgba(22, 62, 115, 0.9) !important;
+  --f-button-active-bg: rgba(22, 62, 115, 1) !important;
+  opacity: 1;
+  top: 12.5px;
+  right: 12.5px;
 }

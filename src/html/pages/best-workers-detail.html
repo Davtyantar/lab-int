@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="ru">
+		@include("./../common/head.html", { "title": "Лучшие работники ППО в ОАО “ГАЗ”" })
+	<body>
+		<div class="page-wrapper">
+			<!-- Шапка -->
+			@include("./../common/header.html")
+			<!-- Шапка -->
+
+			<main class="main">
+				<div class="page-heading">
+					<div class="container">
+						<div class="breadcrumbs" itemscope itemtype="https://schema.org/BreadcrumbList">
+							<ul class="breadcrumbs__list">
+								<li class="breadcrumbs__item" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+									<a href="/" class="breadcrumbs__item-content" itemprop="item" title="Перейти на главную страницу" aria-label="Главная">
+										<span itemprop="name">Главная</span>
+									</a>
+									<meta itemprop="position" content="1" />
+								</li>
+								<li class="breadcrumbs__item" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+									<a href="/organization" class="breadcrumbs__item-content" itemprop="item" title="Перейти в раздел Организация" aria-label="Организация">
+										<span itemprop="name">Проекты</span>
+									</a>
+									<meta itemprop="position" content="2" />
+								</li>
+								<li class="breadcrumbs__item" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+									<a href="/organization" class="breadcrumbs__item-content" itemprop="item" title="Перейти в раздел Организация" aria-label="Организация">
+										<span itemprop="name">Лучшие из лучших</span>
+									</a>
+									<meta itemprop="position" content="3" />
+								</li>
+								<li class="breadcrumbs__item" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+									<span class="breadcrumbs__item-content" itemprop="name">Лучшие работники ППО в ОАО “ГАЗ”</span>
+									<meta itemprop="position" content="4" />
+								</li>
+							</ul>
+						</div>
+						<div class="page-title__wrapper">
+							<h1 class="page-title">Лучшие работники ППО в ОАО “ГАЗ”</h1>
+						</div>
+					</div>
+				</div>
+				<section class="best-workers_detail">
+					<div class="container">
+						<div class="section_content">
+							<div class="text-content">
+								<ul>
+									<li><strong>Богатова Татьяна Викторовна, заместитель председателя профкома ПГА/СКП ООО «АЗ ГАЗ»</li>
+									<li><strong>Василькова Наталья Владимировна, инструктор профкома БЕ ПААГ</li>
+									<li><strong>Загустина Елена Алексеевна, председатель профкома ПГА/СКП ООО «АЗ ГАЗ»</li>
+									<li><strong>Лебедев Николай Анатольевич, заместитель председателя профкома ООО «ЗШП»</li>
+									<li><strong>Наштатик Елена Михайловна, председатель профкома ПСТ ООО «АЗ ГАЗ»</li>
+									<li><strong>Полетаева Алла Евгеньевна, председатель Совета физкультуры БЕ ПШД и ООО «ЗШП»</li>
+									<li><strong>Черноталова Екатерина Васильевна, ведущий специалист отдела соцразвития ППО в ОАО «ГАЗ»</li>
+									<li><strong>Шемагонова Нина Николаевна, заместитель председателя профкома ЗпПА VW/Skoda ООО «АЗ ГАЗ»</li>
+								</ul>
+							</div>
+							<img src="./../../img/best-workers_detail-1.png" alt="">
+							<a href="" class="hero__btn btn btn-primary btn-arrow">подробнее</a>
+						</div>
+					</div>
+				</section>
+			</main>
+			
+			<!-- Подвал -->
+				@include("./../common/footer.html")
+			<!-- Подвал -->
+		</div>
+	</body>
+</html>

@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="ru">
+		@include("./../common/head.html", { "title": "Акции" })
+	<body>
+		<div class="page-wrapper">
+			<!-- Шапка -->
+			@include("./../common/header.html")
+			<!-- Шапка -->
+
+			<main class="main">
+				<div class="page-heading">
+					<div class="container">
+						<div class="breadcrumbs" itemscope itemtype="https://schema.org/BreadcrumbList">
+                            <ul class="breadcrumbs__list">
+                                <li class="breadcrumbs__item" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+                                    <a href="/" class="breadcrumbs__item-content" itemprop="item" title="Перейти на главную страницу" aria-label="Главная">
+                                        <span itemprop="name">Главная</span>
+                                    </a>
+                                    <meta itemprop="position" content="1" />
+                                </li>
+                                <li class="breadcrumbs__item" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+                                    <span class="breadcrumbs__item-content" itemprop="name">Акции</span>
+                                    <meta itemprop="position" content="2" />
+                                </li>
+                            </ul>
+                        </div>
+						<div class="page-title__wrapper">
+							<h1 class="page-title">
+								Акции
+							</h1>
+						</div>
+					</div>
+				</div>
+                <section class="promotions">
+                    <div class="container">
+                        <div class="section__content">
+                            <div class="promotions__grid promotions__items grid grid--4 items mobile-col">
+                                <script>
+                                    const promotionsData = [
+                                        {  title: "Завершилась акция, посвященная Дню действий профсоюзов «За достойный труд!» под девизом ФНПР: «Социальное партнерство - гарантия достойного труда!». В ней приняли участие 118 чел.", imgSrc: "./../../img/promotions__image-1.png", date: "12.10.2024", 
+                                        },
+                                        {  title: "Профсоюзная организация Горьковского автозавода отметила свой 92-ой день рождения.", imgSrc: "./../../img/promotions__image-2.png", date: "11.10.2024", 
+                                        },
+                                        {  title: "Профсоюзные активисты в рамках акции «Пасха – время добрых дел» доставили подарки для воспитанников Воскресной школы Православного прихода Церкви в честь Благовещения Пресвятой Богородицы (п.Желнино, г.Дзержинск).",  imgSrc: "./../../img/promotions__image-3.png", date: "12.10.2024", 
+                                        },
+                                        {  title: "«Трудовой десант» из активистов Совета молодёжи ППО в ОАО «ГАЗ» поработал в ДОЛ «Сокол».", imgSrc: "./../../img/promotions__image-4.png", date: "07.10.2024", 
+                                        },
+                                        {  title: "Приглашаем всех желающих до 13 мая 2023 года принять участие в акции «МОЙ МАЙ! МОЙ КРАЙ!», приуроченной к Первомаю и ко Дню рождения профсоюзной организации Горьковского автозавода.",  imgSrc: "./../../img/promotions__image-5.png", date: "05.10.2024", 
+                                        },
+                                        {  title: "Завершилась благотворительная акция «Твори добро». В акции приняли участие работники ЗМА и ДпК ПАО «ГАЗ», ПУАТ ООО «Технопарк» и ППО в ОАО «ГАЗ».", imgSrc: "./../../img/promotions__image-6.png", date: "05.10.2024", 
+                                        },
+                                        {  title: "Активисты Горьковского автозавода приняли участие в молодёжном челлендже Профсоюза АСМ РФ ко Всемирному дню действий профсоюзов «ЗА ДОСТОЙНЫЙ ТРУД!»", imgSrc: "./../../img/promotions__image-7.png", date: "04.10.2024", 
+                                        },
+                                        {  title: "Первичная профсоюзная организация Горьковского автозавода в рамках Всемирного дня действий «За достойный труд!» провела акцию «Достойные километры»!", imgSrc: "./../../img/promotions__image-8.png", date: "03.10.2024", 
+                                        },
+                                        {  title: "На Горьковском автозаводе успешно прошел фотофлэшмоб «Я - МАШИНОСТРОИТЕЛЬ!», посвященный приближающемуся профессиональному празднику работников завода.", imgSrc: "./../../img/promotions__image-9.png", date: "12.10.2024", 
+                                        },
+                                        {  title: "Профсоюзный актив Горьковского автозавода провел ежегодную акцию - «День памяти».",  imgSrc: "./../../img/promotions__image-10.png", date: "11.10.2024", 
+                                        },
+                                        {  title: "Профсоюзный актив передал все книги, собранные работниками Горьковского автозавода в ходе акции «Принеси книгу для сельской библиотеки», библиотеке при клубе в д.Черная Маза Лысковского района.",  imgSrc: "./../../img/promotions__image-11.png", date: "12.10.2024", 
+                                        },
+                                        {  title: "«Трудовой десант» Профсоюзной организации Горьковского автозавода высадился в детском оздоровительном лагере «Сокол»", imgSrc: "./../../img/promotions__image-12.png", date: "07.10.2024", 
+                                        },
+                                        {  title: "у Дворца спорта Профсоюзов состоялась встреча с участниками Всероссийского Первомайского автопробега от Владивостока до Волгограда, организованного ФНПР.",  imgSrc: "./../../img/promotions__image-13.png", date: "05.10.2024", 
+                                        },
+                                        {  title: "представители профсоюзной организации и советов молодежи приняли участие в акции «Забота о ветеранах».", imgSrc: "./../../img/promotions__image-14.png", date: "05.10.2024", 
+                                        },
+                                        {  title: "Профсоюзные активисты в рамках акции «Пасха – время добрых дел» доставили подарки для воспитанников Воскресной школы Православного прихода Церкви в честь Благовещения Пресвятой Богородицы (п.Желнино, г.Дзержинск).", imgSrc: "./../../img/promotions__image-15.png", date: "04.10.2024", 
+                                        },
+                                        {  title: "Сотрудники Горьковского автозавода приняли участие в акции «10 тысяч шагов к жизни».", imgSrc: "./../../img/promotions__image-16.png", date: "03.10.2024", 
+                                        }
+                                    ];
+                                
+                                    const promotionsContent = document.querySelector('.promotions__items');
+                                
+                                    promotionsData.forEach(item => {
+                                        const promotionsItem = `
+                                            <article class="promotions__item" role="article">
+                                                <a href="./promotions-detail.html" class="item__link" title="${item.title}">
+                                                    <div class="item__img img">
+                                                        <img data-src="${item.imgSrc}" class="lazyload" alt="${item.title}">
+                                                    </div>
+                                                    <div class="item__description">
+                                                        <h3 class="item__title">${item.title}</h3>
+                                                        <span class="item__date">${item.date}</span>
+                                                    </div>
+                                                </a>
+                                            </article>
+                                        `;
+                                        promotionsContent.innerHTML += promotionsItem;
+                                    });
+                                </script>
+                            </div>
+                            @include("./../components/pagination.html")
+                        </div>
+                    </div>
+                </section>  
+			</main>
+			
+			<!-- Подвал -->
+				@include("./../common/footer.html")
+			<!-- Подвал -->
+		</div>
+	</body>
+</html>

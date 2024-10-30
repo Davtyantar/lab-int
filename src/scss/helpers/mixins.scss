@@ -136,6 +136,11 @@
 	}
 }
 
+@mixin flex-center {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
 
 // миксин-разметка для grid блоков
 @mixin grid-items-with-arrow {
@@ -144,25 +149,24 @@
         height: 100%;
         display: flex;
         flex-direction: column;
+        row-gap: 20px;
         justify-content: space-between;
         padding: 30px;
 		@include mobile {
 			padding: 20px;
 		}
         z-index: 1;
-        &::after {
+        &:not(&.has-date)::after {
             content: "";
-            display: flex;
-            align-items: center;
-            justify-content: center;
+            @include flex-center;
             width: 40px;
             height: 40px;
             overflow: hidden;
             background-color: $clr-white;
             border-radius: 30px;
             background-image: url("data:image/svg+xml,%3Csvg width='17' height='16' viewBox='0 0 17 16' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M3.16669 8H13.8334M13.8334 8L9.83335 4M13.8334 8L9.83335 12' stroke='%23252B33' stroke-linecap='round' stroke-linejoin='round' /%3E%3C/svg%3E");
-            background-position: center;
             background-size: 16px;
+            background-position: center;
             background-repeat: no-repeat;
 
             transition: border-color $t-base, background-color $t-base;
@@ -185,7 +189,6 @@
         }
         .item__title {
             position: relative;
-            font-weight: 700;
             font-size: 20px;
             color: $clr-white;
         }
@@ -208,7 +211,10 @@
 		}
     }
 }
+// миксин-разметка для grid блоков
 
+
+// миксин-разметка для grid блоков
 @mixin grid-items-with-media {
     &__item {
         border-radius: $border-radius;
@@ -258,3 +264,83 @@
     }
 }
 // миксин-разметка для grid блоков
+
+
+// миксин-разметка для блока с боковым меню
+@mixin flex-has-sidebar {
+    &__items {
+        display: flex;
+        flex-direction: column;
+        row-gap: 45px;
+    }
+    &__item {
+        scroll-margin-top: 85px;
+    }
+    &__item-title {
+        margin-bottom: 25px;
+    }
+    &__item-list-wrapper {
+        display: flex;
+        flex-direction: column;
+        row-gap: 40px;
+    }
+    &__item-list {
+        display: flex;
+        flex-direction: column;
+        row-gap: 10px;
+    }
+    &__item-list-title {
+        font-size: 18px;
+        margin-bottom: 10px;
+
+        @include mobile {
+            font-size: 14px;
+        }
+    }
+    &__item-list-inner {
+        font-family: $second-family;
+        position: relative;
+        display: flex;
+        align-items: center;
+        column-gap: 30px;
+        @include mobile {
+            column-gap: 15px;
+        }
+        padding: 20px;
+        box-shadow: $shadow-2;
+        border-radius: calc($border-radius / 2);
+        text-transform: capitalize;
+        transition: background $t-base;
+
+        @include mobile {
+            font-size: 12px;
+        }
+        &::before {
+            content: "";
+            width: 30px;
+            height: 30px;
+            aspect-ratio: 1;
+            flex-shrink: 0;
+            display: block;
+            background-position: center;
+            background-size: 26px;
+            background-repeat: no-repeat;
+            background-image: url("data:image/svg+xml,%3Csvg width='26' height='26' viewBox='0 0 26 26' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M24.25 16.75L24.25 18.25C24.25 20.3502 24.25 21.4003 23.8413 22.2025C23.4817 22.9081 22.9081 23.4817 22.2025 23.8413C21.4003 24.25 20.3502 24.25 18.25 24.25L7.75 24.25C5.6498 24.25 4.5997 24.25 3.79754 23.8413C3.09193 23.4817 2.51825 22.9081 2.15872 22.2025C1.75 21.4003 1.75 20.3502 1.75 18.25L1.75 16.75M19.25 10.5L13 16.75M13 16.75L6.75 10.5M13 16.75L13 1.75' stroke='%23252B33' stroke-width='2' stroke-linecap='round' stroke-linejoin='round' /%3E%3C/svg%3E");
+            @include mobile {
+                width: 20px;
+                height: 20px;
+                background-size: 20px;
+            }
+        }
+        @include any-hover {
+            &:hover {
+                background-color: $clr-primary;
+                color: $clr-white !important;
+                &::before {
+                    background-image: url("data:image/svg+xml,%3Csvg width='26' height='26' viewBox='0 0 26 26' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M24.25 16.75L24.25 18.25C24.25 20.3502 24.25 21.4003 23.8413 22.2025C23.4817 22.9081 22.9081 23.4817 22.2025 23.8413C21.4003 24.25 20.3502 24.25 18.25 24.25L7.75 24.25C5.6498 24.25 4.5997 24.25 3.79754 23.8413C3.09193 23.4817 2.51825 22.9081 2.15872 22.2025C1.75 21.4003 1.75 20.3502 1.75 18.25L1.75 16.75M19.25 10.5L13 16.75M13 16.75L6.75 10.5M13 16.75L13 1.75' stroke='white' stroke-width='2' stroke-linecap='round' stroke-linejoin='round' /%3E%3C/svg%3E");
+                }
+            }
+        }
+    }
+} 
+// миксин-разметка для блока с боковым меню

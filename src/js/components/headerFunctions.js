@@ -1,6 +1,6 @@
-const initHeader = () => {
+export const headerFunctions = () => {
     // Инициализация поиска
-    const searchForm = document.querySelector('.header-search__form');
+    const searchForm = document.querySelector('.header .search__form');
     const searchButton = searchForm.querySelector('button[type="submit"]');
     const searchBlock = document.querySelector('.header-search');
 
@@ -14,7 +14,6 @@ const initHeader = () => {
     searchButton.addEventListener('click', toggleSearchBlock);
 
     window.addEventListener('resize', () => {
-        // Close the search block when the window is resized below 576px
         if (window.innerWidth < 576) {
             searchBlock.classList.remove('header-search--is-open');
         }
@@ -74,6 +73,4 @@ const initHeader = () => {
     }
 };
 
-export const headerFunctions = () => {
-    document.addEventListener('DOMContentLoaded', initHeader);
-};
+document.addEventListener('DOMContentLoaded', headerFunctions);

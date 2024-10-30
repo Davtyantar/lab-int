@@ -90,3 +90,6 @@ export const setupFormValidation = () => {
         });
     });
 };
+
+
+document.addEventListener('DOMContentLoaded', setupFormValidation);

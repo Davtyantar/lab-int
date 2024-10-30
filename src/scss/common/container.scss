@@ -3,7 +3,8 @@
     margin-right: auto;
     margin-left: auto;
     padding: 0 $container-offset;
-    @media (min-width: 767px){
-      max-width: $container;
+    max-width: $container;
+    &.container-small {
+      max-width: $container-xs;
     }
   }

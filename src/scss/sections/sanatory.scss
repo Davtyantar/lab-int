@@ -1,27 +1,5 @@
 .sanatory {
-    &__slide {
-        aspect-ratio: 1 / 0.725;
-        border-radius: calc($border-radius / 2);
-        overflow: hidden;
-    }
-    .swiper {
-        overflow: visible;
-        margin-top: 10px;
-        margin-bottom: 60px;
-        @include mobile {
-            margin-bottom: 30px;
-        }
-        &-nav {
-            margin-bottom: 30px;
-        }
-    }
-    .section__content > div:not(:last-child):has(.text-content > :last-child:not(.swiper)) {
-        margin-bottom: 60px;
-    }
     .text-content {
-        & *:not(.introduction > .text-content):not(.swiper):not(.swiper *) {
-            max-width: 690px;
-        }
         &_contacts {
             display: flex;
             flex-direction: column;
@@ -38,14 +16,15 @@
             }
         }
     }
-    .text-content:not(.introduction .text-content) {
-        & > :first-child {
-            margin-bottom: 20px;
-            & {
-                & + * {
-                    margin-bottom: 30px;
-                }
-            }
+    .text-content {
+        display: flex;
+        flex-direction: column;
+        row-gap: 50px;
+        & > div *:first-child {
+            margin-top: 0;
+        }
+        & > div *:last-child {
+            margin-bottom: 0;
         }
         ul + p {
             margin-top: 40px;

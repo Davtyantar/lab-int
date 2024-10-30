@@ -47,56 +47,48 @@
                                             title: "Новогоднее представление Совета молодежи ППО в ОАО \"ГАЗ\" \"Дед Мороз спешит на помощь\" для детей в Центре длительной реабилитации \"Добрый сад\"", 
                                             imgSrc: "./../../img/prof-tv__image-1.png", 
                                             videoSrc: "https://www.youtube.com/watch?v=Bz7fhUzX-lU",
-                                            altText: "Описание изображения", 
                                             date: "28.12.2020", 
                                         },
                                         { 
                                             title: "Мотивационные ролики участников V Молодёжного профсоюзного форума «Профсоюз-перезагрузка!»", 
                                             imgSrc: "./../../img/prof-tv__image-2.png", 
                                             videoSrc: "https://rutube.ru/video/24e04b53ddecdab090181d18d5a10a2c/",
-                                            altText: "Описание изображения",  
                                             date: "16.12.2017", 
                                         },
                                         { 
                                             title: "На базе отдыха «Мечта» состоялся V Молодёжный профсоюзный форум «Профсоюз-перезагрузка!»", 
                                             imgSrc: "./../../img/prof-tv__image-3.png", 
                                             videoSrc: "https://rutube.ru/video/ca701294445779d66cfab71504f69f91/",
-                                            altText: "Описание изображения", 
                                             date: "16.11.2017", 
                                         },
                                         { 
                                             title: "На лыжной базе «Стригино» состоялся профсоюзный спортивный праздник для работающей молодёжи Нижегородских предприятий, организованный...", 
                                             imgSrc: "./../../img/prof-tv__image-4.png", 
                                             videoSrc: "https://rutube.ru/video/59851a8331bbe4e34bd74f54bc774263/",
-                                            altText: "Описание изображения",  
                                             date: "12.08.2017", 
                                         },
                                         { 
                                             title: "Состоялись торжественное шествие работников и ветеранов завода, жителей и учащихся района, а также праздничный митинг - концерт, посвященные 72-летию Победы.", 
                                             imgSrc: "./../../img/prof-tv__image-5.png", 
                                             videoSrc: "https://rutube.ru/video/8931779380f4d5188e7e66fb7752de04/",
-                                            altText: "Описание изображения",  
                                             date: "09.05.2017", 
                                         },
                                         { 
                                             title: "Молодёжь профсоюзной организации Горьковского автозавода приняла участие в «Трудовом десанте», организованном уже четвертый год подряд.", 
                                             imgSrc: "./../../img/prof-tv__image-6.png", 
                                             videoSrc: "https://rutube.ru/video/6ea4c5fdcd3764e99af8171b97575282/",
-                                            altText: "Описание изображения", 
                                             date: "05.05.2017", 
                                         },
                                         { 
                                             title: "Кулинарный конкурс \"Народные рецепты\".", 
                                             imgSrc: "./../../img/prof-tv__image-7.png", 
                                             videoSrc: "https://rutube.ru/video/5c842e4da81d021dee26d858917b6428/",
-                                            altText: "Описание изображения", 
                                             date: "16.05.2017", 
                                         },
                                         { 
                                             title: "На базе отдыха «Мечта» состоялся IV Молодёжный профсоюзный форум «Мой выбор!», посвящённый 85-летию Первичной профсоюзной организации Горьковского автомобильного завода.", 
                                             imgSrc: "./../../img/prof-tv__image-8.png", 
                                             videoSrc: "https://vk.com/video_ext.php?oid=-221043232&id=456239100&hd=2&autoplay=1",
-                                            altText: "Описание изображения", 
                                             date: "28.12.2020", 
                                         }
                                     ];
@@ -105,11 +97,11 @@
                                 
                                     profTvData.forEach(item => {
                                         const profTvItem = `
-                                        <div class="prof-tv__item" role="listitem">
+                                        <div class="prof-tv__item">
                                             <div class="item__link" target="_blank" title="${item.title}">
                                                 <div class="item__img img">
-                                                    <a data-fancybox="" data-type="iframe" data-src="${item.videoSrc}" class="prof-tv__item-link">
-                                                        <img data-src="${item.imgSrc}" class="item__image lazyload" alt="${item.altText}">
+                                                    <a data-fancybox="" data-src="#iframe_modal" data-src-video="${item.videoSrc}" class="prof-tv__item-link">
+                                                        <img data-src="${item.imgSrc}" class="item__image lazyload" alt="${item.title}">
                                                         <button class="play-btn"></button>
                                                     </a>
                                                 </div>

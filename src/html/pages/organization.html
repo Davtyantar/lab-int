@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="ru">
-		@include("./../common/head.html", { "title": "Документы организации" })
+		@include("./../common/head.html", { "title": "Организация" })
 	<body>
 		<div class="page-wrapper">
 			<!-- Шапка -->
@@ -19,174 +19,64 @@
 									<meta itemprop="position" content="1" />
 								</li>
 								<li class="breadcrumbs__item" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
-									<a href="/organization" class="breadcrumbs__item-content" itemprop="item" title="Перейти в раздел Организация" aria-label="Организация">
-										<span itemprop="name">Организация</span>
-									</a>
+									<span class="breadcrumbs__item-content" itemprop="name">Организация</span>
 									<meta itemprop="position" content="2" />
-								</li>
-								<li class="breadcrumbs__item" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
-									<span class="breadcrumbs__item-content" itemprop="name">Документы организации</span>
-									<meta itemprop="position" content="3" />
 								</li>
 							</ul>
 						</div>
 						<div class="page-title__wrapper">
-							<h1 class="page-title">
-								Документы организации
-							</h1>
+							<h1 class="page-title">Организация</h1>
 						</div>
 					</div>
 				</div>
-				<section class="structure">
+				<section class="organization">
 					<div class="container">
 						<div class="section_content">
-							<div class="has-sidebar">
-								<aside class="sidebar">
-								  <nav class="sidebar__nav">
-									<ul class="sidebar__nav-list items">
-										<li class="sidebar__nav-item">
-											<a href="#structure__item-1" class="sidebar__nav-link is-active">Структура</a>
-										</li>
-										<li class="sidebar__nav-item">
-											<a href="#structure__item-2" class="sidebar__nav-link">Подразделения</a>
-										</li>
-										<li class="sidebar__nav-item">
-											<a href="#structure__item-3" class="sidebar__nav-link">Профком</a>
-										</li>
-										<li class="sidebar__nav-item">
-											<a href="#structure__item-4" class="sidebar__nav-link">Президиум</a>
-										</li>
-										<li class="sidebar__nav-item">
-											<a href="#structure__item-5" class="sidebar__nav-link">План работы Профкома ППО в ОАО “ГАЗ”</a>
-										</li>
-										<li class="sidebar__nav-item">
-											<a href="#structure__item-6" class="sidebar__nav-link">Гимны</a>
-										</li>
-										<li class="sidebar__nav-item">
-											<a href="#structure__item-7" class="sidebar__nav-link">Комиссия Профкома ППО в ОАО “ГАЗ”</a>
-										</li>
-										<li class="sidebar__nav-item">
-											<a href="#structure__item-8" class="sidebar__nav-link">Молодежный совет</a>
-										</li>
-									</ul>
-								  </nav>
-								</aside>
-								<div class="content-area">
-									<div class="structure__items items">
-										<div class="structure__item" id="structure__item-1">
-											<h3 class="structure__item-title">Структура</h3>
-											<ul class="structure__item-list">
-												<a href="./files/file.pdf" download class="structure__item-list-inner">
-													Структурная схема управления первичной профсоюзной организацией в ОАО «Газ»
+							<div class="text-content">
+								<h2>Профсоюзная организация Горьковского автозавода объявляет с 10 сентября по 6 октября 2024 года творческий конкурс с одноименным названием!</h2>
+								<p>Профсоюзная организация Горьковского автозавода объявляет с <strong>10 сентября по 6 октября 2024 года</strong> творческий конкурс с одноименным названием!</p>
+
+								<p>Для участия в конкурсе нужно прислать на <strong>вайбер/телеграмм +79519177413</strong> фото вашей семьи, занятой общим трудом, и четверостишие своего сочинения (<strong>строго 4 строчки</strong>), в котором бы были зарифмованы не менее двух из перечисленных далее слов: <strong>ПРОФСОЮЗ, СЕМЬЯ, ТРУД, ОКТЯБРЬ, СЕМЬ!</strong></p>
+
+								<p>В заявке на участие необходимо указать: <strong>ФИО, номер профсоюзного билета, место работы, телефон для связи</strong></p>
+
+								<blockquote>Количество творческих работ от одного члена профсоюза не ограничено!</blockquote>
+
+								<p>Все конкурсные работы будут выставлены в нашей группе ВКонтакте для голосования.</p>
+
+								<p>7 октября состоится подведение итогов: одного победителя определит комиссия по организационной работе, второго определит результат интернет-голосования.</p>
+
+								<p>Комиссия оставляет за собой право учреждения дополнительных номинаций.</p>
+
+								<p>Победители конкурса будут награждены дипломами и памятными подарками.</p>
+							</div>
+							<div class="gallery gallery--grid">
+								<div class="gallery__items items grid grid--4" role="region" aria-label="Галерея">
+									<script>
+										const galleryData = [
+											{ title: "Изображение 1", imgSrc: "./../../img/gallery__item-1.png"},
+											{ title: "Изображение 2", imgSrc: "./../../img/gallery__item-2.png"},
+											{ title: "Изображение 3", imgSrc: "./../../img/gallery__item-3.png"},
+											{ title: "Изображение 4", imgSrc: "./../../img/gallery__item-1.png"},
+											{ title: "Изображение 5", imgSrc: "./../../img/gallery__item-2.png"},
+											{ title: "Изображение 6", imgSrc: "./../../img/gallery__item-3.png"},
+											{ title: "Изображение 7", imgSrc: "./../../img/gallery__item-1.png"},
+											{ title: "Изображение 8", imgSrc: "./../../img/gallery__item-2.png"},
+										];
+									
+										const galleryContent = document.querySelector('.organization .gallery__items');
+									
+										galleryData.forEach(item => {
+											const galleryItem = `
+												<a class="gallery__item hover-img img" href="${item.imgSrc}" data-fancybox="gallery" data-caption="${item.title}">
+													<img data-src="${item.imgSrc}" class="lazyload" alt="${item.title}" title="${item.title}" role="img" />
 												</a>
-											</ul>
-										</div>
-										<div class="structure__item" id="structure__item-2">
-											<h3 class="structure__item-title">Подразделения</h3>
-											<ul class="structure__item-list">
-												<a href="./files/file.pdf" download class="structure__item-list-inner">Подразделения первичной профсоюзной организацией в ОАО «Газ»</a>
-											</ul>
-										</div>
-										<div class="structure__item" id="structure__item-3">
-											<h3 class="structure__item-title">Профком</h3>
-											<ul class="structure__item-list">
-												<a href="./files/file.pdf" download class="structure__item-list-inner">Профком первичной профсоюзной организацией в ОАО «Газ»</a>
-											</ul>
-										</div>
-										<div class="structure__item" id="structure__item-4">
-											<h3 class="structure__item-title">Президиум</h3>
-											<ul class="structure__item-list">
-												<a href="./files/file.pdf" download class="structure__item-list-inner">Президиум первичной профсоюзной организацией в ОАО «Газ»</a>
-											</ul>
-										</div>
-										<div class="structure__item" id="structure__item-5">
-											<h3 class="structure__item-title">План работы Профкома ППО в ОАО “ГАЗ”</h3>
-											<ul class="structure__item-list">
-												<a href="./files/file.pdf" download class="structure__item-list-inner">Перспективный план на 2024 год</a>
-												<a href="./files/file.pdf" download class="structure__item-list-inner">Перспективный план на 2024 год</a>
-												<a href="./files/file.pdf" download class="structure__item-list-inner">Перспективный план на 2024 год</a>
-												<a href="./files/file.pdf" download class="structure__item-list-inner">Перспективный план на 2024 год</a>
-												<a href="./files/file.pdf" download class="structure__item-list-inner">Перспективный план на 2024 год</a>
-												<a href="./files/file.pdf" download class="structure__item-list-inner">Перспективный план на 2024 год</a>
-											</ul>
-										</div>
-										<div class="structure__item" id="structure__item-6">
-											<h3 class="structure__item-title">Гимны</h3>
-											<ul class="structure__item-list">
-												<a href="./files/file.pdf" download class="structure__item-list-inner">Гимн №1</a>
-												<a href="./files/file.pdf" download class="structure__item-list-inner">Гимн №2</a>
-											</ul>
-										</div>
-										<div class="structure__item" id="structure__item-7">
-											<h3 class="structure__item-title">Комиссия Профкома ППО в ОАО “ГАЗ”</h3>
-											<div class="structure__item-list-wrapper">
-												<div class="structure__item-list-wrapper-item">
-													<h4 class="structure__item-list-title">Комиссия по организационной работе</h4>
-													<ul class="structure__item-list">
-														<a href="./files/file.pdf" download class="structure__item-list-inner">Положение о комиссии</a>
-														<a href="./files/file.pdf" download class="structure__item-list-inner">Состав комиссии</a>
-														<a href="./files/file.pdf" download class="structure__item-list-inner">Положение о смотре-конкурсе "Лучшая профгруппа" (2020-2024гг.)</a>
-														<a href="./files/file.pdf" download class="structure__item-list-inner">Положение о смотре-конкурсе "Лучшая цеховая организация" (2020-2024гг.)</a>
-														<a href="./files/file.pdf" download class="structure__item-list-inner">Положение о структурных подразделениях ППО</a>
-														<a href="./files/file.pdf" download class="structure__item-list-inner">Методика "ВЕДЕНИЕ ДЕЛОПРОИЗВОДСТВА В ПРОФСОЮЗНОЙ ОРГАНИЗАЦИИ"</a>
-													</ul>
-												</div>
-												<div class="structure__item-list-wrapper-item">
-													<h4 class="structure__item-list-title">Комиссия по работе с молодежью</h4>
-													<ul class="structure__item-list">
-														<a href="./files/file.pdf" download class="structure__item-list-inner">Положение о комиссии</a>
-														<a href="./files/file.pdf" download class="structure__item-list-inner">Состав комиссии</a>
-													</ul>
-												</div>
-												<div class="structure__item-list-wrapper-item">
-													<h4 class="structure__item-list-title">Отдел охраны труда и социально-трудовых отношений</h4>
-													<ul class="structure__item-list">
-														<a href="./files/file.pdf" download class="structure__item-list-inner">Положение о комиссии</a>
-														<a href="./files/file.pdf" download class="structure__item-list-inner">Состав комиссии</a>
-														<a href="./files/file.pdf" download class="structure__item-list-inner">Положение о смотре-конкурсе "Лучшая профгруппа" (2020-2024гг.)</a>
-														<a href="./files/file.pdf" download class="structure__item-list-inner">Положение о смотре-конкурсе "Лучшая цеховая организация" (2020-2024гг.)</a>
-														<a href="./files/file.pdf" download class="structure__item-list-inner">Положение о структурных подразделениях ППО</a>
-														<a href="./files/file.pdf" download class="structure__item-list-inner">Методика "ВЕДЕНИЕ ДЕЛОПРОИЗВОДСТВА В ПРОФСОЮЗНОЙ ОРГАНИЗАЦИИ"</a>
-													</ul>
-												</div>
-											</div>
-										</div>
-										<div class="structure__item" id="structure__item-8">
-											<h3 class="structure__item-title">Молодежный совет</h3>
-											<div class="structure__item-list-wrapper">
-												<div class="structure__item-list-wrapper-item">
-													<h4 class="structure__item-list-title">Комиссия по организационной работе</h4>
-													<ul class="structure__item-list">
-														<a href="./files/file.pdf" download class="structure__item-list-inner">Положение о комиссии</a>
-														<a href="./files/file.pdf" download class="structure__item-list-inner">Состав комиссии</a>
-														<a href="./files/file.pdf" download class="structure__item-list-inner">Положение о смотре-конкурсе "Лучшая профгруппа" (2020-2024гг.)</a>
-														<a href="./files/file.pdf" download class="structure__item-list-inner">Положение о смотре-конкурсе "Лучшая цеховая организация" (2020-2024гг.)</a>
-														<a href="./files/file.pdf" download class="structure__item-list-inner">Положение о структурных подразделениях ППО</a>
-														<a href="./files/file.pdf" download class="structure__item-list-inner">Методика "ВЕДЕНИЕ ДЕЛОПРОИЗВОДСТВА В ПРОФСОЮЗНОЙ ОРГАНИЗАЦИИ"</a>
-													</ul>
-												</div>
-												<div class="structure__item-list-wrapper-item">
-													<h4 class="structure__item-list-title">Комиссия по работе с молодежью</h4>
-													<ul class="structure__item-list">
-														<a href="./files/file.pdf" download class="structure__item-list-inner">Положение о комиссии</a>
-														<a href="./files/file.pdf" download class="structure__item-list-inner">Состав комиссии</a>
-													</ul>
-												</div>
-												<div class="structure__item-list-wrapper-item">
-													<h4 class="structure__item-list-title">Отдел охраны труда и социально-трудовых отношений</h4>
-													<ul class="structure__item-list">
-														<a href="./files/file.pdf" download class="structure__item-list-inner">Положение о комиссии</a>
-														<a href="./files/file.pdf" download class="structure__item-list-inner">Состав комиссии</a>
-														<a href="./files/file.pdf" download class="structure__item-list-inner">Положение о смотре-конкурсе "Лучшая профгруппа" (2020-2024гг.)</a>
-														<a href="./files/file.pdf" download class="structure__item-list-inner">Положение о смотре-конкурсе "Лучшая цеховая организация" (2020-2024гг.)</a>
-														<a href="./files/file.pdf" download class="structure__item-list-inner">Положение о структурных подразделениях ППО</a>
-														<a href="./files/file.pdf" download class="structure__item-list-inner">Методика "ВЕДЕНИЕ ДЕЛОПРОИЗВОДСТВА В ПРОФСОЮЗНОЙ ОРГАНИЗАЦИИ"</a>
-													</ul>
-												</div>
-											</div>
-										</div>
-									</div>
+											`;
+											galleryContent.innerHTML += galleryItem;
+										});
+									</script>
 								</div>
+								<a href="#" class="get-more_btn">больше фото</a>
 							</div>
 						</div>
 					</div>

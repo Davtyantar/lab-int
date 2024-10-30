@@ -70,17 +70,6 @@ function initModalPlaceholder(prefix = '.modal__') {
 	});
 }
 
-function pageUp() {
-	const pageUpBtn = document.getElementById('pageup'),
-		topShow = 280,
-		scrollPosition = window.scrollY,
-		documentFooter = document.querySelector('footer'),
-		footerHeight = documentFooter ? documentFooter.offsetHeight : 0;
-	if (!pageUpBtn) return;
-	if (scrollPosition > topShow && scrollPosition < document.body.offsetHeight - window.innerHeight - footerHeight) pageUpBtn.classList.add(ACTIVE_CLASS);
-	else pageUpBtn.classList.remove(ACTIVE_CLASS);
-}
-
 function css(element, css) {
 	for (var style in css) {
 		element.style[style] = css[style];
@@ -265,16 +254,11 @@ const TEMPLATE_PATH = '/';
 
 document.addEventListener('DOMContentLoaded', function () {
 	clickAnchors();
-	pageUp();
 	globalFunctions();
 	checkAgree();
 	initModalPlaceholder();
-	// loadScript('//api-maps.yandex.ru/2.1/?lang=ru_RU', setMap);
 });
 
-document.addEventListener('scroll', function () {
-	pageUp();
-});
 
 function globalFunctions() {
 	setCustomSelect();

@@ -8,27 +8,15 @@
                 <span class="header__title">первичная профсоюзная организация горьковского автозавода</span>
                 <nav class="header__nav nav" role="navigation" aria-label="Главное меню" data-move="991" data-to="mobile-menu_nav">
                     <ul class="nav__list">
-                        <li class="nav__item">
-                            <a href="./organization.html" class="nav__link nav__link--current" title="Перейти к разделу Организация" aria-label="Раздел Организация">Организация</a>
-                        </li>
-                        <li class="nav__item">
-                            <a href="#" class="nav__link" title="Перейти к разделу Проекты" aria-label="Раздел Проекты">Проекты</a>
-                        </li>
-                        <li class="nav__item">
-                            <a href="#" class="nav__link" title="Перейти к разделу Пресс-центр" aria-label="Раздел Пресс-центр">Пресс-центр</a>
-                        </li>
-                        <li class="nav__item">
-                            <a href="#" class="nav__link" title="Перейти к разделу Акции" aria-label="Раздел Акции">Акции</a>
-                        </li>
-                        <li class="nav__item">
-                            <a href="#" class="nav__link" title="Перейти к разделу Музей" aria-label="Раздел Музей">Музей</a>
-                        </li>
-                        <li class="nav__item">
-                            <a href="#" class="nav__link" title="Перейти к разделу Профсоюз в лицах" aria-label="Раздел Профсоюз в лицах">Профсоюз в лицах</a>
-                        </li>
-                        <li class="nav__item">
-                            <a href="#" class="nav__link" title="Перейти к разделу Контакты" aria-label="Раздел Контакты">Контакты</a>
-                        </li>
+                        <li class="nav__item"><a href="./organization.html" class="nav__link nav__link--current" title="Перейти к разделу Организация" aria-label="Раздел Организация">Организация</a></li>
+                        <li class="nav__item"><a href="./projects.html" class="nav__link" title="Перейти к разделу Проекты" aria-label="Раздел Проекты">Проекты</a></li>
+                        <li class="nav__item"><a href="./press-center.html" class="nav__link" title="Перейти к разделу Пресс-центр" aria-label="Раздел Пресс-центр">Пресс-центр</a></li>
+                        <li class="nav__item"><a href="./promotions.html" class="nav__link" title="Перейти к разделу Акции" aria-label="Раздел Акции">Акции</a></li>
+                        <li class="nav__item"><a href="#" class="nav__link" title="Перейти к разделу Музей" aria-label="Раздел Музей">Музей</a></li>
+                        <li class="nav__item"><a href="#" class="nav__link" title="Перейти к разделу Профсоюз в лицах" aria-label="Раздел Профсоюз в лицах">Профсоюз в&nbsp;лицах</a></li>
+                        <li class="nav__item"><a href="./contacts.html" class="nav__link" title="Перейти к разделу Контакты" aria-label="Раздел Контакты">Контакты</a></li>
+
+                        <li class="open-page-menu">Страницы</li>
                     </ul>
                 </nav>
             </div>
@@ -40,16 +28,18 @@
                     data-content='
                     "title":"Напишите нам",
                     "subtitle":"Оставьте сообщение, и мы ответим вам в кратчайшие сроки.",
+                    "akciya":"50%",
+                    "status":"В наличии",
+                    "price":"5000 руб.",
                     "theme":"Письмо"'
                     >
 
 					<svg class="icon"><use xlink:href="./img/sprite.svg#email"></use></svg>
 					<span>Напишите нам</span>
 				</button>
-                
                 <div class="header__search header-search">
-                    <form action="" class="header-search__form" role="search" aria-label="Поиск по сайту">
-                        <input type="text" class="header-search__input" placeholder="Поиск по сайту" aria-label="Введите текст для поиска">
+                    <form action="./search.html" class="search__form" role="search" aria-label="Поиск по сайту">
+                        <input type="text" class="search__input" placeholder="Поиск по сайту" aria-label="Введите текст для поиска">
 						<button type="submit"><svg class="icon"><use xlink:href="./img/sprite.svg#search"></use></svg></button>
                     </form>
                 </div>
@@ -75,8 +65,8 @@
             </div>
         </div>
     </div>
-</header>
- 
+</header> 
+
 <!-- Мобильное меню -->
     @include("./../components/mobile-menu.html")
 <!-- Мобильное меню -->

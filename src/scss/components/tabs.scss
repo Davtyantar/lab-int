@@ -1,0 +1,48 @@
+.tabs-head {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 10px 30px;
+    margin-bottom: 40px;
+    .tab {
+        position: relative;
+        font-weight: 700;
+        font-size: 22px;
+        @include mobile {
+            font-size: 16px;
+        }
+        line-height: 130%;
+        color: $clr-gray-light;
+        cursor: pointer;
+
+        transition: color $t-base, border $t-base;
+
+        &.is-active {
+            color: $clr-primary;
+        }
+        @include any-hover {
+
+            &::before {
+                content: "";
+                position: absolute;
+                bottom: -5px;
+                width: 100%;
+                border-bottom: 2px solid $clr-primary;
+                transform: translateY(10px);
+                opacity: 0;
+                visibility: hidden;
+                transition: all $t-base;
+            }
+            &.is-active {
+                &::before {
+                    transform: translateY(0px);
+                    opacity: 1;
+                    visibility: visible;
+                }
+            }
+            &:hover {
+                color: $clr-primary;
+            }
+        }
+    }
+}

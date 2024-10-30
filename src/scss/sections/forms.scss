@@ -68,6 +68,7 @@
 #callback_form {
     padding: 0;
     background-color: transparent;
+    width: 95% !important;
     @include min-mobile {
         max-width: 450px;
     }

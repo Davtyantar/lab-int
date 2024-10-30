@@ -1,0 +1,35 @@
+.search {
+    &__form {
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        gap: 5px;
+        
+        &:not(.search-result &) {
+            padding: 0 15px;
+            background: $bgclr-search;
+            border-radius: $btn-border-radius;
+            border: 1px solid transparent;
+        }
+
+        &:not(.search-result &):has(input:focus) {
+            border-color: $clr-primary;
+        }
+        button[type="submit"] {
+            & > svg {
+                width: 18px;
+                height: 18px;
+            }
+        }
+    }
+    &__input {
+        width: 100%;
+        padding: 11px 0;
+        font-family: $second-family;
+        font-size: 14px;
+        line-height: 100%;
+        &::placeholder {
+            color: #a4a7af;
+        }
+    }     
+}

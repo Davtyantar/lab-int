@@ -1,0 +1,13 @@
+.gallery {
+    margin-top: 60px;
+    &__item {
+        aspect-ratio: 1/0.75;
+        max-height: 230px;
+        border-radius: 13px;
+    }
+    @include mobile {
+        .grid {
+            grid-template-columns: repeat(2, minmax(0, 1fr));
+        }
+    }
+}

@@ -43,48 +43,13 @@
                             <div class="rest__items items grid grid--4 mobile-slider">
                                 <script>
                                     const restData = [
-                                        { 
-                                            title: "Санаторий ”Городецкий”",
-                                            imgSrc: "./../../img/rest__image-1.png",
-                                            altText: "Описание изображения",
-                                            link: "/ссылка" 
-                                        },
-                                        { 
-                                            title: "Санаторий им.ВЦСПС",
-                                            imgSrc: "./../../img/rest__image-2.png",
-                                            altText: "Описание изображения",
-                                            link: "/ссылка" 
-                                        },
-                                        { 
-                                            title: "”АВТОМОБИЛИСТ”",
-                                            imgSrc: "./../../img/rest__image-3.png",
-                                            altText: "Описание изображения",
-                                            link: "/ссылка" 
-                                        },
-                                        { 
-                                            title: "База отдыха ”СУРСКИЕ ЗОРИ”",
-                                            imgSrc: "./../../img/rest__image-4.png",
-                                            altText: "Описание изображения",
-                                            link: "/ссылка" 
-                                        },
-                                        { 
-                                            title: "Санаторий ”ЧУВАШИЯ”",
-                                            imgSrc: "./../../img/rest__image-5.png",
-                                            altText: "Описание изображения",
-                                            link: "/ссылка" 
-                                        },
-                                        { 
-                                            title: "ДОЛ ”КРАСНЫЙ ПЛЕС”",
-                                            imgSrc: "./../../img/rest__image-6.png",
-                                            altText: "Описание изображения",
-                                            link: "/ссылка" 
-                                        },
-                                        { 
-                                            title: "СОЛ ”РОМАНТИКА”",
-                                            imgSrc: "./../../img/rest__image-7.png",
-                                            altText: "Описание изображения",
-                                            link: "/ссылка" 
-                                        },
+                                        { title: "Санаторий ”Городецкий”", imgSrc: "./../../img/rest__image-1.png"},
+                                        { title: "Санаторий им.ВЦСПС", imgSrc: "./../../img/rest__image-2.png"},
+                                        { title: "”АВТОМОБИЛИСТ”", imgSrc: "./../../img/rest__image-3.png"},
+                                        { title: "База отдыха ”СУРСКИЕ ЗОРИ”", imgSrc: "./../../img/rest__image-4.png"},
+                                        { title: "Санаторий ”ЧУВАШИЯ”", imgSrc: "./../../img/rest__image-5.png"},
+                                        { title: "ДОЛ ”КРАСНЫЙ ПЛЕС”", imgSrc: "./../../img/rest__image-6.png"},
+                                        { title: "СОЛ ”РОМАНТИКА”", imgSrc: "./../../img/rest__image-7.png"},
                                     ];
                                 
                                     const restContent = document.querySelector('.rest__items');
@@ -93,10 +58,10 @@
                                         const restItem = `
                                             <article class="rest__item" role="article">
                                                 <div class="rest__image">
-                                                    <img data-src="${project.imgSrc}" class="lazyload" alt="${project.altText}">
+                                                    <img data-src="${project.imgSrc}" class="lazyload" alt="${project.title}">
                                                 </div>
-                                                <a href="${project.link}" class="rest__link" target="_blank" title="${project.title}">
-                                                    <h3 class="rest__subtitle item__title">${project.title}</h3>
+                                                <a href="#" class="rest__link" target="_blank" title="${project.title}">
+                                                    <h3 class="rest__title item__title">${project.title}</h3>
                                                 </a>
                                             </article>
                                         `;

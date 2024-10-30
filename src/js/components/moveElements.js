@@ -1,4 +1,4 @@
-export function moveElements() {
+export function initMoveElements() {
     const prefix = 'movedIn';
     const windowWidth = window.innerWidth;
     
@@ -25,7 +25,5 @@ export function moveElements() {
     }
 }
 
-export function initMoveElements() {
-    window.addEventListener('resize', moveElements);
-    document.addEventListener('DOMContentLoaded', moveElements);
-}
+window.addEventListener('resize', initMoveElements);
+document.addEventListener('DOMContentLoaded', initMoveElements);

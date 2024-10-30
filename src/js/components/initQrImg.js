@@ -19,3 +19,5 @@ export const initQrImg = () => {
         overlay.innerHTML = '';
     });
 };
+
+document.addEventListener('DOMContentLoaded', initQrImg);

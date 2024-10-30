@@ -33,7 +33,7 @@ h1, h2, h3, h4, h5, h6 {
 }
   
 h1, .h1 {
-// 32 - 80 375 - 1920
+    // 32 - 80 375 - 1920
     &:not(.page-title) {
         font-size: clamp(2rem, 1.272rem + 3.11vw, 5rem);
     }
@@ -42,5 +42,15 @@ h1, .h1 {
 h2, .h2, .section__title {
     // 24 - 32 375 - 1920
     font-size: clamp(1.5rem, 1.379rem + 0.52vw, 2rem);
+}
+
+h3, .h3 {
+    // 18 - 24 375 - 1920
+    font-size: clamp(1.125rem, 1.034rem + 0.39vw, 1.5rem);
+}
+
+.h4 {
+    // 16 - 20 375 - 19220
+    font-size: clamp(1rem, 0.939rem + 0.26vw, 1.25rem);
 }
   

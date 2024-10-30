@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="ru">
+		@include("./../common/head.html", { "title": "Билет 090" })
+	<body>
+		<div class="page-wrapper">
+			<!-- Шапка -->
+			@include("./../common/header.html")
+			<!-- Шапка -->
+
+			<main class="main">
+				<div class="page-heading">
+					<div class="container">
+						<div class="breadcrumbs" itemscope itemtype="https://schema.org/BreadcrumbList">
+                            <ul class="breadcrumbs__list">
+                                <li class="breadcrumbs__item" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+                                    <a href="/" class="breadcrumbs__item-content" itemprop="item" title="Перейти на главную страницу" aria-label="Главная">
+                                        <span itemprop="name">Главная</span>
+                                    </a>
+                                    <meta itemprop="position" content="1" />
+                                </li>
+                                <li class="breadcrumbs__item" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+                                    <a href="/" class="breadcrumbs__item-content" itemprop="item" title="Перейти на главную страницу" aria-label="Главная">
+                                        <span itemprop="name">Проекты</span>
+                                    </a>
+                                    <meta itemprop="position" content="2" />
+                                </li>
+                                <li class="breadcrumbs__item" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+                                    <span class="breadcrumbs__item-content" itemprop="name">Билет 090</span>
+                                    <meta itemprop="position" content="3" />
+                                </li>
+                            </ul>
+                        </div>
+						<div class="page-title__wrapper">
+							<h1 class="page-title">Билет 090</h1>
+						</div>
+					</div>
+				</div>
+				<section class="bilet">
+					<div class="container">
+                        <div class="section__content">
+                            <div class="bilet__items items grid grid--2">
+                                <script>
+                                    const bilet90Data = [
+                                            {   
+                                                name: "Антонов Анатолий Евгеньевич",
+                                                position: "Наладчик автоматических линий и агрегатных станков БЕ ПААГ ПАО «ГАЗ»",
+                                                imgSrc: "./../../img/bilet-090-item-1-img.png",
+                                                docImgSrc: "./../../img/bilet-090-item-1-img-small.png",
+                                                workHistory: "1983",
+                                                membership: "1983",
+                                                id: "05798090"
+                                            },
+                                            {   
+                                                name: "Будюк Сергей Федорович",
+                                                position: "Бригадир на участках основного производства БЕ ПААГ ПАО «ГАЗ»",
+                                                imgSrc: "./../../img/bilet-090-item-2-img.png",
+                                                docImgSrc: "./../../img/bilet-090-item-2-img-small.png",
+                                                workHistory: "2012",
+                                                membership: "2016",
+                                                id: "221090"
+                                            },
+                                            {   
+                                                name: "Тенькова Татьяна Викторовна",
+                                                position: "Председатель профкома VW/Skoda ООО «Автозавод «ГАЗ»",
+                                                imgSrc: "./../../img/bilet-090-item-3-img.png",
+                                                docImgSrc: "./../../img/bilet-090-item-3-img-small.png",
+                                                workHistory: "1990",
+                                                membership: "1990",
+                                                id: "219090"
+                                            },
+                                            {   
+                                                name: "Хазов Сергей Александрович",
+                                                position: "выбивальщик Литейного цеха №8 БЕ МП ПАО «ГАЗ»",
+                                                imgSrc: "./../../img/bilet-090-item-4-img.png",
+                                                docImgSrc: "./../../img/bilet-090-item-4-img-small.png",
+                                                workHistory: "1998",
+                                                membership: "1998",
+                                                id: "037090"
+                                            },
+                                            {   
+                                                name: "Орлова Татьяна Николаевна",
+                                                position: "ведущий специалист Управления БЕ МП ПАО «ГАЗ»",
+                                                imgSrc: "./../../img/bilet-090-item-5-img.png",
+                                                docImgSrc: "./../../img/bilet-090-item-5-img-small.png",
+                                                workHistory: "2006",
+                                                membership: "2006",
+                                                id: "051090"
+                                            },
+                                            {   
+                                                name: "Рябова Елена Владимировна",
+                                                position: "маляр цеха окрасочных работ кузовов грузовых автомобилей ОП ООО «Автозавод «ГАЗ»",
+                                                imgSrc: "./../../img/bilet-090-item-6-img.png",
+                                                docImgSrc: "./../../img/bilet-090-item-6-img-small.png",
+                                                workHistory: "2019",
+                                                membership: "2019",
+                                                id: "224090"
+                                            },
+                                            {   
+                                                name: "Лебедева Елена Юрьевна",
+                                                position: "Секретарь руководителя группы документационного обеспечения БЕ ПЦЛ ПАО «ГАЗ»",
+                                                imgSrc: "./../../img/bilet-090-item-7-img.png",
+                                                docImgSrc: "./../../img/bilet-090-item-7-img-small.png",
+                                                workHistory: "1988",
+                                                membership: "1988",
+                                                id: "017090"
+                                            },
+                                            {   
+                                                name: "Смирнова Елена Владимировна",
+                                                position: "Главный специалист ПАО «ГАЗ»",
+                                                imgSrc: "./../../img/bilet-090-item-8-img.png",
+                                                docImgSrc: "./../../img/bilet-090-item-8-img-small.png",
+                                                workHistory: "1990",
+                                                membership: "1990",
+                                                id: "57098090"
+                                            },
+                                            {   
+                                                name: "Баранцев Андрей Александрович",
+                                                position: "Наладчик цеха рулевых управлений и термической обработки БЕ ПШД ПАО «ГАЗ»",
+                                                imgSrc: "./../../img/bilet-090-item-9-img.png",
+                                                docImgSrc: "./../../img/bilet-090-item-9-img-small.png",
+                                                workHistory: "1990",
+                                                membership: "1983",
+                                                id: "00701090"
+                                            },
+                                    ]
+                                    const biletItemContent = document.querySelector('.bilet__items');
+
+                                    bilet90Data.forEach(member => {
+                                        const biletTabItem  = `
+                                        <div class="bilet__item">
+                                            <div class="item__img img">
+                                                <img data-src="${member.imgSrc}" class="lazyload" alt="${member.name}" title="${member.name}">
+                                            </div>
+                                            <div class="item__info">
+                                                <div class="info__head">
+                                                    <div class="item__title">${member.name}</div>
+                                                    <div class="item__subtitle">${member.position}</div>
+                                                </div>
+                                                <div class="info__foot">
+                                                    <a class="info__foot-img hover-img img" href="${member.docImgSrc}" data-caption="${member.name}" data-fancybox="gallery">
+                                                        <img data-src="${member.docImgSrc}" class="lazyload" title="${member.name}" alt="${member.name}" />
+                                                    </a>
+                                                    <div class="info__foot-numbers">
+                                                        <span class="work-history">на заводе с ${member.workHistory}г.</span>
+                                                        <span class="union-membership">в профсоюзе с ${member.membership}г.</span>
+                                                        <span class="union-id">профбилет №${member.id}</span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        `;
+                                        biletItemContent.innerHTML += biletTabItem;
+                                    });
+                                </script>
+                            </div>
+                        </div>
+                    </div>
+				</section>
+			</main>
+			
+			<!-- Подвал -->
+				@include("./../common/footer.html")
+			<!-- Подвал -->
+		</div>
+	</body>
+</html>

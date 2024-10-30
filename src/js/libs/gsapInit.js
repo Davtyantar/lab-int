@@ -6,7 +6,7 @@ export function initGsap() {
 
     const itemBlocks = document.querySelectorAll('.items, .swiper-wrapper');
     const heroBgImage = document.querySelector('.hero__bg > img');
-    const headings = document.querySelectorAll('h1, h2');
+    const headings = document.querySelectorAll('h1, h2.section__title');
 
     headings.forEach((heading) => {
         gsap.from(heading, {
@@ -32,7 +32,7 @@ export function initGsap() {
             stagger: 0.15,
             scrollTrigger: {
                 trigger: block,
-                start: 'top 90%',
+                start: 'top 100%',
                 end: 'bottom 80%',
             },
         });

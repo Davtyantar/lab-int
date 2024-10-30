@@ -20,3 +20,6 @@ export const pageUp = () => {
 		});
 	});
 };
+
+
+document.addEventListener('scroll', pageUp);

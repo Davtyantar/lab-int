@@ -93,11 +93,11 @@
                                         
                                             const historyContent = document.querySelector('.history__items');
                                         
-                                            historyData.forEach(project => {
+                                            historyData.forEach(item => {
                                                 const historyItem = `
                                                     <article class="history__item" role="article">
-                                                        <a href="${project.link}" class="history__link" target="_blank" title="${project.title}">
-                                                            <h3 class="history__subtitle item__title">${project.title}</h3>
+                                                        <a href="${item.link}" class="history__link" target="_blank" title="${item.title}">
+                                                            <h3 class="history__title item__title">${item.title}</h3>
                                                         </a>
                                                     </article>
                                                 `;

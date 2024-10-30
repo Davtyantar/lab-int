@@ -1,70 +1,36 @@
 <section class="chronicle" aria-labelledby="chronicle-title">
-    <div class="chronicle__container container">
+    <div class="container">
         <div class="chronicle__heading section__heading">
             <h2 class="chronicle__title section__title" id="chronicle-title">Профсоюзная хроника</h2>
             <a href="/" class="see-more"><span>вся хроника</span></a>
         </div>
-        <div class="chronicle__content section__content">
+        <div class="section__content">
             <div class="chronicle__grid chronicle__items grid grid--4 items mobile-col">
                 <script>
                     const chronicleData = [
-                        { 
-                            title: "Приглашаем Вас в ДК \"Красное Сормово\" на криминальную комедию \"Дорогая Памела\".", 
-                            imgSrc: "./../../img/chronicle__image-1.png", 
-                            altText: "Описание изображения", 
-                            date: "12.10.2024", 
-                            link: "/", 
+                        {  title: "Приглашаем Вас в ДК \"Красное Сормово\" на криминальную комедию \"Дорогая Памела\".", 
+                           imgSrc: "./../../img/chronicle__image-1.png", date: "12.10.2024", 
                         },
-                        { 
-                            title: "11 и 25 октября 2024 года в 19:00 час. Приглашаем Вас в Театр на Счастливой на спектакль \"Дыроватый камень\".", 
-                            imgSrc: "./../../img/chronicle__image-2.png", 
-                            altText: "Описание изображения",  
-                            date: "11.10.2024", 
-                            link: "/", 
+                        {  title: "11 и 25 октября 2024 года в 19:00 час. Приглашаем Вас в Театр на Счастливой на спектакль \"Дыроватый камень\".", 
+                           imgSrc: "./../../img/chronicle__image-2.png", date: "11.10.2024", 
                         },
-                        { 
-                            title: "Представляем нового участника проекта \"Твои таланты, Профсоюз!\" — Разумову Елену Юрьевну (ФС АЗ \"ГАЗ\").", 
-                            imgSrc: "./../../img/chronicle__image-3.png", 
-                            altText: "Описание изображения", 
-                            date: "12.10.2024", 
-                            link: "/", 
+                        {  title: "Представляем нового участника проекта \"Твои таланты, Профсоюз!\" — Разумову Елену Юрьевну (ФС АЗ \"ГАЗ\").", 
+                           imgSrc: "./../../img/chronicle__image-3.png", date: "12.10.2024", 
                         },
-                        { 
-                            title: "Члены профсоюза Завода мостов и агрегатов провели акцию \"Достойный труд — основы благополучия семьи!\".", 
-                            imgSrc: "./../../img/chronicle__image-4.png", 
-                            altText: "Описание изображения",  
-                            date: "07.10.2024", 
-                            link: "/", 
+                        {  title: "Члены профсоюза Завода мостов и агрегатов провели акцию \"Достойный труд — основы благополучия семьи!\".", 
+                           imgSrc: "./../../img/chronicle__image-4.png", date: "07.10.2024", 
                         },
-                        { 
-                            title: "В штатном режиме работает столовая: №73 — Нижегородские моторы.", 
-                            imgSrc: "./../../img/chronicle__image-5.png", 
-                            altText: "Описание изображения",  
-                            date: "05.10.2024", 
-                            link: "/", 
+                        {  title: "В штатном режиме работает столовая: №73 — Нижегородские моторы.", 
+                           imgSrc: "./../../img/chronicle__image-5.png", date: "05.10.2024", 
                         },
-                        { 
-                            title: "На рабочую субботу Администрацией завода заказан электротранспорт.", 
-                            imgSrc: "./../../img/chronicle__image-6.png", 
-                            altText: "Описание изображения", 
-                            date: "05.10.2024", 
-                            link: "/", 
+                        {   title: "На рабочую субботу Администрацией завода заказан электротранспорт.", 
+                            imgSrc: "./../../img/chronicle__image-6.png", date: "05.10.2024", 
                         },
-                        { 
-                            title: "В профсоюзной организации Прессово-рамного завода завершилась отчетно-выборная кампания в цеховых организациях.", 
-                            imgSrc: "./../../img/chronicle__image-7.png", 
-                            altText: "Описание изображения", 
-                            date: "04.10.2024", 
-                            link: "/", 
-                            ariaLabel: "Подробнее о завершении отчетно-выборной кампании в Прессово-рамном заводе", 
-                            titleAttr: "Отчетно-выборная кампания в Прессово-рамном заводе"
+                        {   title: "В профсоюзной организации Прессово-рамного завода завершилась отчетно-выборная кампания в цеховых организациях.", 
+                            imgSrc: "./../../img/chronicle__image-7.png", date: "04.10.2024", 
                         },
-                        { 
-                            title: "Гипермаркет \"Лента\" предлагает воспользоваться купонами на скидки.", 
-                            imgSrc: "./../../img/chronicle__image-8.png", 
-                            altText: "Описание изображения", 
-                            date: "03.10.2024", 
-                            link: "/", 
+                        {   title: "Гипермаркет \"Лента\" предлагает воспользоваться купонами на скидки.", 
+                            imgSrc: "./../../img/chronicle__image-8.png", date: "03.10.2024", 
                         }
                     ];
                 
@@ -73,9 +39,9 @@
                     chronicleData.forEach(item => {
                         const chronicleItem = `
                             <article class="chronicle__item" role="article">
-                                <a href="${item.link}" class="item__link" target="_blank"  title="${item.title}">
+                                <a href="#" class="item__link" target="_blank"  title="${item.title}">
                                     <div class="item__img img">
-                                        <img data-src="${item.imgSrc}" class="lazyload" alt="${item.altText}">
+                                        <img data-src="${item.imgSrc}" class="lazyload" alt="${item.title}">
                                     </div>
                                     <div class="item__description">
                                         <h3 class="item__title">${item.title}</h3>

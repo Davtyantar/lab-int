@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="ru">
+		@include("./../common/head.html", { "title": "Поздравляем" })
+	<body>
+		<div class="page-wrapper">
+			<!-- Шапка -->
+			@include("./../common/header.html")
+			<!-- Шапка -->
+
+			<main class="main">
+				<div class="page-heading">
+					<div class="container">
+						<div class="breadcrumbs" itemscope itemtype="https://schema.org/BreadcrumbList">
+							<ul class="breadcrumbs__list">
+								<li class="breadcrumbs__item" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+									<a href="/" class="breadcrumbs__item-content" itemprop="item" title="Перейти на главную страницу" aria-label="Главная">
+										<span itemprop="name">Главная</span>
+									</a>
+									<meta itemprop="position" content="1" />
+								</li>
+								<li class="breadcrumbs__item" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+									<a href="/organization" class="breadcrumbs__item-content" itemprop="item" title="Перейти в раздел Организация" aria-label="Организация">
+										<span itemprop="name">Проекты</span>
+									</a>
+									<meta itemprop="position" content="2" />
+								</li>
+								<li class="breadcrumbs__item" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+									<span class="breadcrumbs__item-content" itemprop="name">Поздравляем</span>
+									<meta itemprop="position" content="3" />
+								</li>
+							</ul>
+						</div>
+						<div class="page-title__wrapper">
+							<h1 class="page-title">Поздравляем</h1>
+						</div>
+					</div>
+				</div>
+				<section class="congrats">
+					<div class="container">
+						<div class="section_content">
+							<div class="congrats__grid congrats__items items">
+								<script>
+									const congratsData = [
+										{ 	
+											title: "Коллектив ОНМСиИТД Технологического Управления от всей души поздравляет с Днем Рождения Главного специалиста <strong>Яцко Алексея 	Геннадьевича!</strong>", 
+											imgSrc: "./../../img/congrats-page-img-6.png",
+										},
+										{ 
+											title: "Коллектив ОНМСиИТД Технологического Управления от всей души поздравляет с Днем рождения <strong>Лапшину Светлану Станиславовну!</strong>",
+										  	imgSrc: "./../../img/congrats-page-img-5.png",
+										}, 
+										{ 
+											title: "Коллектив ОСПУ ООО «ЦИТРБ» сердечно поздравляет Баженову <strong>Елену Владимировну</strong> С ЮБИЛЕЕМ!",
+										  	imgSrc: "./../../img/congrats-page-img-4.png",
+										},
+										{
+											title: "Коллектив ООИ от всей души поздравляет <strong>Ермолаеву Елену Васильевну</strong> С ЮБИЛЕЕМ!",
+										  	imgSrc: "./../../img/congrats-page-img-3.png",
+										},
+										{ 	
+											title: "Коллектив ООИ от всей души поздравляет <strong>Завьялову Ольгу Анатольевну</strong> С ЮБИЛЕЕМ!",
+											imgSrc: "./../../img/congrats-page-img-2.png",
+										},
+										{ 
+											title: "Коллектив ОНМСиИТД Технологического Управления от всей души поздравляет С ДНЕМ РОЖДЕНИЯ <strong>Вахрамову Ольгу Анатольевну!</strong>",
+											imgSrc: "./../../img/congrats-page-img-1.png",
+										},
+									];
+								
+									const congratsContent = document.querySelector('.congrats__items');
+								
+									congratsData.forEach(item => {
+										const competitionItem = `
+											<div class="congrats__item">
+												<div class="congrats__image img">
+													<img data-src="${item.imgSrc}" class="lazyload" alt="${item.title}">
+												</div>
+												<div class="congrats__descr">
+													<div class="congrats__descr-head">
+														<div class="congrats__title item__title">${item.title}</div>
+														<div class="congrats__descr-text">
+															Наш коллектив Вас поздравляет
+															И только лучшего желает!
+															Руководить всегда не просто,
+															Желаем Вам успеха, роста,
+															Всегда великих достижений,
+															Любых проектов воплощений,
+															Здоровья Вам и настроения,
+															Вас поздравляем с днем рождения!!!
+														</div>
+													</div>
+													<span class="congrats__date">17.10.2024</span>
+												</div>
+											</div>
+										`;
+										congratsContent.innerHTML += competitionItem;
+									});
+								</script>
+							</div>
+							@include("./../components/pagination.html")
+						</div>
+					</div>
+				</section>
+			</main>
+			
+			<!-- Подвал -->
+				@include("./../common/footer.html")
+			<!-- Подвал -->
+		</div>
+	</body>
+</html>

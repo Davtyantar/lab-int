@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="ru">
+		@include("./../common/head.html", { "title": "Арест на трое суток за летнюю резину" })
+	<body>
+		<div class="page-wrapper">
+			<!-- Шапка -->
+			@include("./../common/header.html")
+			<!-- Шапка -->
+
+			<main class="main">
+				<div class="page-heading">
+					<div class="container">
+						<div class="breadcrumbs" itemscope itemtype="https://schema.org/BreadcrumbList">
+							<ul class="breadcrumbs__list">
+								<li class="breadcrumbs__item" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+									<a href="/" class="breadcrumbs__item-content" itemprop="item" title="Перейти на главную страницу" aria-label="Главная">
+										<span itemprop="name">Главная</span>
+									</a>
+									<meta itemprop="position" content="1" />
+								</li>
+								<li class="breadcrumbs__item" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+									<a href="/chronicle_detail" class="breadcrumbs__item-content" itemprop="item" title="Перейти в раздел Организация" aria-label="Организация">
+										<span itemprop="name">Пресс-центр</span>
+									</a>
+									<meta itemprop="position" content="2" />
+								</li>
+								<li class="breadcrumbs__item" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+									<span class="breadcrumbs__item-content" itemprop="name">Арест на трое суток за летнюю резину</span>
+									<meta itemprop="position" content="3" />
+								</li>
+							</ul>
+						</div>
+						<div class="page-title__wrapper">
+							<h1 class="page-title">Арест на трое суток за летнюю резину</h1>
+						</div>
+					</div>
+				</div>
+				<section class="chronicle_detail">
+					<div class="container">
+						<div class="section_content">
+							<div class="text-content">
+								<p>Резина не по сезону внесена в перечень неисправностей, с которыми запрещено управление ТС (12.5.1 КоАП штраф 500? + возможно предписание об устранении нарушения).</p>
+                                <p>С декабря по февраль обязательно использование зимней резины, с июня по август — летней.</p>
+                                <p>Если инспектор повторно остановит нарушителя на летней резине, не выполнившего требование — ему грозит уже штраф 2000? — 4000?, либо арест до 15 суток, либо обязательные работы от 40 до 120 часов (19.3 КоАП).</p>
+							</div>
+                            <div class="gallery gallery--grid">
+								<div class="gallery__items items grid grid--4" role="region" aria-label="Галерея">
+									<script>
+										const galleryData = [
+											{ title: "Изображение 1", imgSrc: "./../../img/chronicle__image-page-16.png"},
+											{ title: "Изображение 2", imgSrc: "./../../img/chronicle__image-page-16.png"},
+											{ title: "Изображение 3", imgSrc: "./../../img/chronicle__image-page-16.png"},
+											{ title: "Изображение 4", imgSrc: "./../../img/chronicle__image-page-16.png"},
+											{ title: "Изображение 5", imgSrc: "./../../img/chronicle__image-page-16.png"},
+											{ title: "Изображение 6", imgSrc: "./../../img/chronicle__image-page-16.png"},
+											{ title: "Изображение 7", imgSrc: "./../../img/chronicle__image-page-16.png"},
+											{ title: "Изображение 8", imgSrc: "./../../img/chronicle__image-page-16.png"},
+										];
+									
+										const galleryContent = document.querySelector('.chronicle_detail .gallery__items');
+									
+										galleryData.forEach(item => {
+											const galleryItem = `
+												<a class="gallery__item hover-img img" href="${item.imgSrc}" data-fancybox="gallery" data-caption="${item.title}">
+													<img data-src="${item.imgSrc}" class="lazyload" alt="${item.title}" title="${item.title}" role="img" />
+												</a>
+											`;
+											galleryContent.innerHTML += galleryItem;
+										});
+									</script>
+								</div>
+								<a href="#" class="get-more_btn">больше фото</a>
+							</div>
+						</div>
+					</div>
+				</section>
+			</main>
+			
+			<!-- Подвал -->
+				@include("./../common/footer.html")
+			<!-- Подвал -->
+		</div>
+	</body>
+</html>

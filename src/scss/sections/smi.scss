@@ -1,0 +1,13 @@
+.smi {
+    @include flex-has-sidebar;
+    @include min-mobile {
+        &__item-list {
+            flex-direction: row;
+            flex-wrap: wrap;
+            gap: 20px 25px;
+        }
+        &__item-list-inner {
+            display: inline-flex;
+        }
+    }
+}

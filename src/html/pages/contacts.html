@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="ru">
+		@include("./../common/head.html", { "title": "Контакты" })
+	<body>
+		<div class="page-wrapper">
+			<!-- Шапка -->
+			@include("./../common/header.html")
+			<!-- Шапка -->
+
+			<main class="main">
+				<div class="page-heading">
+					<div class="container">
+						<div class="breadcrumbs" itemscope itemtype="https://schema.org/BreadcrumbList">
+                            <ul class="breadcrumbs__list">
+                                <li class="breadcrumbs__item" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+                                    <a href="/" class="breadcrumbs__item-content" itemprop="item" title="Перейти на главную страницу" aria-label="Главная">
+                                        <span itemprop="name">Главная</span>
+                                    </a>
+                                    <meta itemprop="position" content="1" />
+                                </li>
+                                <li class="breadcrumbs__item" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+                                    <span class="breadcrumbs__item-content" itemprop="name">Контакты</span>
+                                    <meta itemprop="position" content="2" />
+                                </li>
+                            </ul>
+                        </div>
+						<div class="page-title__wrapper">
+							<h1 class="page-title">Контакты</h1>
+						</div>
+					</div>
+				</div>
+				<section class="contacts">
+					<div class="container">
+                        <div class="section__content">
+                            <div class="tabs-head items">
+                                <span class="tab contacts__tab-head">Аппарат профсоюзной организации</span>
+                                <span class="tab contacts__tab-head">Структурные профсоюзные организаци</span>
+                            </div>
+                            <div class="tabs-content">
+                                <div class="tab_item contacts__tab-content apparatus">
+                                    <div class="contacts__team items grid grid--2">
+                                        <script>
+                                            const contactsData = [
+                                                    {   
+                                                        name: "Солодов Сергей Викторович",
+                                                        position: "Председатель Первичной профсоюзной организации Горьковского автозавода",
+                                                        imgSrc: "./../../img/team_img-1.png",
+                                                        phone1: "(831) 295-90-97", phone2: "3-40-83"
+                                                    },
+                                                    {   
+                                                        name: "Волынская Татьяна Ивановна",
+                                                        position: "Заместитель председателя Первичной профсоюзной организации Горьковского автозавода - заведующий отделом организационной работы, председатель комиссии по организационной работе профкома",
+                                                        imgSrc: "./../../img/team_img-2.png",
+                                                        phone1: "(831) 295-90-97", phone2: "3-40-83"
+                                                    },
+                                                    {   
+                                                        name: "Митрофанов Леонид Эдуардович",
+                                                        position: "Заместитель председателя Первичной профсоюзной организации Горьковского автозавода - председатель комиссии по культуре и спорту профкома",
+                                                        imgSrc: "./../../img/team_img-3.png",
+                                                        phone1: "(831) 290-95-75", phone2: "3-95-75"
+                                                    },
+                                                    {   
+                                                        name: "Слепов Владимир Александрович",
+                                                        position: "Заместитель заведующего отделом организационной работы Первичной профсоюзной организации Горьковского автозавода",
+                                                        imgSrc: "./../../img/team_img-4.png",
+                                                        phone1: "(831) 290-95-75", phone2: "3-95-75"
+                                                    },
+                                                    {   
+                                                        name: "Мотова Наталья Станиславовна",
+                                                        position: "Ведущий специалист отдела организационной работы Первичной профсоюзной организации Горьковского автозавода",
+                                                        imgSrc: "./../../img/team_img-5.png",
+                                                        phone1: "(831) 295-90-97", phone2: "3-40-83", phone3: "(831) 295-90-35"
+                                                    },
+                                                    {   
+                                                        name: "Орехов Василий Николаевич",
+                                                        position: "Заведующий отделом охраны труда и социально-трудовых отношений Первичной профсоюзной организации Горьковского автозавода",
+                                                        imgSrc: "./../../img/team_img-6.png",
+                                                        phone1: "(831) 290-80-59", phone2: "3-80-59", email: "example@mail.ru"
+                                                    },
+                                                    {   
+                                                        name: "Вашкевич Татьяна Львовна",
+                                                        position: "Заведующий отделом социального развития Первичной профсоюзной организации Горьковского автозавода, председатель комиссии социального страхования профкома",
+                                                        imgSrc: "./../../img/team_img-7.png",
+                                                        phone1: "(831) 290-87-67", phone2: "3-87-67", phone3: "(831) 295-63-41"
+                                                    },
+                                                    {   
+                                                        name: "Черноталова Екатерина Васильевна",
+                                                        position: "Ведущий специалист отдела социального развития Первичной профсоюзной организации Горьковского автозавода",
+                                                        imgSrc: "./../../img/team_img-8.png",
+                                                        phone1: "(831) 290-80-54", phone2: "3-80-54"
+                                                    },
+                                                    {   
+                                                        name: "Чебина Надежда Федоровна",
+                                                        position: "Ведущий специалист по персоналу и социальным вопросам отдела социального развития Первичной профсоюзной организации Горьковского автозавода",
+                                                        imgSrc: "./../../img/team_img-9.png",
+                                                        phone1: "(831) 290-92-10", phone2: "3-92-10"
+                                                    },
+                                                    {   
+                                                        name: "Кутырева Елена Игоревна",
+                                                        position: "Главный бухгалтер - заведующий отделом бухгалтерского учета, отчетности и контроля Первичной профсоюзной организации Горьковского автозавода",
+                                                        imgSrc: "./../../img/team_img-10.png",
+                                                        phone1: "(831) 290-96-91", phone2: "3-96-91", email: "ppogaz@yandex.ru"
+                                                    },
+                                                    {   
+                                                        name: "Урявина Наталья Владимировна",
+                                                        position: "Заместитель главного бухгалтера заведующего отделом бухгалтерского учета, отчетности и контроля Первичной профсоюзной организации Горьковского автозавода",
+                                                        imgSrc: "./../../img/team_img-11.png",
+                                                        phone1: "(831) 290-96-91", phone2: "3-96-91", email: "ppogaz@yandex.ru"
+                                                    },
+                                                    {   
+                                                        name: "Ураева Ольга Александровна",
+                                                        position: "Старший бухгалтер отдела бухгалтерского учета, отчетности и контроля Первичной профсоюзной организации Горьковского автозавода",
+                                                        imgSrc: "./../../img/team_img-12.png",
+                                                        phone1: "(831) 290-96-91", phone2: "3-42-50", email: "ppogaz@yandex.ru"
+                                                    }
+                                            ]
+                                            const contactsItemContent = document.querySelector('.apparatus .contacts__team');
+
+                                            contactsData.forEach(member => {
+                                                const contactsTabItem  = `
+                                                <div class="contacts__team-item">
+                                                    <div class="item__img img">
+                                                        <img data-src="${member.imgSrc}" class="lazyload" alt="${member.name}" title="${member.name}">
+                                                    </div>
+                                                    <div class="item__info">
+                                                        <div class="info__head">
+                                                            <div class="item__title">${member.name}</div>
+                                                            <div class="item__subtitle">${member.position}</div>
+                                                        </div>
+                                                        <div class="info__foot">
+                                                            <a href="tel:+${member.phone1}">${member.phone1}</a>
+                                                            <a href="tel:+${member.phone2}">${member.phone2}</a>
+                                                            ${member.phone3 ? `<a href="tel:+${member.phone3}">${member.phone3} - факс</a>` : ''}
+                                                            ${member.email ? `<a href="mailto:${member.email}">${member.email}</a>` : ''}
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                `;
+                                                contactsItemContent.innerHTML += contactsTabItem;
+                                            });
+                                        </script>
+                                    </div>
+                                </div>
+                                <div class="tab_item contacts__tab-content structure">
+                                    <div class="contacts__team items grid grid--2">
+                                        Вторая вкладка 
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+				</section>
+			</main>
+			
+			<!-- Подвал -->
+				@include("./../common/footer.html")
+			<!-- Подвал -->
+		</div>
+	</body>
+</html>

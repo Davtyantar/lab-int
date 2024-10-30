@@ -35,7 +35,7 @@
 				max-width: 1230px;
 				margin-left: auto;
 				margin-right: auto;
-				padding: 70px 30px;
+				padding: 50px 15px;
 			}
 			h1 {
 				font-size: 24px;
@@ -50,6 +50,11 @@
 			ol {
 				margin-bottom: 40px;
 				padding-left: 20px;
+				list-style-position: inside;
+			}
+			ol ul {
+				padding-left: 40px;
+				margin: 20px 0;
 			}
 			ol:last-of-type {
 				margin-bottom: 70px;
@@ -87,12 +92,61 @@
 		</style>
 	</head>
 	<body>
-		<main>
+		<main class="text-content">
 			<h1>Листинг страниц верстки</h1>
 			<ol>
-				<li><a href="index.html" target="_blank">Главная</a></li>
-				<li><a href="./organization.html" target="_blank">Организация</a></li>
-				<li><a href="./zaslugi.html" target="_blank">Заслуги</a></li>
+				<li><a target="_blank" href="index.html">Главная</a></li>
+				
+				<li>
+					<a target="_blank" href="./organization.html">Организация</a>
+					<ul>
+						<li><a target="_blank" href="./org-docs.html">Документы организации</a></li>
+						<li><a target="_blank" href="./zaslugi.html">Заслуги</a></li>
+						<li>
+							<a target="_blank" href="./history.html">История профсоюза</a>
+							<ul>
+								<li><a target="_blank" href="./predsedateli.html">Председатели</a></li>
+							</ul>
+						</li>
+						<li><a target="_blank" href="./prof-tv.html">Проф-тв</a></li>
+						<li>
+							<a target="_blank" href="./otdyx.html">Отдохните</a>
+							<ul>
+								<li><a target="_blank" href="./sanatory.html">Санаторий "Городецкий"</a></li>
+							</ul>
+						</li>
+					</ul>
+				</li>
+
+				<li>
+					<a target="_blank" href="./projects.html">Проекты</a>
+					<ul>
+						<li><a target="_blank" href="./competitions.html">Конкурсы</a></li>
+						<li><a target="_blank" href="./smi.html">СМИ</a></li>
+						<li><a target="_blank" href="./congrats.html">Поздравляем</a></li>
+						<li>
+							<a target="_blank" href="./best-workers.html">Лучшие из лучших</a>
+							<ul>
+								<li><a target="_blank" href="./best-workers-detail.html">Лучшие работники детальная страница/a></li>
+							</ul>
+						</li>
+						<li>
+							<a target="_blank" href="./union-meeting.html">Слет профгрупоргов</a>
+							<ul>
+								<li><a target="_blank" href="./union-meeting-detail.html">50 слет профгрупоргов</a></li>
+							</ul>
+						</li>
+
+					</ul>
+				</li>
+				<li>
+					<a target="_blank" href="./promotions.html">Акции</a>
+					<ul>
+						<li><a target="_blank" href="./promotions-detail.html">Акция детальная страница</a></li>
+					</ul>
+				</li>
+				<li><a target="_blank" href="./search.html">Результаты поиска</a></li>
+				<li><a target="_blank" href="./contacts.html">Контакты</a></li>
 			</ol>
 		</main>
 	</body>
