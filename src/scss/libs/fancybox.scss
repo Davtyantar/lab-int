@@ -27,14 +27,16 @@ body .fancybox {
     --f-thumb-border-radius: 0px;
     --f-thumb-outline: 0;
   }
-}
-
-body .fancybox__content>.f-button.is-close-btn {
-  --f-button-border-radius: 50% !important;
-  --f-button-bg: rgba(22, 62, 115, 0.8) !important;
-  --f-button-hover-bg: rgba(22, 62, 115, 0.9) !important;
-  --f-button-active-bg: rgba(22, 62, 115, 1) !important;
-  opacity: 1;
-  top: 12.5px;
-  right: 12.5px;
+  .fancybox__toolbar__column {
+    gap: 5px;
+  }
+  .fancybox__content>.f-button.is-close-btn {
+    --f-button-border-radius: 50%;
+    --f-button-bg: rgba(22, 62, 115, 0.8);
+    --f-button-hover-bg: rgba(22, 62, 115, 0.9);
+    --f-button-active-bg: rgba(22, 62, 115, 1);
+    opacity: 1;
+    top: 12.5px;
+    right: 12.5px;
+  }
 }

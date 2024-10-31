@@ -10,7 +10,7 @@
     transition: transform .5s;
 
     overflow-y: auto;
-    max-height: calc(100vh - var(--header-height));
+    max-height: calc((100 * (var(--vh))) - var(--header-height));
     padding-bottom: 30px;
 
     &:not(.mobile-menu--open) {
@@ -38,7 +38,7 @@
         text-transform: uppercase;
     }
     &_foot {
-        margin-top: 5px;
+        margin-top: 20px;
         padding: 0 20px;
     }
     [href^="mailto:"] {

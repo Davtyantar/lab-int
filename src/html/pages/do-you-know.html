@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="ru">
+		@include("./../common/head.html", { "title": "А вы знали?" })
+	<body>
+		<div class="page-wrapper">
+			<!-- Шапка -->
+			@include("./../common/header.html")
+			<!-- Шапка -->
+
+			<main class="main">
+				<div class="page-heading">
+					<div class="container">
+						<div class="breadcrumbs" itemscope itemtype="https://schema.org/BreadcrumbList">
+							<ul class="breadcrumbs__list">
+								<li class="breadcrumbs__item" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+									<a href="/" class="breadcrumbs__item-content" itemprop="item" title="Перейти на главную страницу" aria-label="Главная">
+										<span itemprop="name">Главная</span>
+									</a>
+									<meta itemprop="position" content="1" />
+								</li>
+								<li class="breadcrumbs__item" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+									<a href="/organization" class="breadcrumbs__item-content" itemprop="item" title="Перейти в раздел Организация" aria-label="Организация">
+										<span itemprop="name">Проекты</span>
+									</a>
+									<meta itemprop="position" content="2" />
+								</li>
+								<li class="breadcrumbs__item" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+									<span class="breadcrumbs__item-content" itemprop="name">А вы знали?</span>
+									<meta itemprop="position" content="3" />
+								</li>
+							</ul>
+						</div>
+						<div class="page-title__wrapper">
+							<h1 class="page-title">А вы знали?</h1>
+						</div>
+					</div>
+				</div>
+				<section class="do-you-know">
+					<div class="container">
+						<div class="section_content">
+                            <div class="text-content">
+                                <p>Профсоюзная организация Горьковского автозавода объявляет с 10 сентября по 6 октября 2024 года творческий конкурс с одноименным названием!</p>
+                                <p>Для участия в конкурсе нужно прислать на вайбер/телеграмм +79519177413 фото вашей семьи, занятой общим трудом, и четверостишие своего сочинения (строго 4 строчки), в котором бы были зарифмованы не менее двух из перечисленных далее слов: ПРОФСОЮЗ, СЕМЬЯ, ТРУД, ОКТЯБРЬ, СЕМЬ!</p>
+                                <p>В заявке на участие необходимо указать ФИО, номер профсоюзного билета, место работы, телефон для связи.</p>
+                                <p>Количество творческих работ от одного члена профсоюза не ограничено!</p>
+                                <p>Все конкурсные работы будут выставлены в нашей группе ВКонтакте для голосования.</p>
+                                <p>7 октября состоится подведение итогов: одного победителя определит комиссия по организационной работе, второго определит результат интернет-голосования.</p>
+                                <p>Комиссия оставляет за собой право учреждения дополнительных номинаций.</p>
+                                <p>Победители конкурса будут награждены дипломами и памятными подарками.</p>
+                            </div>
+
+							<div class="do-you-know__items grid grid--3 items">
+								<script>
+									const doYouKnowData = [
+                                        { title: "Факт - 1", imgSrc: "./../../img/do-you-know__item-1.png"},
+                                        { title: "Факт - 2", imgSrc: "./../../img/do-you-know__item-2.png"},
+                                        { title: "Факт - 3", imgSrc: "./../../img/do-you-know__item-3.png"},
+                                        { title: "Факт - 4", imgSrc: "./../../img/do-you-know__item-4.png"},
+                                        { title: "Факт - 5", imgSrc: "./../../img/do-you-know__item-5.png"},
+                                        { title: "Факт - 6", imgSrc: "./../../img/do-you-know__item-6.png"},
+                                        { title: "Факт - 7", imgSrc: "./../../img/do-you-know__item-7.png"},
+                                        { title: "Факт - 8", imgSrc: "./../../img/do-you-know__item-8.png"},
+                                        { title: "Факт - 9", imgSrc: "./../../img/do-you-know__item-9.png"},
+                                        { title: "Факт - 10", imgSrc: "./../../img/do-you-know__item-10.png"},
+                                        { title: "Факт - 11", imgSrc: "./../../img/do-you-know__item-11.png"},
+                                        { title: "Факт - 12", imgSrc: "./../../img/do-you-know__item-12.png"},
+                                        { title: "Факт - 13", imgSrc: "./../../img/do-you-know__item-13.png"},
+                                        { title: "Факт - 14", imgSrc: "./../../img/do-you-know__item-14.png"},
+                                        { title: "Факт - 15", imgSrc: "./../../img/do-you-know__item-15.png"},
+									];
+								
+									const doYouKnowContent  = document.querySelector('.do-you-know__items');
+								
+                                    doYouKnowData.forEach(item => {
+                                        const doYouKnowItem = `
+                                            <a class="do-you-know__item hover-img img" href="${item.imgSrc}" data-fancybox="gallery" data-caption="${item.title}" title="${item.title}">
+                                                <img data-src="${item.imgSrc}" class="lazyload" alt="${item.title}" title="${item.title}" role="img" />
+                                            </a>
+                                        `;
+                                        doYouKnowContent.innerHTML += doYouKnowItem;
+                                    });
+								</script>
+								
+							</div>
+							@include("./../components/pagination.html")
+						</div>
+					</div>
+				</section>
+			</main>
+			
+			<!-- Подвал -->
+				@include("./../common/footer.html")
+			<!-- Подвал -->
+		</div>
+	</body>
+</html>

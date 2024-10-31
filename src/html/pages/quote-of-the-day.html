@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="ru">
+		@include("./../common/head.html", { "title": "Цитата дня" })
+	<body>
+		<div class="page-wrapper">
+			<!-- Шапка -->
+			@include("./../common/header.html")
+			<!-- Шапка -->
+
+			<main class="main">
+				<div class="page-heading">
+					<div class="container">
+						<div class="breadcrumbs" itemscope itemtype="https://schema.org/BreadcrumbList">
+							<ul class="breadcrumbs__list">
+								<li class="breadcrumbs__item" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+									<a href="/" class="breadcrumbs__item-content" itemprop="item" title="Перейти на главную страницу" aria-label="Главная">
+										<span itemprop="name">Главная</span>
+									</a>
+									<meta itemprop="position" content="1" />
+								</li>
+								<li class="breadcrumbs__item" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+									<a href="/organization" class="breadcrumbs__item-content" itemprop="item" title="Перейти в раздел Организация" aria-label="Организация">
+										<span itemprop="name">Проекты</span>
+									</a>
+									<meta itemprop="position" content="2" />
+								</li>
+								<li class="breadcrumbs__item" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+									<span class="breadcrumbs__item-content" itemprop="name">Цитата дня</span>
+									<meta itemprop="position" content="3" />
+								</li>
+							</ul>
+						</div>
+						<div class="page-title__wrapper">
+							<h1 class="page-title">Цитата дня</h1>
+						</div>
+					</div>
+				</div>
+				<section class="quote-of-the-day">
+					<div class="container">
+						<div class="section_content">
+                            <div class="text-content">
+                                <p>Жизнеутверждающие высказывания известных людей на каждый день. Есть над чем задуматься, есть к чему стремиться.</p>
+                            </div>
+
+							<div class="quote-of-the-day__items grid grid--3 items">
+								<script>
+									const quoteOfTheDayData = [
+										{ quote: "Автомобиль — любимая игрушка взрослых мужчин.", author: "Марлен Дитрих",},
+										{ quote: "Автомобиль стал частью одежды, без которой мы чувствуем себя неуверенными, неприкрытыми и незакомплексованными.", author: "Маршал Маклюэн"},
+										{ quote: "Анонимные письма хороши уже тем, что на них не надо отвечать.", author: "Александр Дюма-сын"},
+										{ quote: "Без движения жизнь — только летаргический сон.", author: "Жан-Жак Руссо"},
+										{ quote: "Без знатных дел знатное состояние — ничто.", author: "Архимед"},
+										{ quote: "Без идеи не может быть ничего великого! Без великого не может быть ничего прекрасного.", author: "Гюстав Флобер"},
+										{ quote: "Автомобиль — любимая игрушка взрослых мужчин.", author: "Марлен Дитрих"},
+										{ quote: "Автомобиль стал частью одежды, без которой мы чувствуем себя неуверенными, неприкрытыми и незакомплексованными.", author: "Маршал Маклюэн"},
+										{ quote: "Анонимные письма хороши уже тем, что на них не надо отвечать.", author: "Александр Дюма-сын"},
+										{ quote: "Без движения жизнь — только летаргический сон.", author: "Жан-Жак Руссо"},
+										{ quote: "Без знатных дел знатное состояние — ничто.", author: "Архимед"},
+										{ quote: "Без идеи не может быть ничего великого! Без великого не может быть ничего прекрасного.", author: "Гюстав Флобер"},
+										{ quote: "Автомобиль стал частью одежды, без которой мы чувствуем себя неуверенными, неприкрытыми и незакомплексованными.", author: "Маршал Маклюэн"},
+										{ quote: "Анонимные письма хороши уже тем, что на них не надо отвечать.", author: "Александр Дюма-сын"},
+										{ quote: "Без идеи не может быть ничего великого! Без великого не может быть ничего прекрасного.", author: "Гюстав Флобер"},
+									];
+								
+									const quoteOfTheDayContent = document.querySelector('.quote-of-the-day__items');
+								
+									quoteOfTheDayData.forEach(item => {
+										const quoteOfTheDayItem = `
+											<div class="quote-of-the-day__item lazyload">
+												<div class="item__quote">${item.quote}</div>
+												<div class="item__quote-author">${item.author}</div>
+											</div>
+										`;
+										quoteOfTheDayContent.innerHTML += quoteOfTheDayItem;
+									});
+								</script>
+								
+							</div>
+							@include("./../components/pagination.html")
+						</div>
+					</div>
+				</section>
+			</main>
+			
+			<!-- Подвал -->
+				@include("./../common/footer.html")
+			<!-- Подвал -->
+		</div>
+	</body>
+</html>

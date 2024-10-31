@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="ru">
+		@include("./../common/head.html", { "title": "Перечитай" })
+	<body>
+		<div class="page-wrapper">
+			<!-- Шапка -->
+			@include("./../common/header.html")
+			<!-- Шапка -->
+
+			<main class="main">
+				<div class="page-heading">
+					<div class="container">
+						<div class="breadcrumbs" itemscope itemtype="https://schema.org/BreadcrumbList">
+							<ul class="breadcrumbs__list">
+								<li class="breadcrumbs__item" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+									<a href="/" class="breadcrumbs__item-content" itemprop="item" title="Перейти на главную страницу" aria-label="Главная">
+										<span itemprop="name">Главная</span>
+									</a>
+									<meta itemprop="position" content="1" />
+								</li>
+								<li class="breadcrumbs__item" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+									<a href="/organization" class="breadcrumbs__item-content" itemprop="item" title="Перейти в раздел Организация" aria-label="Организация">
+										<span itemprop="name">Проекты</span>
+									</a>
+									<meta itemprop="position" content="2" />
+								</li>
+								<li class="breadcrumbs__item" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+									<span class="breadcrumbs__item-content" itemprop="name">Перечитай</span>
+									<meta itemprop="position" content="3" />
+								</li>
+							</ul>
+						</div>
+						<div class="page-title__wrapper">
+							<h1 class="page-title">Перечитай</h1>
+						</div>
+					</div>
+				</div>
+				<section class="reread">
+					<div class="container">
+						<div class="section_content">
+
+                            <div class="text-content">
+                                <p>2015 год был объявлен в нашей стране Годом литературы. Профсоюзный комитет Горьковского автозавода  организовал в течении года акцию "ПЕРЕЧИТАЙ", в рамках которой предлагал для прочтения самые известные произведения классиков и пока ещё неизвестные современников.</p>
+                                <p>В нашей жизни есть время и место для увлекательного чтения произведений отечественных авторов, размышлений о смысле жизни, пороках и добродетелях, людях со сложной судьбой.</p>
+                                <p>Остановитесь! Перечитайте! Задумайтесь!</p>
+                            </div>
+
+							<div class="reread__items grid grid--4 items">
+								<script>
+									const rereadData = [
+										{ title: "Избранное", author: "В.Маяковский", imgSrc: "./../../img/reread-img-1.png", fileSrc: "./file.pdf", date: "28.12.2015"},
+										{ title: "Избранное", author: "С.Есенин", imgSrc: "./../../img/reread-img-2.png", fileSrc: "./file.pdf", date: "28.12.2015" },
+										{ title: "Избранное", author: "А.Ахматова", imgSrc: "./../../img/reread-img-3.png", fileSrc: "./file.pdf", date: "28.12.2015" },
+                                        { title: "Очарованный странник", author: "В.Маяковский", imgSrc: "./../../img/reread-img-4.png", fileSrc: "./file.pdf", date: "28.12.2015" },
+                                        { title: "Демон", author: "М.Ю.Лермонтов", imgSrc: "./../../img/reread-img-5.png", fileSrc: "./file.pdf", date: "28.12.2015"},
+										{ title: "Кавказский пленник", author: "А.Н.Толстой", imgSrc: "./../../img/reread-img-6.png", fileSrc: "./file.pdf", date: "28.12.2015" },
+										{ title: "Кроссовки", author: "С.Штаркова", imgSrc: "./../../img/reread-img-7.png", fileSrc: "./file.pdf", date: "28.12.2015" },
+                                        { title: "Драма на охоте", author: "А.П.Чехов", imgSrc: "./../../img/reread-img-8.png", fileSrc: "./file.pdf", date: "28.12.2015" },
+                                        { title: "Демон", author: "И.А.Гончаров", imgSrc: "./../../img/reread-img-9.png", fileSrc: "./file.pdf", date: "28.12.2015"},
+										{ title: "Шинель", author: "Н.В.Гоголь", imgSrc: "./../../img/reread-img-10.png", fileSrc: "./file.pdf", date: "28.12.2015" },
+										{ title: "Запечатленный ангел", author: "Н.С.Лесков", imgSrc: "./../../img/reread-img-11.png", fileSrc: "./file.pdf", date: "28.12.2015" },
+                                        { title: "Палата №6", author: "А.П.Чехов", imgSrc: "./../../img/reread-img-12.png", fileSrc: "./file.pdf", date: "28.12.2015" },
+                                        { title: "Судьба человека", author: "М.А.Шолохов", imgSrc: "./../../img/reread-img-13.png", fileSrc: "./file.pdf", date: "28.12.2015"},
+										{ title: "Дамское счастье", author: "Э.Золя", imgSrc: "./../../img/reread-img-14.png", fileSrc: "./file.pdf", date: "28.12.2015" },
+										{ title: "Хаджи-Мурат", author: "Л.Н.Толстой", imgSrc: "./../../img/reread-img-15.png", fileSrc: "./file.pdf", date: "28.12.2015" },
+                                        { title: "Дубровский", author: "А.С.Пушкин", imgSrc: "./../../img/reread-img-16.png", fileSrc: "./file.pdf", date: "28.12.2015" },
+									];
+								
+									const rereadContent = document.querySelector('.reread__items');
+								
+									rereadData.forEach(item => {
+										const rereadItem = `
+											<div class="reread__item">
+												<div class="reread__item-img img">
+													<img data-src="${item.imgSrc}" class="lazyload" alt="${item.title}  title="${item.title}">
+												</div>
+												<div class="reread__item-info" target="_blank"">
+                                                    <div class="reread__item-info_head">
+                                                        <h4 class="reread__item-title h4">${item.title}</h4>
+                                                        <p class="reread__item-subtitle">${item.author}</p>                                           
+                                                    </div>
+                                                    <div class="reread__item-info_foot">
+                                                        <span class="reread__item-date">${item.date}</span>
+                                                        <a href="${item.fileSrc}" download title="Скачать '${item.title}'" aria-label="Скачать '${item.title}'">
+                                                            СКАЧАТь
+                                                        </a>
+                                                    </div>
+												</div>
+											</div>
+										`;
+										rereadContent.innerHTML += rereadItem;
+									});
+								</script>
+							</div>
+							@include("./../components/pagination.html")
+						</div>
+					</div>
+				</section>
+			</main>
+			
+			<!-- Подвал -->
+				@include("./../common/footer.html")
+			<!-- Подвал -->
+		</div>
+	</body>
+</html>

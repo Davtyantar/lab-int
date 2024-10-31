@@ -1,0 +1,26 @@
+.quote-of-the-day {
+    &__item {
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+        background-image: url('./../../img/quote-bg-img.png');
+
+        border-radius: 13px;
+        overflow: hidden;
+        padding: 30px;
+        color: $clr-white;
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        row-gap: 45px;
+    }
+    .item__quote {
+        font-size: 24px;
+        line-height: 130%;
+        
+    }
+    .item__quote-author {
+
+    }
+}

@@ -56,7 +56,7 @@
 									const mentorYearContent = document.querySelector('.mentor-year__items');
 								
 									mentorYearData.forEach(project => {
-										const competitionItem = `
+										const mentorYearItem = `
 											<article class="mentor-year__item" role="article">
 												<div class="mentor-year__image">
 													<img data-src="${project.imgSrc}" class="lazyload" alt="${project.title}">
@@ -66,7 +66,7 @@
 												</a>
 											</article>
 										`;
-										mentorYearContent.innerHTML += competitionItem;
+										mentorYearContent.innerHTML += mentorYearItem;
 									});
 								</script>
 							</div>

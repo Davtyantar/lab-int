@@ -8,13 +8,16 @@ export function initFancybox() {
         Toolbar: {
             display: {
                 left: [],
-                middle: [],
+                middle: [
+                    "zoomIn",
+                    "zoomOut",
+                  ],
                 right: ['close'],
             },
         },
 
         Images: {
-            zoom: false,
+            zoom: true,
         },
 
         Thumbs: {

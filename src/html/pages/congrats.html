@@ -70,7 +70,7 @@
 									const congratsContent = document.querySelector('.congrats__items');
 								
 									congratsData.forEach(item => {
-										const competitionItem = `
+										const congratsItem = `
 											<div class="congrats__item">
 												<div class="congrats__image img">
 													<img data-src="${item.imgSrc}" class="lazyload" alt="${item.title}">
@@ -93,7 +93,7 @@
 												</div>
 											</div>
 										`;
-										congratsContent.innerHTML += competitionItem;
+										congratsContent.innerHTML += congratsItem;
 									});
 								</script>
 							</div>
