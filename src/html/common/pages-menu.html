@@ -29,6 +29,7 @@
             <ul>
                 <li><a target="_blank" href="./competitions.html">Конкурсы</a></li>
                 <li><a target="_blank" href="./congrats.html">Поздравляем</a></li>
+                <li><a target="_blank" href="./mentor-year.html">Год наставника</a></li>
                 <li>
                     <a target="_blank" href="./azbuka-voditelya.html">Азбука водителя</a>
                     <ul>
@@ -37,7 +38,6 @@
                 </li>
                 <li><a target="_blank" href="./bilet-85.html">Билет 085</a></li>
                 <li><a target="_blank" href="./bilet-90.html">Билет 090</a></li>
-                
                 <li>
                     <a target="_blank" href="./press-center.html">Пресс-центр</a>
                     <ul>
@@ -99,8 +99,8 @@
 <style>
     .pages-menu {
         position: relative;
-        height: 100vh;
-        max-height: 100vh;
+        height: calc(100 * var(--vh));
+        max-height: calc(100 * var(--vh));
         overflow-y: auto;
         position: fixed;
         right: 0;
@@ -112,6 +112,11 @@
         transform: translateX(100%);
         transition: transform .3s;
         border: 1px solid;
+    }
+    @media (max-width: 1199px) {
+        .pages-menu {
+            display: none !important; 
+        }
     }
 
     .pages-menu.is-visible {

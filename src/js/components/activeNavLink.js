@@ -18,3 +18,5 @@ export function updateActiveNavLink() {
         }
     });
 }
+
+document.addEventListener('DOMContentLoaded', updateActiveNavLink);

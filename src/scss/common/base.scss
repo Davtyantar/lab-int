@@ -92,7 +92,4 @@ a {
   html {
     zoom: 0.85;
   }
-  .hero {
-    height: calc((100* var(--vh)) - var(--header-height));
-  }
 }

@@ -10,7 +10,7 @@
 			&__nav-wrapper {
 			margin-right: 10%;
 			}
-		}
+	}
 	.nav {
 		@include min-desktop {
 			width: 410px;
@@ -30,6 +30,7 @@
 		}
 	}
 	&__inner {
+		position: relative;
 		display: flex;
 		justify-content: space-between;
 		gap: 50px;
@@ -82,5 +83,4 @@
 		width: 90px;
 		height: 90px;
 	}
-	
 }

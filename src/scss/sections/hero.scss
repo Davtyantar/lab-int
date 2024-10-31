@@ -1,16 +1,16 @@
 .hero {
     position: relative;
-    height: calc(100vh - var(--header-height));
+    height: calc((100 * var(--vh)) - var(--header-height));
     overflow: hidden;
     display: flex;
     align-items: end;
     padding-bottom: clamp(1.25rem, 0.188rem + 4.53vw, 5.625rem);
     // 20 - 90 375 - 1920
     @include tablet {
-        height: 75vh;
+        height: calc(75 * var(--vh));
     }
     @include small-tablet {
-        height: 50vh;
+        height: calc(50 * var(--vh));
     }
     @include mobile {
         height: 440px;
