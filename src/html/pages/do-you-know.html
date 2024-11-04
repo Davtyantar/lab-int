@@ -55,18 +55,6 @@
                                         { title: "Факт - 1", imgSrc: "./../../img/do-you-know__item-1.png"},
                                         { title: "Факт - 2", imgSrc: "./../../img/do-you-know__item-2.png"},
                                         { title: "Факт - 3", imgSrc: "./../../img/do-you-know__item-3.png"},
-                                        { title: "Факт - 4", imgSrc: "./../../img/do-you-know__item-4.png"},
-                                        { title: "Факт - 5", imgSrc: "./../../img/do-you-know__item-5.png"},
-                                        { title: "Факт - 6", imgSrc: "./../../img/do-you-know__item-6.png"},
-                                        { title: "Факт - 7", imgSrc: "./../../img/do-you-know__item-7.png"},
-                                        { title: "Факт - 8", imgSrc: "./../../img/do-you-know__item-8.png"},
-                                        { title: "Факт - 9", imgSrc: "./../../img/do-you-know__item-9.png"},
-                                        { title: "Факт - 10", imgSrc: "./../../img/do-you-know__item-10.png"},
-                                        { title: "Факт - 11", imgSrc: "./../../img/do-you-know__item-11.png"},
-                                        { title: "Факт - 12", imgSrc: "./../../img/do-you-know__item-12.png"},
-                                        { title: "Факт - 13", imgSrc: "./../../img/do-you-know__item-13.png"},
-                                        { title: "Факт - 14", imgSrc: "./../../img/do-you-know__item-14.png"},
-                                        { title: "Факт - 15", imgSrc: "./../../img/do-you-know__item-15.png"},
 									];
 								
 									const doYouKnowContent  = document.querySelector('.do-you-know__items');
@@ -74,7 +62,7 @@
                                     doYouKnowData.forEach(item => {
                                         const doYouKnowItem = `
                                             <a class="do-you-know__item hover-img img" href="${item.imgSrc}" data-fancybox="gallery" data-caption="${item.title}" title="${item.title}">
-                                                <img data-src="${item.imgSrc}" class="lazyload" alt="${item.title}" title="${item.title}" role="img" />
+                                                <img data-src="${item.imgSrc}" class="lazyload" alt="${item.title}" role="img" />
                                             </a>
                                         `;
                                         doYouKnowContent.innerHTML += doYouKnowItem;

@@ -38,7 +38,7 @@
 				<section class="mentor-year">
 					<div class="container">
 						<div class="section_content">
-							<div class="mentor-year__items grid grid--4 items">
+							<div class="mentor-year__items items grid grid--4 unified-grid-arrow">
 								<script>
 									const mentorYearData = [
 										{ title: "Человек Трудав живописи", imgSrc: "./../../img/mentor-year-page-img-1.png"},
@@ -57,12 +57,12 @@
 								
 									mentorYearData.forEach(project => {
 										const mentorYearItem = `
-											<article class="mentor-year__item" role="article">
-												<div class="mentor-year__image">
+											<article class="item" role="article">
+												<div class="item__image">
 													<img data-src="${project.imgSrc}" class="lazyload" alt="${project.title}">
 												</div>
-												<a href="#" class="mentor-year__link" target="_blank" title="${project.title}">
-													<h3 class="mentor-year__title item__title">${project.title}</h3>
+												<a href="#" class="item__link" target="_blank" title="${project.title}">
+													<h3 class="item__title">${project.title}</h3>
 												</a>
 											</article>
 										`;

@@ -1,0 +1,40 @@
+.periodicals {
+    &__items-wrapper {
+        scroll-margin-top: 85px;
+    }
+    &__items-title {
+        margin-bottom: 30px;
+    }
+    &__item {
+        border-radius: $border-radius;
+        overflow: hidden;
+        border: 1px solid $clr-gray-border;
+        transition: transform .3s, box-shadow .3s;
+        .item__link {
+            display: flex;
+            flex-direction: column;
+            height: 100%;
+        }
+        .item__img {
+            position: relative;
+            width: 100%;
+            height: 180px;
+            flex-shrink: 0;
+        }
+        .item__description {
+            padding: 25px;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            row-gap: 15px;
+        }
+        .item__subtitle {
+            font-family: $second-family;
+        }
+        @include any-hover {
+            &:not(.prof-tv__item):hover {
+                transform: translateY(-15px);
+            }
+        }
+    }
+}

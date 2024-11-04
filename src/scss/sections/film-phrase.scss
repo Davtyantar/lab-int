@@ -1,0 +1,20 @@
+.film-phrase {
+    &__items {
+        row-gap: 50px;
+    }
+    &__item {
+        &-img {
+            border-radius: $border-radius;
+            overflow: hidden;
+            aspect-ratio: 1 / 0.715;
+            max-height: 312px;
+            margin-bottom: 15px;
+            border: 1px solid;
+        }
+        &-title {
+            font-family: $second-family;
+            text-align: center;
+            display: block;
+        }
+    }
+}

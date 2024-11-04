@@ -11,6 +11,9 @@
         background: $bgclr-search;
         border-radius: $btn-border-radius;
         border: 1px solid transparent;
+        &:focus {
+            border-color: $clr-gray-border;
+        }
     }
     // 30 - 50 375 - 1920
     --spacing: clamp(1.875rem, 1.572rem + 1.29vw, 3.125rem);;

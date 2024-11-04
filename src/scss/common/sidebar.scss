@@ -41,9 +41,9 @@
             @include mobile {
                 font-size: 12px;
                 padding: 5px 10px;
-                border: 1px solid $clr-primary;
+                border: 1px solid $clr-gray-light;
                 color: inherit;
-                border-radius: $border-radius;
+                border-radius: 100px;
                 display: -webkit-box;
                 -webkit-box-orient: vertical;
                 -webkit-line-clamp: 1;
@@ -51,6 +51,7 @@
                 &.is-active {
                     color: $clr-white;
                     background-color: $clr-primary;
+                    border-color: $clr-primary;
                 }
             }
         }
@@ -58,10 +59,10 @@
     .content-area {
         display: flex;
         flex-direction: column;
-        gap: 20px;
+        gap: 50px 20px;
         &_item {
             padding: 30px 30px;
-            border: 1px solid #ccc;
+            border: 1px solid $clr-gray-light;
         }
     }
 }

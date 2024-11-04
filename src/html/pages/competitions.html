@@ -38,7 +38,7 @@
 				<section class="competitions">
 					<div class="container">
 						<div class="section_content">
-							<div class="competitions__items grid grid--4 items">
+							<div class="competitions__items items grid grid--4 unified-grid-arrow">
 								<script>
 									const competitionsData = [
 										{ title: "Конкурс ППО в ОАО \"ГАЗ\" - Профсоюз помог: реальные истории", imgSrc: "./../../img/competitions-page-img-1.png"},
@@ -70,12 +70,12 @@
 								
 									competitionsData.forEach(project => {
 										const competitionItem = `
-											<article class="competitions__item" role="article">
-												<div class="competitions__image">
+											<article class="item" role="article">
+												<div class="item__image">
 													<img data-src="${project.imgSrc}" class="lazyload" alt="${project.title}">
 												</div>
-												<a href="#" class="competitions__link" target="_blank" title="${project.title}">
-													<h3 class="competitions__title item__title">${project.title}</h3>
+												<a href="#" class="item__link" target="_blank" title="${project.title}">
+													<h3 class="item__title">${project.title}</h3>
 												</a>
 											</article>
 										`;

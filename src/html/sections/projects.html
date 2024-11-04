@@ -4,7 +4,7 @@
             <h2 class="projects__title section__title" id="projects-title">Проекты</h2>
         </div>
         <div class="section_content">
-            <div class="projects__items grid grid--4 mobile-slider items">
+            <div class="projects__items items grid grid--4 unified-grid-arrow mobile-slider">
                 <script>
                     const projectsData = [
                         { title: "Выставки участников проектов", imgSrc: "./../../img/projects__image-1.png"},
@@ -21,12 +21,12 @@
                 
                     projectsData.forEach(project => {
                         const projectItem = `
-                            <article class="projects__item" role="article">
-                                <div class="projects__image">
+                            <article class="item" role="article">
+                                <div class="item__image">
                                     <img data-src="${project.imgSrc}" class="lazyload" alt="${project.title}">
                                 </div>
-                                <a href="#" class="projects__link" target="_blank" title="${project.title}">
-                                    <h3 class="projects__title item__title">${project.title}</h3>
+                                <a href="#" class="item__link" target="_blank" title="${project.title}">
+                                    <h3 class="item__title">${project.title}</h3>
                                 </a>
                             </article>
                         `;

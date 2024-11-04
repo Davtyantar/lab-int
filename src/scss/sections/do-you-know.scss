@@ -1,9 +1,6 @@
 .do-you-know {
-    &__items {
-
-    }
     &__item {
-        border-radius: 13px;
+        border-radius: $border-radius;
         overflow: hidden;
         aspect-ratio: 1 / 0.715;
         max-height: 312px;

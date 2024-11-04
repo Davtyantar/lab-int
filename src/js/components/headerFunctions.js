@@ -39,22 +39,22 @@ export const headerFunctions = () => {
     burgerIcon.addEventListener('click', toggleMobileMenu);
 
     // Инициализация мобильного поиска
+    const header = document.querySelector('.header');
     const searchIcon = document.querySelector('.header__search-mobile-icon');
     const headerSearch = document.querySelector('.header-search');
     const overlay = document.querySelector('.overlay');
 
     searchIcon.addEventListener('click', () => {
-        headerSearch.classList.add('header-search--transformed');
+        header.classList.add('header-search--transformed');
         overlay.classList.add('is-visible');
     });
 
     overlay.addEventListener('click', () => {
-        headerSearch.classList.remove('header-search--transformed');
+        header.classList.remove('header-search--transformed');
         overlay.classList.remove('is-visible');
     });
 
     // Скрытие шапки при прокрутке
-    const header = document.querySelector('.header');
     const firstSection = document.querySelector('main > *:first-child');
     let lastScrollTop = 0;
 

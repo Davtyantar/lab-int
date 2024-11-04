@@ -39,7 +39,7 @@
 					<div class="container">
 						<div class="section_content">
 							<div class="section_content">
-                                <div class="best-workers__items grid grid--4 items">
+                                <div class="best-workers__items items grid grid--4 unified-grid-arrow">
                                     <script>
                                         const bestWorkersData = [
                                             { title: "Лучшие работники года"},
@@ -54,12 +54,12 @@
                                     
                                         bestWorkersData.forEach(best => {
                                             const bestWorkersItem = `
-                                                <article class="best-workers__item" role="article">
-                                                    <div class="best-workers__image">
+                                                <article class="item" role="article">
+                                                    <div class="item__image">
 														<img data-src="./../../img/best-workers-bgImg.png" class="lazyload" alt="Alt изображения">
                                                     </div>
-                                                    <a href="#" class="best-workers__link" target="_blank" title="${best.title}">
-                                                        <h3 class="best-workers__title item__title">${best.title}</h3>
+                                                    <a href="./best-workers-detail.html" class="item__link" target="_blank" title="${best.title}">
+                                                        <h3 class="item__title">${best.title}</h3>
                                                     </a>
                                                 </article>
                                             `;

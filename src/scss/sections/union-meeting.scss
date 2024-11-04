@@ -1,10 +1,4 @@
 .union-meeting {
-    @include grid-items-with-arrow;
-    &__item {
-        &::after {
-            display: none;
-        }
-    }
     .item__title {
         display: flex;
         align-items: end;
@@ -16,18 +10,15 @@
             font-size: 20px;
         }
     }
+    .item__link::after {
+        display: none;
+    }
     .item__count {
         font-size: 95px;
         line-height: 0.8;
         min-width: 120px;
     }
     .item__date {
-        position: relative;
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-        color: $clr-white;
-        font-size: 14px;
         &::before {
             content: "";
             display: flex;

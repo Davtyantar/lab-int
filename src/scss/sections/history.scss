@@ -1,18 +1,14 @@
 .history {
-    @include grid-items-with-arrow;
     &__items {
         @include desktop {
             --cols: 2 !important;
         }
     }
-    &__item {
+    .item {
         background-color: $clr-white;
         border: 1px solid $clr-gray-border;
         &::after {
             display: none;
-        }
-        .item__title {
-            color: inherit;
         }
         @include any-hover {
             &:hover {
@@ -27,11 +23,12 @@
             }
         }
     }
-    &__link {
+    .item__link {
         &::after {
             border: 1px solid $clr-gray-border;
         }
     }
-
-    
+    .item__title {
+        color: inherit;
+    }
 }

@@ -40,7 +40,7 @@
 				<section class="rest">
 					<div class="container">
                         <div class="section_content">
-                            <div class="rest__items items grid grid--4 mobile-slider">
+                            <div class="rest__items items grid grid--4 unified-grid-arrow mobile-slider">
                                 <script>
                                     const restData = [
                                         { title: "Санаторий ”Городецкий”", imgSrc: "./../../img/rest__image-1.png"},
@@ -56,12 +56,12 @@
                                 
                                     restData.forEach(project => {
                                         const restItem = `
-                                            <article class="rest__item" role="article">
-                                                <div class="rest__image">
+                                            <article class="item" role="article">
+                                                <div class="item__image">
                                                     <img data-src="${project.imgSrc}" class="lazyload" alt="${project.title}">
                                                 </div>
-                                                <a href="#" class="rest__link" target="_blank" title="${project.title}">
-                                                    <h3 class="rest__title item__title">${project.title}</h3>
+                                                <a href="#" class="item__link" target="_blank" title="${project.title}">
+                                                    <h3 class="item__title">${project.title}</h3>
                                                 </a>
                                             </article>
                                         `;

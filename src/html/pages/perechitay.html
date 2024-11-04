@@ -48,22 +48,10 @@
 							<div class="reread__items grid grid--4 items">
 								<script>
 									const rereadData = [
-										{ title: "Избранное", author: "В.Маяковский", imgSrc: "./../../img/reread-img-1.png", fileSrc: "./file.pdf", date: "28.12.2015"},
-										{ title: "Избранное", author: "С.Есенин", imgSrc: "./../../img/reread-img-2.png", fileSrc: "./file.pdf", date: "28.12.2015" },
-										{ title: "Избранное", author: "А.Ахматова", imgSrc: "./../../img/reread-img-3.png", fileSrc: "./file.pdf", date: "28.12.2015" },
-                                        { title: "Очарованный странник", author: "В.Маяковский", imgSrc: "./../../img/reread-img-4.png", fileSrc: "./file.pdf", date: "28.12.2015" },
-                                        { title: "Демон", author: "М.Ю.Лермонтов", imgSrc: "./../../img/reread-img-5.png", fileSrc: "./file.pdf", date: "28.12.2015"},
-										{ title: "Кавказский пленник", author: "А.Н.Толстой", imgSrc: "./../../img/reread-img-6.png", fileSrc: "./file.pdf", date: "28.12.2015" },
-										{ title: "Кроссовки", author: "С.Штаркова", imgSrc: "./../../img/reread-img-7.png", fileSrc: "./file.pdf", date: "28.12.2015" },
-                                        { title: "Драма на охоте", author: "А.П.Чехов", imgSrc: "./../../img/reread-img-8.png", fileSrc: "./file.pdf", date: "28.12.2015" },
-                                        { title: "Демон", author: "И.А.Гончаров", imgSrc: "./../../img/reread-img-9.png", fileSrc: "./file.pdf", date: "28.12.2015"},
-										{ title: "Шинель", author: "Н.В.Гоголь", imgSrc: "./../../img/reread-img-10.png", fileSrc: "./file.pdf", date: "28.12.2015" },
-										{ title: "Запечатленный ангел", author: "Н.С.Лесков", imgSrc: "./../../img/reread-img-11.png", fileSrc: "./file.pdf", date: "28.12.2015" },
-                                        { title: "Палата №6", author: "А.П.Чехов", imgSrc: "./../../img/reread-img-12.png", fileSrc: "./file.pdf", date: "28.12.2015" },
-                                        { title: "Судьба человека", author: "М.А.Шолохов", imgSrc: "./../../img/reread-img-13.png", fileSrc: "./file.pdf", date: "28.12.2015"},
-										{ title: "Дамское счастье", author: "Э.Золя", imgSrc: "./../../img/reread-img-14.png", fileSrc: "./file.pdf", date: "28.12.2015" },
-										{ title: "Хаджи-Мурат", author: "Л.Н.Толстой", imgSrc: "./../../img/reread-img-15.png", fileSrc: "./file.pdf", date: "28.12.2015" },
-                                        { title: "Дубровский", author: "А.С.Пушкин", imgSrc: "./../../img/reread-img-16.png", fileSrc: "./file.pdf", date: "28.12.2015" },
+										{ title: "Избранное", author: "В.Маяковский", imgSrc: "./../../img/reread-img-1.png"},
+										{ title: "Избранное", author: "С.Есенин", imgSrc: "./../../img/reread-img-2.png" },
+										{ title: "Избранное", author: "А.Ахматова", imgSrc: "./../../img/reread-img-3.png"},
+                                        { title: "Очарованный странник", author: "В.Маяковский", imgSrc: "./../../img/reread-img-4.png"},
 									];
 								
 									const rereadContent = document.querySelector('.reread__items');
@@ -80,8 +68,8 @@
                                                         <p class="reread__item-subtitle">${item.author}</p>                                           
                                                     </div>
                                                     <div class="reread__item-info_foot">
-                                                        <span class="reread__item-date">${item.date}</span>
-                                                        <a href="${item.fileSrc}" download title="Скачать '${item.title}'" aria-label="Скачать '${item.title}'">
+                                                        <span class="reread__item-date">28.12.2015</span>
+                                                        <a href="./file.pdf" download title="Скачать '${item.title}'" aria-label="Скачать '${item.title}'">
                                                             СКАЧАТь
                                                         </a>
                                                     </div>

@@ -69,7 +69,7 @@
 								  </nav>
 								</aside>
 								<div class="content-area">
-                                    <div class="history__items items grid grid--3 mobile-col">
+                                    <div class="history__items items grid grid--4 unified-grid-arrow">
                                         <script>
                                             const historyData = [
                                                 { title: "Председатели ВЦСПС", link: "/ссылка" },
@@ -95,9 +95,9 @@
                                         
                                             historyData.forEach(item => {
                                                 const historyItem = `
-                                                    <article class="history__item" role="article">
-                                                        <a href="${item.link}" class="history__link" target="_blank" title="${item.title}">
-                                                            <h3 class="history__title item__title">${item.title}</h3>
+                                                    <article class="item" role="article">
+                                                        <a href="${item.link}" class="item__link" target="_blank" title="${item.title}">
+                                                            <h3 class="item__title">${item.title}</h3>
                                                         </a>
                                                     </article>
                                                 `;

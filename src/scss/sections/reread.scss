@@ -10,7 +10,8 @@
             font-family: $second-family;
         }
         &-img {
-            aspect-ratio: 1 / 1.320;
+            aspect-ratio: 1 / 1.32;
+            max-height: 425px;
         }
         &-date {
             font-family: $second-family;

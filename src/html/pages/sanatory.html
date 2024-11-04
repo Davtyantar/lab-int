@@ -204,8 +204,8 @@
 									
 										galleryData.forEach(item => {
 											const galleryItem = `
-												<a class="gallery__item hover-img img" data-fancybox="gallery" data-caption="${item.title}" href="${item.imgSrc}">
-													<img data-src="${item.imgSrc}" class="lazyload" alt="${item.title}" title="${item.title}" role="img" />
+												<a class="gallery__item hover-img img" data-fancybox="gallery" data-caption="${item.title}" href="${item.imgSrc}" title="${item.title}">
+													<img data-src="${item.imgSrc}" class="lazyload" alt="${item.title}" role="img" />
 												</a>
 											`;
 											galleryContent.innerHTML += galleryItem;

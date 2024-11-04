@@ -1,7 +1,10 @@
 .grid {
     display: grid;
     gap: clamp(0.938rem, 0.653rem + 1.21vw, 1.563rem);
-    grid-template-columns: repeat(auto-fill, minmax(var(--elem-width), 1fr));
+    
+    &:not(.grid--2) {
+        grid-template-columns: repeat(auto-fill, minmax(var(--elem-width), 1fr));
+    }
 
     &.grid--5 { --elem-width: 235px; }
 

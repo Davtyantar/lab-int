@@ -38,35 +38,31 @@
 				<section class="union-meeting">
 					<div class="container">
 						<div class="section_content">
-							<div class="union-meeting__items grid grid--4 items">
-								<script>
-									const unionMeetingData = [
-										{ count: "50" }, { count: "49" }, { count: "48" }, { count: "47" }, { count: "46" }, { count: "45" },
-										{ count: "44" }, { count: "43" }, { count: "42" }, { count: "41" }, { count: "40" }, { count: "39" },
-										{ count: "38" }, { count: "37" }, { count: "36" }, { count: "35" }, { count: "34" }, { count: "33" },
-										{ count: "32" }, { count: "31" }, { count: "30" }, { count: "29" }, { count: "28" }, { count: "27" },
-										{ count: "26" }, { count: "25" }, { count: "24" }, { count: "23" }, { count: "22" }, { count: "21" },
-										{ count: "20" }
-									];
-
-								
-									const unionMeetingContent = document.querySelector('.union-meeting__items');
-								
-									unionMeetingData.forEach(item => {
-										const unionMeetingItem = `
-											<article class="union-meeting__item" role="article">
-												<div class="union-meeting__image">
-													<img data-src="./../../img/union-meeting-bgImg.png" class="lazyload" alt="Alt изображения">
-												</div>
-												<a href="./union-meeting-detail.html" class="union-meeting__link has-date" title="${item.count} Слет профгрупоргов">
-													<h3 class="union-meeting__title item__title"><span class="item__count">${item.count}</span> Слет профгрупоргов</h3>
-													<div class="item__date"><span>20 апреля 2022 г.</span></div>
-												</a>
-											</article>
-										`;
-										unionMeetingContent.innerHTML += unionMeetingItem;
-									});
-								</script>
+							<div class="items items grid grid--4 unified-grid-arrow items-bgi">
+								<article class="item" role="article">
+									<a href="./union-meeting-detail.html" class="item__link" title="50 Слет профгрупоргов">
+										<h3 class="item__title"><span class="item__count">50</span> Слет профгрупоргов</h3>
+										<div class="item__date"><span>20 апреля 2022 г.</span></div>
+									</a>
+								</article>
+								<article class="item" role="article">
+									<a href="./union-meeting-detail.html" class="item__link" title="49 Слет профгрупоргов">
+										<h3 class="item__title"><span class="item__count">49</span> Слет профгрупоргов</h3>
+										<div class="item__date"><span>20 апреля 2022 г.</span></div>
+									</a>
+								</article>
+								<article class="item" role="article">
+									<a href="./union-meeting-detail.html" class="item__link" title="48 Слет профгрупоргов">
+										<h3 class="item__title"><span class="item__count">48</span> Слет профгрупоргов</h3>
+										<div class="item__date"><span>20 апреля 2022 г.</span></div>
+									</a>
+								</article>
+								<article class="item" role="article">
+									<a href="./union-meeting-detail.html" class="item__link" title="47 Слет профгрупоргов">
+										<h3 class="item__title"><span class="item__count">47</span> Слет профгрупоргов</h3>
+										<div class="item__date"><span>20 апреля 2022 г.</span></div>
+									</a>
+								</article>
 							</div>
 							@include("./../components/pagination.html")
 						</div>

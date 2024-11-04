@@ -6,6 +6,47 @@
   max-width: 100%;
   font-family: $second-family;
 
+
+  .flex_block {
+    display: flex;
+    justify-content: space-between;
+    margin: 50px 0;
+
+    @include tablet {
+      flex-direction: column-reverse;
+      row-gap: 20px;
+    }
+
+    @include mobile {
+      margin: 30px 0;
+    }
+
+    @include min-tablet {
+      align-items: center;
+      &-media{
+        flex: 0 50%;
+      }
+      &-text {
+        flex: 0 42.5%;
+      }
+    }
+
+    &-text > *:first-child {
+      margin-top: 0;
+    }
+    
+    &-media {
+      max-height: 450px;
+      border-radius: $border-radius;
+      overflow: hidden;
+      img {
+        margin: 0;
+      }
+    }
+
+  }
+
+
   @include mobile {
     font-size: 14px;
   }
@@ -101,7 +142,7 @@
     position: relative;
     display: inline-block;
     padding: 15px 14px;
-    border-radius: 13px;
+    border-radius: $border-radius;
     font-weight: 700;
     font-size: 16px;
     line-height: 130%;

@@ -93,7 +93,6 @@
 		@content;
 	}
 }
-
   
 @mixin custom-checkbox {
 	position: relative;
@@ -142,77 +141,9 @@
     justify-content: center;
 }
 
-// миксин-разметка для grid блоков
-@mixin grid-items-with-arrow {
-	&__link {
-        position: relative;
-        height: 100%;
-        display: flex;
-        flex-direction: column;
-        row-gap: 20px;
-        justify-content: space-between;
-        padding: 30px;
-		@include mobile {
-			padding: 20px;
-		}
-        z-index: 1;
-        &:not(&.has-date)::after {
-            content: "";
-            @include flex-center;
-            width: 40px;
-            height: 40px;
-            overflow: hidden;
-            background-color: $clr-white;
-            border-radius: 30px;
-            background-image: url("data:image/svg+xml,%3Csvg width='17' height='16' viewBox='0 0 17 16' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M3.16669 8H13.8334M13.8334 8L9.83335 4M13.8334 8L9.83335 12' stroke='%23252B33' stroke-linecap='round' stroke-linejoin='round' /%3E%3C/svg%3E");
-            background-size: 16px;
-            background-position: center;
-            background-repeat: no-repeat;
-
-            transition: border-color $t-base, background-color $t-base;
-        }
-    }
-    &__item {
-        position: relative;
-        border-radius: $border-radius;
-        overflow: hidden;
-        min-height: 200px;
-		transition: background-color $t-base, border-color $t-base;
-        &::after {
-            content: "";
-            position: absolute;
-            inset: 0;
-            width: 100%;
-            height: 100%;
-            background: rgba(0, 0, 0, 0.3);
-            z-index: 0;
-        }
-        .item__title {
-            position: relative;
-            font-size: 20px;
-            color: $clr-white;
-        }
-    }
-    &__image {
-        position: absolute;
-        inset: 0;
-        width: 100%;
-        height: 100%;
-        & > img {
-            width: 100%;
-            height: 100%;
-            transition: transform .3s;
-            transform-origin: right;
-        }
-    }
-	@media (any-hover: hover) {
-		&__item:hover &__image > img {
-			transform: scale(1.15);
-		}
-    }
+@mixin ff2 {
+    font-family: $second-family;
 }
-// миксин-разметка для grid блоков
-
 
 // миксин-разметка для grid блоков
 @mixin grid-items-with-media {
@@ -256,6 +187,7 @@
             line-height: 130%;
             color: $clr-gray-light;
         }
+        
         @include any-hover {
             &:not(.prof-tv__item):hover {
                 transform: translateY(-15px);

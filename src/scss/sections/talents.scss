@@ -1,0 +1,89 @@
+.talents {
+    
+}
+
+.talents-detail {
+    &__items.grid {
+        @include tablet {
+            grid-template-columns: repeat(1, minmax(0, 1fr));
+        }
+    }
+    .profile {
+        display: flex;
+        gap: 20px 30px;
+        padding: 5px;
+        @include mobile {
+            padding: 20px;
+            flex-direction: column;
+        }
+        border-radius: calc($border-radius + 5px);
+        overflow: hidden;
+        border: 1px solid $clr-gray-border;
+        &__img {
+            border-radius: calc($border-radius + 2px);
+            overflow: hidden;
+            @include min-mobile {
+                width: 205px;
+            }
+            @include mobile {
+                aspect-ratio: 1;
+            }
+        }
+        &__content {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            height: 100%;
+            row-gap: 20px;
+            @include min-mobile {
+                padding: 20px 0;
+            }
+        }
+        &__name {
+            margin-bottom: 10px;
+        }
+        &__position {
+            font-family: $second-family;
+            margin-bottom: 20px;
+            @include mobile {
+                font-size: 14px;
+            }
+        }
+        &__talent {
+            position: relative;
+            font-family: $second-family;
+            display: inline-flex;
+            align-items: center;
+            column-gap: 10px;
+            padding: 5px 10px;
+            background: rgba(22, 62, 115, 0.1);
+            border-radius: 100px;
+            @include mobile {
+                font-size: 14px;
+            }
+            &::before {
+                background-image: url("data:image/svg+xml,%3Csvg width='16' height='16' viewBox='0 0 16 16' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cg clip-path='url(%23clip0_338_4630)'%3E%3Cpath d='M2.9987 14.6667V11.3334M2.9987 4.66671V1.33337M1.33203 3.00004H4.66536M1.33203 13H4.66536M8.66536 2.00004L7.50925 5.00595C7.32124 5.49477 7.22723 5.73918 7.08105 5.94476C6.95149 6.12697 6.7923 6.28617 6.61009 6.41573C6.4045 6.56191 6.16009 6.65591 5.67127 6.84392L2.66536 8.00004L5.67127 9.15616C6.16009 9.34417 6.4045 9.43817 6.61009 9.58435C6.7923 9.71391 6.95149 9.87311 7.08105 10.0553C7.22723 10.2609 7.32124 10.5053 7.50925 10.9941L8.66537 14L9.82148 10.9941C10.0095 10.5053 10.1035 10.2609 10.2497 10.0553C10.3792 9.87311 10.5384 9.71391 10.7206 9.58435C10.9262 9.43817 11.1706 9.34417 11.6595 9.15616L14.6654 8.00004L11.6595 6.84392C11.1706 6.65591 10.9262 6.56191 10.7206 6.41573C10.5384 6.28617 10.3792 6.12697 10.2497 5.94476C10.1035 5.73918 10.0095 5.49477 9.82148 5.00595L8.66536 2.00004Z' stroke='%23163E73' stroke-width='2' stroke-linecap='round' stroke-linejoin='round' /%3E%3C/g%3E%3Cdefs%3E%3CclipPath id='clip0_338_4630'%3E%3Crect width='16' height='16' fill='white' /%3E%3C/clipPath%3E%3C/defs%3E%3C/svg%3E");
+            }
+        }
+        &__event {
+            position: relative;
+            @include min-mobile {
+                width: max-content;
+            }
+            &::after {
+                background-image: url("data:image/svg+xml,%3Csvg width='16' height='16' viewBox='0 0 16 16' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M14 6.00001L14 2.00001M14 2.00001H9.99999M14 2.00001L8 8M6.66667 2H5.2C4.0799 2 3.51984 2 3.09202 2.21799C2.71569 2.40973 2.40973 2.71569 2.21799 3.09202C2 3.51984 2 4.07989 2 5.2V10.8C2 11.9201 2 12.4802 2.21799 12.908C2.40973 13.2843 2.71569 13.5903 3.09202 13.782C3.51984 14 4.07989 14 5.2 14H10.8C11.9201 14 12.4802 14 12.908 13.782C13.2843 13.5903 13.5903 13.2843 13.782 12.908C14 12.4802 14 11.9201 14 10.8V9.33333' stroke='white' stroke-width='2' stroke-linecap='round' stroke-linejoin='round' /%3E%3C/svg%3E");
+            }
+        }
+
+        &__talent::before,
+        &__event::after {
+            content: "";
+            display: block;
+            width: 16px;
+            height: 16px;
+            background-size: 16px;
+            background-position: center;
+            background-repeat: no-repeat;
+        }
+    }
+}

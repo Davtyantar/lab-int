@@ -15,31 +15,30 @@
         color: $clr-gray-light;
         cursor: pointer;
 
-        transition: color $t-base, border $t-base;
+        transition: color $t-base, border $t-base, background-color $t-base;
 
         &.is-active {
             color: $clr-primary;
         }
-        @include any-hover {
-
+        &:not(.museum &) {
             &::before {
                 content: "";
                 position: absolute;
                 bottom: -5px;
-                width: 100%;
-                border-bottom: 2px solid $clr-primary;
-                transform: translateY(10px);
-                opacity: 0;
-                visibility: hidden;
-                transition: all $t-base;
+                background-color: currentColor;
+                height: 3px;
+                width: 0%;
+                left: 50%;
+                transform: translateX(-50%);
+                transition: width 0.2s ease-in-out;
             }
             &.is-active {
                 &::before {
-                    transform: translateY(0px);
-                    opacity: 1;
-                    visibility: visible;
+                    width: 100%;
                 }
             }
+        }
+        @include any-hover {
             &:hover {
                 color: $clr-primary;
             }

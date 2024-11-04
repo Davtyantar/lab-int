@@ -31,123 +31,89 @@
 				</div>
 				<section class="contacts">
 					<div class="container">
-                        <div class="section_content">
-                            <div class="tabs-head items">
-                                <span class="tab contacts__tab-head">Аппарат профсоюзной организации</span>
-                                <span class="tab contacts__tab-head">Структурные профсоюзные организаци</span>
+                        <div class="section_content" role="region">
+                            <div class="tabs-head items" role="tablist">
+                                <button class="tab" role="tab" aria-selected="true">Аппарат профсоюзной организации</button>
+                                <button class="tab" role="tab" aria-selected="false">Структурные профсоюзные организации</button>
                             </div>
                             <div class="tabs-content">
-                                <div class="tab_item contacts__tab-content apparatus">
-                                    <div class="contacts__team items grid grid--2">
-                                        <script>
-                                            const contactsData = [
-                                                    {   
-                                                        name: "Солодов Сергей Викторович",
-                                                        position: "Председатель Первичной профсоюзной организации Горьковского автозавода",
-                                                        imgSrc: "./../../img/team_img-1.png",
-                                                        phone1: "(831) 295-90-97", phone2: "3-40-83"
-                                                    },
-                                                    {   
-                                                        name: "Волынская Татьяна Ивановна",
-                                                        position: "Заместитель председателя Первичной профсоюзной организации Горьковского автозавода - заведующий отделом организационной работы, председатель комиссии по организационной работе профкома",
-                                                        imgSrc: "./../../img/team_img-2.png",
-                                                        phone1: "(831) 295-90-97", phone2: "3-40-83"
-                                                    },
-                                                    {   
-                                                        name: "Митрофанов Леонид Эдуардович",
-                                                        position: "Заместитель председателя Первичной профсоюзной организации Горьковского автозавода - председатель комиссии по культуре и спорту профкома",
-                                                        imgSrc: "./../../img/team_img-3.png",
-                                                        phone1: "(831) 290-95-75", phone2: "3-95-75"
-                                                    },
-                                                    {   
-                                                        name: "Слепов Владимир Александрович",
-                                                        position: "Заместитель заведующего отделом организационной работы Первичной профсоюзной организации Горьковского автозавода",
-                                                        imgSrc: "./../../img/team_img-4.png",
-                                                        phone1: "(831) 290-95-75", phone2: "3-95-75"
-                                                    },
-                                                    {   
-                                                        name: "Мотова Наталья Станиславовна",
-                                                        position: "Ведущий специалист отдела организационной работы Первичной профсоюзной организации Горьковского автозавода",
-                                                        imgSrc: "./../../img/team_img-5.png",
-                                                        phone1: "(831) 295-90-97", phone2: "3-40-83", phone3: "(831) 295-90-35"
-                                                    },
-                                                    {   
-                                                        name: "Орехов Василий Николаевич",
-                                                        position: "Заведующий отделом охраны труда и социально-трудовых отношений Первичной профсоюзной организации Горьковского автозавода",
-                                                        imgSrc: "./../../img/team_img-6.png",
-                                                        phone1: "(831) 290-80-59", phone2: "3-80-59", email: "example@mail.ru"
-                                                    },
-                                                    {   
-                                                        name: "Вашкевич Татьяна Львовна",
-                                                        position: "Заведующий отделом социального развития Первичной профсоюзной организации Горьковского автозавода, председатель комиссии социального страхования профкома",
-                                                        imgSrc: "./../../img/team_img-7.png",
-                                                        phone1: "(831) 290-87-67", phone2: "3-87-67", phone3: "(831) 295-63-41"
-                                                    },
-                                                    {   
-                                                        name: "Черноталова Екатерина Васильевна",
-                                                        position: "Ведущий специалист отдела социального развития Первичной профсоюзной организации Горьковского автозавода",
-                                                        imgSrc: "./../../img/team_img-8.png",
-                                                        phone1: "(831) 290-80-54", phone2: "3-80-54"
-                                                    },
-                                                    {   
-                                                        name: "Чебина Надежда Федоровна",
-                                                        position: "Ведущий специалист по персоналу и социальным вопросам отдела социального развития Первичной профсоюзной организации Горьковского автозавода",
-                                                        imgSrc: "./../../img/team_img-9.png",
-                                                        phone1: "(831) 290-92-10", phone2: "3-92-10"
-                                                    },
-                                                    {   
-                                                        name: "Кутырева Елена Игоревна",
-                                                        position: "Главный бухгалтер - заведующий отделом бухгалтерского учета, отчетности и контроля Первичной профсоюзной организации Горьковского автозавода",
-                                                        imgSrc: "./../../img/team_img-10.png",
-                                                        phone1: "(831) 290-96-91", phone2: "3-96-91", email: "ppogaz@yandex.ru"
-                                                    },
-                                                    {   
-                                                        name: "Урявина Наталья Владимировна",
-                                                        position: "Заместитель главного бухгалтера заведующего отделом бухгалтерского учета, отчетности и контроля Первичной профсоюзной организации Горьковского автозавода",
-                                                        imgSrc: "./../../img/team_img-11.png",
-                                                        phone1: "(831) 290-96-91", phone2: "3-96-91", email: "ppogaz@yandex.ru"
-                                                    },
-                                                    {   
-                                                        name: "Ураева Ольга Александровна",
-                                                        position: "Старший бухгалтер отдела бухгалтерского учета, отчетности и контроля Первичной профсоюзной организации Горьковского автозавода",
-                                                        imgSrc: "./../../img/team_img-12.png",
-                                                        phone1: "(831) 290-96-91", phone2: "3-42-50", email: "ppogaz@yandex.ru"
-                                                    }
-                                            ]
-                                            const contactsItemContent = document.querySelector('.apparatus .contacts__team');
-
-                                            contactsData.forEach(member => {
-                                                const contactsTabItem  = `
-                                                <div class="contacts__team-item">
-                                                    <div class="item__img img">
-                                                        <img data-src="${member.imgSrc}" class="lazyload" alt="${member.name}" title="${member.name}">
-                                                    </div>
-                                                    <div class="item__info">
-                                                        <div class="info__head">
-                                                            <div class="item__title">${member.name}</div>
-                                                            <div class="item__subtitle">${member.position}</div>
-                                                        </div>
-                                                        <div class="info__foot">
-                                                            <a href="tel:+${member.phone1}">${member.phone1}</a>
-                                                            <a href="tel:+${member.phone2}">${member.phone2}</a>
-                                                            ${member.phone3 ? `<a href="tel:+${member.phone3}">${member.phone3} - факс</a>` : ''}
-                                                            ${member.email ? `<a href="mailto:${member.email}">${member.email}</a>` : ''}
-                                                        </div>
-                                                    </div>
+                                <div class="tab_item" role="tabpanel">
+                                    <div class="items grid grid--2">
+                                        <div class="contacts__team-item">
+                                            <div class="item__img img">
+                                                <img data-src="./../../img/team_img-1.png" class="lazyload" alt="Солодов Сергей Викторович" title="Солодов Сергей Викторович">
+                                            </div>
+                                            <div class="item__info">
+                                                <div class="info__head">
+                                                    <div class="item__title">Солодов Сергей Викторович</div>
+                                                    <div class="item__subtitle">Председатель Первичной профсоюзной организации Горьковского автозавода</div>
                                                 </div>
-                                                `;
-                                                contactsItemContent.innerHTML += contactsTabItem;
-                                            });
-                                        </script>
+                                                <div class="info__foot">
+                                                    <a href="tel:+(831) 295-90-97">(831) 295-90-97</a>
+                                                    <a href="tel:+3-40-83">3-40-83</a>
+
+                                                    <!-- могут и не быть -->
+                                                    <a href="tel:+(831) 295-90-97">(831) 295-90-97 - факс</a>
+                                                    <a href="mailto:почта@yandex.ru">почта@yandex.ru</a>
+                                                    <!-- могут и не быть -->
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="contacts__team-item">
+                                            <div class="item__img img">
+                                                <img data-src="./../../img/team_img-2.png" class="lazyload" alt="Волынская Татьяна Ивановна" title="Волынская Татьяна Ивановна">
+                                            </div>
+                                            <div class="item__info">
+                                                <div class="info__head">
+                                                    <div class="item__title">Волынская Татьяна Ивановна</div>
+                                                    <div class="item__subtitle">Заместитель председателя Первичной профсоюзной организации Горьковского автозавода - заведующий отделом организационной работы, председатель комиссии по организационной работе профкома</div>
+                                                </div>
+                                                <div class="info__foot">
+                                                    <a href="tel:+(831) 295-90-97">(831) 295-90-97</a>
+                                                    <a href="tel:+3-40-83">3-40-83</a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="contacts__team-item">
+                                            <div class="item__img img">
+                                                <img data-src="./../../img/team_img-3.png" class="lazyload" alt="Митрофанов Леонид Эдуардович" title="Митрофанов Леонид Эдуардович">
+                                            </div>
+                                            <div class="item__info">
+                                                <div class="info__head">
+                                                    <div class="item__title">Митрофанов Леонид Эдуардович</div>
+                                                    <div class="item__subtitle">Заместитель председателя Первичной профсоюзной организации Горьковского автозавода - председатель комиссии по культуре и спорту профкома</div>
+                                                </div>
+                                                <div class="info__foot">
+                                                    <a href="tel:+(831) 295-90-97">(831) 295-90-97</a>
+                                                    <a href="tel:+3-40-83">3-40-83</a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="contacts__team-item">
+                                            <div class="item__img img">
+                                                <img data-src="./../../img/team_img-4.png" class="lazyload" alt="Слепов Владимир Александрович" title="Слепов Владимир Александрович">
+                                            </div>
+                                            <div class="item__info">
+                                                <div class="info__head">
+                                                    <div class="item__title">Слепов Владимир Александрович</div>
+                                                    <div class="item__subtitle">Заместитель заведующего отделом организационной работы Первичной профсоюзной организации Горьковского автозавода</div>
+                                                </div>
+                                                <div class="info__foot">
+                                                    <a href="tel:+(831) 295-90-97">(831) 295-90-97</a>
+                                                    <a href="tel:+3-40-83">3-40-83</a>
+                                                </div>
+                                            </div>
+                                        </div>
                                     </div>
                                 </div>
-                                <div class="tab_item contacts__tab-content structure">
-                                    <div class="contacts__team items grid grid--2">
+                                <div class="tab_item" role="tabpanel">
+                                    <div class="items grid grid--2">
                                         Вторая вкладка 
                                     </div>
                                 </div>
                             </div>
                         </div>
+                        
                     </div>
 				</section>
 			</main>

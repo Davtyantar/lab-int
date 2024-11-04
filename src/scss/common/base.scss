@@ -35,12 +35,10 @@ body {
   }
 }
 
-
-
 .page-wrapper {
   display: flex;
   flex-direction: column;
-  min-height: 100vh;
+  min-height: calc(100 * var(--vh));
   background-color: $clr-wrapper;
 }
 
@@ -88,7 +86,7 @@ a {
   overflow: hidden;
 }
 
-@media (min-width: 1024px) and (max-width: 1660px) {
+@media (min-width: 991px) and (max-width: 1660px) {
   html {
     zoom: 0.85;
   }

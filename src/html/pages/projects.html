@@ -32,17 +32,17 @@
                 <section class="projects">
                     <div class="container">
                         <div class="section_content">
-                            <div class="projects__items grid grid--4 items">
+                            <div class="projects__items items grid grid--4 unified-grid-arrow mobile-slider">
                                 <script>
                                     const projectsData = [
                                         { title: "Слет профгрупоргов", imgSrc: "./../../img/projects-page-img-1.png", link: "./union-meeting.html"},
                                         { title: "Проф-тв", imgSrc: "./../../img/projects-page-img-2.png", link: "./prof-tv.html"},
                                         { title: "Конкурсы", imgSrc: "./../../img/projects-page-img-3.png", link: "./competitions.html"},
-                                        { title: "Твой талант", imgSrc: "./../../img/projects-page-img-4.png", link: "#"},
+                                        { title: "Твой талант", imgSrc: "./../../img/projects-page-img-4.png", link: "./talents.html"},
                                         { title: "Поздравляем", imgSrc: "./../../img/projects-page-img-5.png", link: "./congrats.html"},
                                         { title: "Перечитай", imgSrc: "./../../img/projects-page-img-6.png", link: "./perechitay.html"},
-                                        { title: "Кинофраза", imgSrc: "./../../img/projects-page-img-7.png", link: "#"},
-                                        { title: "Как вести себя", imgSrc: "./../../img/projects-page-img-8.png", link: "#"},
+                                        { title: "Кинофраза", imgSrc: "./../../img/projects-page-img-7.png", link: "./kinofraza.html"},
+                                        { title: "Как вести себя", imgSrc: "./../../img/projects-page-img-8.png", link: "./kak-sebya-vesti.html"},
                                         { title: "Цитата дня", imgSrc: "./../../img/projects-page-img-9.png", link: "./quote-of-the-day.html"},
                                         { title: "А вы знали?", imgSrc: "./../../img/projects-page-img-10.png", link: "./do-you-know.html"},
                                         { title: "Год наставника", imgSrc: "./../../img/projects-page-img-11.png", link: "./mentor-year.html"},
@@ -55,12 +55,12 @@
                                 
                                     projectsData.forEach(project => {
                                         const projectItem = `
-                                            <article class="projects__item" role="article">
-                                                <div class="projects__image">
+                                            <article class="item" role="article">
+                                                <div class="item__image">
                                                     <img data-src="${project.imgSrc}" class="lazyload" alt="${project.title}">
                                                 </div>
-                                                <a href="${project.link}" class="projects__link" title="${project.title}">
-                                                    <h3 class="projects__title item__title">${project.title}</h3>
+                                                <a href="${project.link}" class="item__link" title="${project.title}">
+                                                    <h3 class="item__title">${project.title}</h3>
                                                 </a>
                                             </article>
                                         `;

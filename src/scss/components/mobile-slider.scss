@@ -1,6 +1,7 @@
     
 @include mobile {
     .mobile-slider {
+        position: relative;
         display: flex;
         overflow-x: auto;
         scroll-snap-type: x mandatory;
@@ -8,6 +9,7 @@
         padding-bottom: 20px;
     }
     .mobile-slider > * {
+        position: relative;
         min-width: 300px;
         scroll-snap-align: start;
     }

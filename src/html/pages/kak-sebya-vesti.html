@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="ru">
+		@include("./../common/head.html", { "title": "Как себя вести" })
+	<body>
+		<div class="page-wrapper">
+			<!-- Шапка -->
+			@include("./../common/header.html")
+			<!-- Шапка -->
+
+			<main class="main">
+				<div class="page-heading">
+					<div class="container">
+						<div class="breadcrumbs" itemscope itemtype="https://schema.org/BreadcrumbList">
+							<ul class="breadcrumbs__list">
+								<li class="breadcrumbs__item" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+									<a href="/" class="breadcrumbs__item-content" itemprop="item" title="Перейти на главную страницу" aria-label="Главная">
+										<span itemprop="name">Главная</span>
+									</a>
+									<meta itemprop="position" content="1" />
+								</li>
+								<li class="breadcrumbs__item" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+									<a href="/organization" class="breadcrumbs__item-content" itemprop="item" title="Перейти в раздел Организация" aria-label="Организация">
+										<span itemprop="name">Проекты</span>
+									</a>
+									<meta itemprop="position" content="2" />
+								</li>
+								<li class="breadcrumbs__item" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+									<span class="breadcrumbs__item-content" itemprop="name">Как себя вести</span>
+									<meta itemprop="position" content="3" />
+								</li>
+							</ul>
+						</div>
+						<div class="page-title__wrapper">
+							<h1 class="page-title">Как себя вести</h1>
+						</div>
+					</div>
+				</div>
+				<section class="self-conduct">
+					<div class="container">
+						<div class="section_content">
+                            <div class="text-content">
+                                <p>2016 год официально объявлен В.В.Путиным годом кино и профсоюзная организация решила поддержать инициативу Президента РФ, запустив интерактивный проект "Как себя вести".</p>
+                                <p>Стать участником проекта сможет каждый. Для этого присылайте в течении всего 2016 года на электронный адрес VolynskayaTI @gaz.ru c пометкой "Как себя вести":</p>
+                                <ul>
+                                    <li>короткую известную фразу из кинофильма, которая давно уже стала для всех нас крылатой (в текстовом виде);</li>
+                                    <li>название фильма, в котором она прозвучала (в текстовом виде);</li>
+                                    <li>кадр из фильма, когда герои говорят эту фразу (картинка).</li>
+                                </ul>
+                                <p>Ваша фраза будет выставлена на сайте в разделе "Проект "Как себя вести". <strong>Давайте вспоминать отечественые фильмы вместе!</strong></p>
+                            </div>
+
+							<div class="self-conduct__items grid grid--4 items">
+								<script>
+									const selfConductData = [
+                                        { title: "Беседа 19. Вы пришли в общественное место", imgSrc: "./../../img/beseda-19.png" },
+                                        { title: "Беседа 18. За праздничный столом", imgSrc: "./../../img/beseda-18.png" },
+										{ title: "Беседа 17. У вас гости", imgSrc: "./../../img/beseda-17.png" },
+										{ title: "Беседа 16. К вам пришли гости", imgSrc: "./../../img/beseda-16.png" },
+									];
+								
+									const selfConductContent  = document.querySelector('.self-conduct__items');
+								
+                                    selfConductData.forEach(item => {
+                                        const selfConductItem = `
+                                            <article class="self-conduct__item" role="article">
+                                                <a href="./kak-sebya-vesti-detail.html" class="item__link">
+                                                    <div class="item__img img">
+                                                        <img data-src="${item.imgSrc}" class="lazyload" alt="${item.title}" title="${item.title}">
+                                                    </div>
+                                                    <div class="item__description">
+														<div class="item__description-head">
+															<h3 class="item__title">${item.title}</h3>
+															<span class="item__source" 
+																  data-fancybox="" 
+																  data-src="./../../img/beseda-source.jpg"
+																  title="Посмотреть первоисточник"
+																  aria-label="Посмотреть первоисточник">
+																Первоисточник
+															</span>
+														</div>
+                                                        <span class="item__date">04.12.2020</span>
+                                                    </div>
+                                                </a>
+                                            </article>
+                                        `;
+                                        selfConductContent.innerHTML += selfConductItem;
+                                    });
+								</script>
+							</div>
+						</div>
+					</div>
+				</section>
+			</main>
+			
+			<!-- Подвал -->
+				@include("./../common/footer.html")
+			<!-- Подвал -->
+		</div>
+	</body>
+</html>

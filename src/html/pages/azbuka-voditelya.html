@@ -32,73 +32,14 @@
                 <section class="drivers-alphabet">
                     <div class="container">
                         <div class="section_content">
-                            <div class="drivers-alphabet__items grid grid--4 items mobile-col">
+                            <div class="drivers-alphabet__items grid grid--4 items mobile-slider">
                                 <script>
                                     const driversAlphabetData = [
-                                        {   
-                                            title: "Арест на трое суток за летнюю резину", 
-                                            imgSrc: "./../../img/drivers-alphabet__image-page-1.png", date: "12.10.2024"  
+                                        { title: "Арест на трое суток за летнюю резину",  imgSrc: "./../../img/drivers-alphabet__image-page-1.png" },
+                                        { title: "Три случая, когда авто отправят на штрафстоянку", imgSrc: "./../../img/drivers-alphabet__image-page-2.png" },
+                                        { title: "Инспекторы стали чаще останавливать машины с детьми",  imgSrc: "./../../img/drivers-alphabet__image-page-3.png"},
+                                        { title: "Можно ли безалкогольное пиво за рулем?", imgSrc: "./../../img/drivers-alphabet__image-page-4.png",
                                         },
-                                        {  
-                                            title: "Три случая, когда авто отправят на штрафстоянку", 
-                                            imgSrc: "./../../img/drivers-alphabet__image-page-2.png", date: "11.10.2024"
-                                        },
-                                        {  
-                                            title: "Инспекторы стали чаще останавливать машины с детьми", 
-                                            imgSrc: "./../../img/drivers-alphabet__image-page-3.png", date: "12.10.2024" 
-                                        },
-                                        {  
-                                            title: "Можно ли безалкогольное пиво за рулем?", 
-                                            imgSrc: "./../../img/drivers-alphabet__image-page-4.png", date: "07.10.2024"
-                                        },
-                                        {   
-                                            title: "Можно ли вместо аварийного знака ставить другой предмет?", 
-                                            imgSrc: "./../../img/drivers-alphabet__image-page-5.png", date: "05.10.2024"
-                                        },
-                                        {   
-                                            title: "Теперь для квадроциклов и снегоходов не нужна особая категория прав", 
-                                            imgSrc: "./../../img/drivers-alphabet__image-page-6.png", date: "05.10.2024"
-                                        },
-                                        {   
-                                            title: "Когда могут оштрафовать на 15 тысяч рублей, если нет медсправки?", 
-                                            imgSrc: "./../../img/drivers-alphabet__image-page-7.png", date: "04.10.2024"
-                                        },
-                                        {   
-                                            title: "Можно ли оспорить штраф с камеры, о которой не предупредили?", 
-                                            imgSrc: "./../../img/drivers-alphabet__image-page-8.png", date: "03.10.2024"
-                                        },
-                                        {   
-                                            title: "За какие нарушения могут забрать авто или другое имущество?", 
-                                            imgSrc: "./../../img/drivers-alphabet__image-page-9.png", date: "12.10.2024" 
-                                        },
-                                        {   
-                                            title: "Более 50 новых комплексов фотовидеофиксации заработают в Нижегородской области с 1 января 2024 года.", 
-                                            imgSrc: "./../../img/drivers-alphabet__image-page-10.png", date: "11.10.2024"
-                                        },
-                                        {   
-                                            title: "Россиян стали чаще штрафовать за выключенные фары и ходовые огни", 
-                                            imgSrc: "./../../img/drivers-alphabet__image-page-11.png", date: "12.10.2024" 
-                                        },
-                                        {   
-                                            title: "Нарушения с номерами, за которые выпишут штраф", 
-                                            imgSrc: "./../../img/drivers-alphabet__image-page-12.png", date: "07.10.2024"
-                                        },
-                                        {   
-                                            title: "Как оспорить штраф за прогрев двигателя?", 
-                                            imgSrc: "./../../img/drivers-alphabet__image-page-13.png", date: "05.10.2024"
-                                        },
-                                        {   
-                                            title: "Что будет, если не подписать протокол ГИБДД?",
-                                            imgSrc: "./../../img/drivers-alphabet__image-page-14.png", date: "05.10.2024"
-                                        },
-                                        {   
-                                            title: "Как гражданину с инвалидностью оформить бесплатную парковку?", 
-                                            imgSrc: "./../../img/drivers-alphabet__image-page-15.png", date: "04.10.2024"
-                                        },
-                                        {   
-                                            title: "За какие нарушения могут лишить водительских прав?", 
-                                            imgSrc: "./../../img/drivers-alphabet__image-page-16.png", date: "03.10.2024"
-                                        }
                                     ];
                                 
                                     const driversAlphabetContent = document.querySelector('main:not(.mainpage) .drivers-alphabet__items');
@@ -112,7 +53,7 @@
                                                     </div>
                                                     <div class="item__description">
                                                         <h3 class="item__title">${item.title}</h3>
-                                                        <span class="item__date">${item.date}</span>
+                                                        <span class="item__date">03.10.2024</span>
                                                     </div>
                                                 </a>
                                             </article>

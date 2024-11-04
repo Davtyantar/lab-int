@@ -1,10 +1,8 @@
-.best-workers {
-    @include grid-items-with-arrow;
-}
+.best-workers {}
 
 .best-workers_detail {
     img {
-        border-radius: 13px;
+        border-radius: $border-radius;
     }
     .btn-arrow {
         margin-top: 20px;

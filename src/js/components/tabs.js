@@ -8,14 +8,23 @@ export const Tabs = () => {
         });
 
         tabs.forEach((tab, index) => {
+            // Установка начального значения aria-selected
+            tab.setAttribute("aria-selected", index === 0 ? "true" : "false");
+            
             tab.addEventListener("click", function() {
-                tabs.forEach(t => t.classList.remove("is-active"));
-                tabItems.forEach(item => item.classList.remove("is-active"));
+                tabs.forEach((t, tIndex) => {
+                    t.classList.remove("is-active");
+                    t.setAttribute("aria-selected", "false");
+                });
+
+                tabItems.forEach(item => {
+                    item.classList.remove("is-active");
+                    item.style.display = "none";
+                });
 
                 tab.classList.add("is-active");
+                tab.setAttribute("aria-selected", "true");
                 tabItems[index].classList.add("is-active");
-
-                tabItems.forEach(item => item.style.display = "none");
                 tabItems[index].style.display = "block";
                 tabItems[index].style.transform = "translateY(20px)";
                 tabItems[index].style.opacity = 0;
@@ -29,6 +38,7 @@ export const Tabs = () => {
         });
 
         tabs[0].classList.add("is-active");
+        tabs[0].setAttribute("aria-selected", "true");
         tabItems[0].classList.add("is-active");
     }
 };

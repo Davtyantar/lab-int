@@ -32,7 +32,7 @@
                 <section class="press-center">
                     <div class="container">
                         <div class="section_content">
-                            <div class="press-center__items grid grid--4 items">
+                            <div class="press-center__items items grid grid--4 unified-grid-arrow">
                                 <script>
                                     const pressCenterData = [
                                         { 
@@ -45,7 +45,7 @@
                                         },
                                         { 
                                             title: "Периодика", imgSrc: "./../../img/press-center-3.png",
-                                            link: "./smi.html"
+                                            link: "./periodika.html"
                                         },
                                         { 
                                             title: "СМИ", imgSrc: "./../../img/press-center-4.png",
@@ -57,12 +57,12 @@
                                 
                                     pressCenterData.forEach(project => {
                                         const projectItem = `
-                                            <article class="press-center__item" role="article">
-                                                <div class="press-center__image">
-                                                    <img data-src="${project.imgSrc}" class="lazyload" alt="${project.title}">
+                                            <article class="item" role="article">
+                                                <div class="item__image">
+                                                    <img src="${project.imgSrc}" alt="${project.title}">
                                                 </div>
-                                                <a href="${project.link}" class="press-center__link" title="${project.title}">
-                                                    <h3 class="press-center__title item__title">${project.title}</h3>
+                                                <a href="${project.link}" class="item__link" title="${project.title}">
+                                                    <h3 class="item__title">${project.title}</h3>
                                                 </a>
                                             </article>
                                         `;

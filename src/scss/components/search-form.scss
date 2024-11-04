@@ -13,12 +13,21 @@
         }
 
         &:not(.search-result &):has(input:focus) {
-            border-color: $clr-primary;
+            border-color: $clr-gray-border;
         }
         button[type="submit"] {
             & > svg {
                 width: 18px;
                 height: 18px;
+                transition: all $t-base;
+                @include mobile {
+                    color: $clr-text !important;
+                }
+            }
+            @include any-hover {
+                &:hover svg {
+                    stroke: $clr-primary;
+                }
             }
         }
     }
