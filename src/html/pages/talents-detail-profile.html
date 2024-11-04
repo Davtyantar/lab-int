@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="ru">
+		@include("./../common/head.html", { "title": "Макарова Светлана Юрьевна" })
+	<body>
+		<div class="page-wrapper">
+			<!-- Шапка -->
+			@include("./../common/header.html")
+			<!-- Шапка -->
+
+			<main class="main">
+				<div class="page-heading">
+					<div class="container">
+						<div class="breadcrumbs" itemscope itemtype="https://schema.org/BreadcrumbList">
+							<ul class="breadcrumbs__list">
+								<li class="breadcrumbs__item" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+									<a href="/" class="breadcrumbs__item-content" itemprop="item" title="Перейти на главную страницу" aria-label="Главная">
+										<span itemprop="name">Главная</span>
+									</a>
+									<meta itemprop="position" content="1" />
+								</li>
+								<li class="breadcrumbs__item" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+									<a href="/talents__detail" class="breadcrumbs__item-content" itemprop="item" title="Перейти в раздел Организация" aria-label="Организация">
+										<span itemprop="name">Проекты</span>
+									</a>
+									<meta itemprop="position" content="2" />
+								</li>
+                                <li class="breadcrumbs__item" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+									<a href="/talents__detail" class="breadcrumbs__item-content" itemprop="item" title="Перейти в раздел Организация" aria-label="Организация">
+										<span itemprop="name">Твои таланты</span>
+									</a>
+									<meta itemprop="position" content="3" />
+								</li>
+								<li class="breadcrumbs__item" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+									<span class="breadcrumbs__item-content" itemprop="name">Макарова Светлана Юрьевна</span>
+									<meta itemprop="position" content="4" />
+								</li>
+							</ul>
+						</div>
+						<div class="page-title__wrapper">
+							<h1 class="page-title">Макарова Светлана Юрьевна</h1>
+						</div>
+					</div>
+				</div>
+				<section class="talents talents__detail">
+					<div class="container">
+						<div class="section_content">
+							<div class="talents__detail-profile profile">
+                                <div class="profile__img img">
+                                    <img src="./../../img/talents-detail-profile-1.png" alt="Описание" title="Описание" >
+                                </div>
+                                <div class="profile__content">
+                                    <div class="profile__head">
+                                        <div class="profile__position">Делопроизводитель ЗМА ООО "Нижегородские автокомпоненты</div>
+                                        <div class="profile__talent">Мастер вязаных игрушек</div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="gallery gallery--grid">
+									<div class="gallery__items items grid grid--4" role="region" aria-label="Галерея">
+										<a class="gallery__item hover-img img" href="./../../img/talents-detail-person-img.png" data-fancybox="gallery" data-caption="Изображение 1" alt="Изображение 1" title="Изображение 1">
+											<img data-src="./../../img/talents-detail-person-img.png" class="lazyload" title="Изображение 1" role="img" />
+										</a>
+										<a class="gallery__item hover-img img" href="./../../img/talents-detail-person-img.png" data-fancybox="gallery" data-caption="Изображение 2" alt="Изображение 2" title="Изображение 2">
+											<img data-src="./../../img/talents-detail-person-img.png" class="lazyload" role="img" />
+										</a>
+										<a class="gallery__item hover-img img" href="./../../img/talents-detail-person-img.png" data-fancybox="gallery" data-caption="Изображение 3" alt="Изображение 3" title="Изображение 3">
+											<img data-src="./../../img/talents-detail-person-img.png" class="lazyload" role="img" />
+										</a>
+										<a class="gallery__item hover-img img" href="./../../img/talents-detail-person-img.png" data-fancybox="gallery" data-caption="Изображение 4" alt="Изображение 4" title="Изображение 4">
+											<img data-src="./../../img/talents-detail-person-img.png" class="lazyload" role="img" />
+										</a>
+										<a class="gallery__item hover-img img" href="./../../img/talents-detail-person-img.png" data-fancybox="gallery" data-caption="Изображение 5" alt="Изображение 5" title="Изображение 5">
+											<img data-src="./../../img/talents-detail-person-img.png" class="lazyload" role="img" />
+										</a>
+										<a class="gallery__item hover-img img" href="./../../img/talents-detail-person-img.png" data-fancybox="gallery" data-caption="Изображение 6" alt="Изображение 6" title="Изображение 6">
+											<img data-src="./../../img/talents-detail-person-img.png" class="lazyload" role="img" />
+										</a>
+										<a class="gallery__item hover-img img" href="./../../img/talents-detail-person-img.png" data-fancybox="gallery" data-caption="Изображение 7" alt="Изображение 7" title="Изображение 7">
+											<img data-src="./../../img/talents-detail-person-img.png" class="lazyload" role="img" />
+										</a>
+										<a class="gallery__item hover-img img" href="./../../img/talents-detail-person-img.png" data-fancybox="gallery" data-caption="Изображение 8" alt="Изображение 8" title="Изображение 8">
+											<img data-src="./../../img/talents-detail-person-img.png" class="lazyload" role="img" />
+										</a>
+									</div>
+								<a href="#" class="get-more_btn">больше фото</a>
+							</div>
+						</div>
+					</div>
+				</section>
+			</main>
+			
+			<!-- Подвал -->
+				@include("./../common/footer.html")
+			<!-- Подвал -->
+		</div>
+	</body>
+</html>

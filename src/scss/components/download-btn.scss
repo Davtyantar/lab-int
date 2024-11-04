@@ -3,15 +3,21 @@
     display: flex;
     align-items: center;
     column-gap: 10px;
-
+    
+    border-radius: 100px;
     font-weight: 700;
     font-size: 12px;
     line-height: 100%;
     letter-spacing: 0.04em;
     text-transform: uppercase;
-
-    &:hover::before {
-        background-image: url("data:image/svg+xml,%3Csvg width='20' height='20' viewBox='0 0 20 20' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M19 13L19 14.2C19 15.8802 19 16.7202 18.673 17.362C18.3854 17.9265 17.9265 18.3854 17.362 18.673C16.7202 19 15.8802 19 14.2 19L5.8 19C4.11984 19 3.27976 19 2.63803 18.673C2.07354 18.3854 1.6146 17.9265 1.32698 17.362C0.999999 16.7202 0.999999 15.8802 0.999999 14.2L0.999999 13M15 8L10 13M10 13L5 8M10 13L10 1' stroke='%23163e73' stroke-width='2' stroke-linecap='round' stroke-linejoin='round' /%3E%3C/svg%3E");
+    padding: 5px 10px;
+    margin: -5px -10px;
+    transition: background-color $t-base;
+    @include any-hover {
+        &:hover {
+            background-color: rgba(22, 62, 115, 0.1);
+            color: inherit !important;
+        }
     }
     &::before {
         content: "";

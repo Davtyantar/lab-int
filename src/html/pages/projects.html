@@ -38,7 +38,7 @@
                                         { title: "Слет профгрупоргов", imgSrc: "./../../img/projects-page-img-1.png", link: "./union-meeting.html"},
                                         { title: "Проф-тв", imgSrc: "./../../img/projects-page-img-2.png", link: "./prof-tv.html"},
                                         { title: "Конкурсы", imgSrc: "./../../img/projects-page-img-3.png", link: "./competitions.html"},
-                                        { title: "Твой талант", imgSrc: "./../../img/projects-page-img-4.png", link: "./talents.html"},
+                                        { title: "Твои таланты", imgSrc: "./../../img/projects-page-img-4.png", link: "./talents.html"},
                                         { title: "Поздравляем", imgSrc: "./../../img/projects-page-img-5.png", link: "./congrats.html"},
                                         { title: "Перечитай", imgSrc: "./../../img/projects-page-img-6.png", link: "./perechitay.html"},
                                         { title: "Кинофраза", imgSrc: "./../../img/projects-page-img-7.png", link: "./kinofraza.html"},
@@ -51,13 +51,13 @@
                                         { title: "Азбука водителя", imgSrc: "./../../img/projects-page-img-14.png", link: "./azbuka-voditelya.html"},
                                     ];
                                 
-                                    const projectsContent = document.querySelector('.projects__items:not(.main.homepage .projects__items)');
+                                    const projectsContent = document.querySelector('.projects__items');
                                 
                                     projectsData.forEach(project => {
                                         const projectItem = `
                                             <article class="item" role="article">
                                                 <div class="item__image">
-                                                    <img data-src="${project.imgSrc}" class="lazyload" alt="${project.title}">
+                                                    <img src="${project.imgSrc}" alt="${project.title}">
                                                 </div>
                                                 <a href="${project.link}" class="item__link" title="${project.title}">
                                                     <h3 class="item__title">${project.title}</h3>

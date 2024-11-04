@@ -95,33 +95,41 @@
                                 </ul>
                             </div>
                             <div class="gallery gallery--grid">
-                                <div class="gallery__items items grid grid--4" role="region" aria-label="Галерея">
-                                    <script>
-                                        const galleryData = [
-                                            { title: "Изображение 1", imgSrc: "./../../img/union-meeting_detail-1.png"},
-                                            { title: "Изображение 2", imgSrc: "./../../img/union-meeting_detail-2.png"},
-                                            { title: "Изображение 3", imgSrc: "./../../img/union-meeting_detail-3.png"},
-                                            { title: "Изображение 4", imgSrc: "./../../img/union-meeting_detail-4.png"},
-                                            { title: "Изображение 5", imgSrc: "./../../img/union-meeting_detail-5.png"},
-                                            { title: "Изображение 6", imgSrc: "./../../img/union-meeting_detail-6.png"},
-                                            { title: "Изображение 7", imgSrc: "./../../img/union-meeting_detail-7.png"},
-                                            { title: "Изображение 8", imgSrc: "./../../img/union-meeting_detail-8.png"},
-                                        ];
-                                    
-                                        const galleryContent = document.querySelector('.union-meeting_detail .gallery__items');
-                                    
-                                        galleryData.forEach(item => {
-                                            const galleryItem = `
-                                                <a class="gallery__item hover-img img" href="${item.imgSrc}" data-fancybox="gallery" data-caption="${item.title}" title="${item.title}">
-                                                    <img data-src="${item.imgSrc}" class="lazyload" alt="${item.title}" role="img" />
-                                                </a>
-                                            `;
-                                            galleryContent.innerHTML += galleryItem;
-                                        });
-                                    </script>
-                                </div>
-                                <a href="#" class="get-more_btn">больше фото</a>
-                            </div>
+								<div class="gallery__items items grid grid--4" role="region" aria-label="Галерея">
+									<a class="gallery__item hover-img img" href="./../../img/union-meeting_detail-1.png" data-fancybox="gallery" data-caption="Изображение 1" title="Изображение 1">
+										<img data-src="./../../img/union-meeting_detail-1.png" class="lazyload" alt="Изображение 1" role="img" />
+									</a>
+
+									<a class="gallery__item hover-img img" href="./../../img/union-meeting_detail-1.png" data-fancybox="gallery" data-caption="Изображение 2" title="Изображение 2">
+										<img data-src="./../../img/union-meeting_detail-1.png" class="lazyload" alt="Изображение 2" role="img" />
+									</a>
+
+									<a class="gallery__item hover-img img" href="./../../img/union-meeting_detail-1.png" data-fancybox="gallery" data-caption="Изображение 3" title="Изображение 3">
+										<img data-src="./../../img/union-meeting_detail-1.png" class="lazyload" alt="Изображение 3" role="img" />
+									</a>
+
+									<a class="gallery__item hover-img img" href="./../../img/union-meeting_detail-1.png" data-fancybox="gallery" data-caption="Изображение 4" title="Изображение 4">
+										<img data-src="./../../img/union-meeting_detail-1.png" class="lazyload" alt="Изображение 4" role="img" />
+									</a>
+
+									<a class="gallery__item hover-img img" href="./../../img/union-meeting_detail-1.png" data-fancybox="gallery" data-caption="Изображение 5" title="Изображение 5">
+										<img data-src="./../../img/union-meeting_detail-1.png" class="lazyload" alt="Изображение 5" role="img" />
+									</a>
+
+									<a class="gallery__item hover-img img" href="./../../img/union-meeting_detail-1.png" data-fancybox="gallery" data-caption="Изображение 6" title="Изображение 6">
+										<img data-src="./../../img/union-meeting_detail-1.png" class="lazyload" alt="Изображение 6" role="img" />
+									</a>
+
+									<a class="gallery__item hover-img img" href="./../../img/union-meeting_detail-1.png" data-fancybox="gallery" data-caption="Изображение 7" title="Изображение 7">
+										<img data-src="./../../img/union-meeting_detail-1.png" class="lazyload" alt="Изображение 7" role="img" />
+									</a>
+
+									<a class="gallery__item hover-img img" href="./../../img/union-meeting_detail-1.png" data-fancybox="gallery" data-caption="Изображение 8" title="Изображение 8">
+										<img data-src="./../../img/union-meeting_detail-1.png" class="lazyload" alt="Изображение 8" role="img" />
+									</a>
+								</div>
+								<a href="#" class="get-more_btn">больше фото</a>
+							</div>
 						</div>
 					</div>
 				</section>

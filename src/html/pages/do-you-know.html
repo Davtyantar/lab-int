@@ -50,25 +50,15 @@
                             </div>
 
 							<div class="do-you-know__items grid grid--3 items">
-								<script>
-									const doYouKnowData = [
-                                        { title: "Факт - 1", imgSrc: "./../../img/do-you-know__item-1.png"},
-                                        { title: "Факт - 2", imgSrc: "./../../img/do-you-know__item-2.png"},
-                                        { title: "Факт - 3", imgSrc: "./../../img/do-you-know__item-3.png"},
-									];
-								
-									const doYouKnowContent  = document.querySelector('.do-you-know__items');
-								
-                                    doYouKnowData.forEach(item => {
-                                        const doYouKnowItem = `
-                                            <a class="do-you-know__item hover-img img" href="${item.imgSrc}" data-fancybox="gallery" data-caption="${item.title}" title="${item.title}">
-                                                <img data-src="${item.imgSrc}" class="lazyload" alt="${item.title}" role="img" />
-                                            </a>
-                                        `;
-                                        doYouKnowContent.innerHTML += doYouKnowItem;
-                                    });
-								</script>
-								
+								<a class="do-you-know__item hover-img img" href="./../../img/do-you-know__item-1.png" data-fancybox="gallery" data-caption="Факт - 1" title="Факт - 1">
+									<img data-src="./../../img/do-you-know__item-1.png" class="lazyload" alt="Факт - 1" role="img" />
+								</a>
+								<a class="do-you-know__item hover-img img" href="./../../img/do-you-know__item-2.png" data-fancybox="gallery" data-caption="Факт - 2" title="Факт - 2">
+									<img data-src="./../../img/do-you-know__item-2.png" class="lazyload" alt="Факт - 2" role="img" />
+								</a>
+								<a class="do-you-know__item hover-img img" href="./../../img/do-you-know__item-3.png" data-fancybox="gallery" data-caption="Факт - 3" title="Факт - 3">
+									<img data-src="./../../img/do-you-know__item-3.png" class="lazyload" alt="Факт - 3" role="img" />
+								</a>
 							</div>
 							@include("./../components/pagination.html")
 						</div>

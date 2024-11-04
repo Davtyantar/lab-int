@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="ru">
+		@include("./../common/head.html", { "title": "История наставничества" })
+	<body>
+		<div class="page-wrapper">
+			<!-- Шапка -->
+			@include("./../common/header.html")
+			<!-- Шапка -->
+
+			<main class="main">
+				<div class="page-heading">
+					<div class="container">
+						<div class="breadcrumbs" itemscope itemtype="https://schema.org/BreadcrumbList">
+                            <ul class="breadcrumbs__list">
+                                <li class="breadcrumbs__item" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+                                    <a href="/" class="breadcrumbs__item-content" itemprop="item" title="Перейти на главную страницу" aria-label="Главная">
+                                        <span itemprop="name">Главная</span>
+                                    </a>
+                                    <meta itemprop="position" content="1" />
+                                </li>
+                                <li class="breadcrumbs__item" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+                                    <a href="/" class="breadcrumbs__item-content" itemprop="item" title="Перейти на главную страницу" aria-label="Главная">
+                                        <span itemprop="name">Пресс-центр</span>
+                                    </a>
+                                    <meta itemprop="position" content="2" />
+                                </li>
+                                <li class="breadcrumbs__item" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+                                    <span class="breadcrumbs__item-content" itemprop="name">История наставничества</span>
+                                    <meta itemprop="position" content="2" />
+                                </li>
+                            </ul>
+                        </div>
+						<div class="page-title__wrapper">
+							<h1 class="page-title">История наставничества</h1>
+						</div>
+					</div>
+				</div>
+                <!-- то же самое что на главной -->
+                <section class="mentoring-history">
+                    <div class="container">
+                        <div class="section_content">
+                            <div class="mentoring-history__items grid grid--4 items mobile-col">
+                                <script>
+                                    const mentoringHistoryData = [
+                                        {   
+                                            title: "Представители ГАЗа приняли участие в первом профсоюзном фестивале наставников «ПРОопыт» на побережье озера Тургояк в Миассе. Путевкой на это мероприятие для сотрудников компании стало успешное выступление на конкурсе «Я наставник!», организованном комиссией по работе с молодежью профкома ГАЗа.", 
+                                            imgSrc: "./../../img/mentoring-history__image-page-1.png",  
+                                        },
+                                        {  
+                                            title: "При разборе фотоархива, переданного в дар ППО в ОАО 'ГАЗ' внучкой председателя профкома Горьковского автозавода Роберта Викторовича Банаева, были обнаружены два снимка, имеющие отношение к наставничеству.", 
+                                            imgSrc: "./../../img/mentoring-history__image-page-2.png",
+                                        },
+                                        {  
+                                            title: "На сайте профкома под девизом 'Году наставника посвящается...' публикуются цитаты известных людей о наставничестве", 
+                                            imgSrc: "./../../img/mentoring-history__image-page-3.png",
+                                        },
+                                        {  
+                                            title: "Директор Музея истории ГАЗа Наталья Витальевна Колесникова познакомила профсоюзных активистов с историей движения наставничества на Горьковском автозаводе.", 
+                                            imgSrc: "./../../img/mentoring-history__image-page-4.png",
+                                        }
+                                    ];
+                                
+                                    const mentoringHistoryContent = document.querySelector('.mentoring-history__items');
+                                
+                                    mentoringHistoryData.forEach(item => {
+                                        const mentoringHistoryItem = `
+                                            <article class="mentoring-history__item" role="article">
+                                                <a href="./profsoyuz-xronika-detail.html" class="item__link" title="${item.title}">
+                                                    <div class="item__img img">
+                                                        <img data-src="${item.imgSrc}" class="lazyload" alt="${item.title}">
+                                                    </div>
+                                                    <div class="item__description">
+                                                        <h3 class="item__title">${item.title}</h3>
+                                                        <span class="item__date">03.10.2024</span>
+                                                    </div>
+                                                </a>
+                                            </article>
+                                        `;
+                                        mentoringHistoryContent.innerHTML += mentoringHistoryItem;
+                                    });
+                                </script>
+                            </div>
+                            @include("./../components/pagination.html")
+                        </div>
+                    </div>
+                </section>
+                <!-- то же самое что на главной -->
+			</main>
+			
+			<!-- Подвал -->
+				@include("./../common/footer.html")
+			<!-- Подвал -->
+		</div>
+	</body>
+</html>

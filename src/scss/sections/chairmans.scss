@@ -1,5 +1,8 @@
 
 .chairmans {
+    .text-content {
+        width: min(100%, calc($container / 2));
+    }
     &__item {
         display: flex;
         flex-direction: column;

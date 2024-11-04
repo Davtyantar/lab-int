@@ -2,8 +2,10 @@
     .search__form {
         background-color: transparent;
         margin-bottom: 20px;
-        button[type="submit"] {
-            width: 127px;
+        @include min-mobile {
+            button[type="submit"] {
+                width: 127px;
+            }
         }
     }
     .search__input {

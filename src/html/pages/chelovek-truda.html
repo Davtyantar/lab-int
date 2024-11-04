@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="ru">
+		@include("./../common/head.html", { "title": "Человек труда в живописи" })
+	<body>
+		<div class="page-wrapper">
+			<!-- Шапка -->
+			@include("./../common/header.html")
+			<!-- Шапка -->
+
+			<main class="main">
+				<div class="page-heading">
+					<div class="container">
+						<div class="breadcrumbs" itemscope itemtype="https://schema.org/BreadcrumbList">
+							<ul class="breadcrumbs__list">
+								<li class="breadcrumbs__item" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+									<a href="/" class="breadcrumbs__item-content" itemprop="item" title="Перейти на главную страницу" aria-label="Главная">
+										<span itemprop="name">Главная</span>
+									</a>
+									<meta itemprop="position" content="1" />
+								</li>
+								<li class="breadcrumbs__item" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+									<a href="/organization" class="breadcrumbs__item-content" itemprop="item" title="Перейти в раздел Организация" aria-label="Организация">
+										<span itemprop="name">Проекты</span>
+									</a>
+									<meta itemprop="position" content="2" />
+								</li>
+								<li class="breadcrumbs__item" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+									<a href="/organization" class="breadcrumbs__item-content" itemprop="item" title="Перейти в раздел Организация" aria-label="Организация">
+										<span itemprop="name">Год наставника</span>
+									</a>
+									<meta itemprop="position" content="3" />
+								</li>
+								<li class="breadcrumbs__item" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+									<span class="breadcrumbs__item-content" itemprop="name">Человек труда в живописи</span>
+									<meta itemprop="position" content="4" />
+								</li>
+							</ul>
+						</div>
+						<div class="page-title__wrapper">
+							<h1 class="page-title">Человек труда в живописи</h1>
+						</div>
+					</div>
+				</div>
+				<section class="mentor-year_detail">
+					<div class="container">
+						<div class="section_content">
+							<div class="mentor-year_detail__items grid grid--4 items">
+								<div class="mentor-year_detail__item">
+									<a class="hover-img mentor-year_detail-img img" href="./../../img/mentor-year_detail-1.png" data-fancybox="gallery" data-caption="Изображение" title="Изображение">
+										<img data-src="./../../img/mentor-year_detail-1.png" class="lazyload" alt="Изображение" role="img" />
+									</a>
+                                    <div class="mentor-year_detail-info">
+                                        <h3 class="mentor-year_detail-title h4">"Столяр"</h3>
+                                        <p class="mentor-year_detail-subtitle">Бутов Алексей Иванович</p>
+                                        <span class="mentor-year_detail-date">1979</span>
+                                    </div>
+								</div>
+								<div class="mentor-year_detail__item">
+									<a class="hover-img mentor-year_detail-img img" href="./../../img/mentor-year_detail-2.png" data-fancybox="gallery" data-caption="Изображение" title="Изображение">
+										<img data-src="./../../img/mentor-year_detail-2.png" class="lazyload" alt="Изображение" role="img" />
+									</a>
+                                    <div class="mentor-year_detail-info">
+                                        <h3 class="mentor-year_detail-title h4">"Рабочая династия. Герой Социалистического труда Н.А.Волков с сыновьями Юрием и Валерием"</h3>
+                                        <p class="mentor-year_detail-subtitle">Егуткин Аркадий Ефимович</p>
+                                        <span class="mentor-year_detail-date">1979</span>
+                                    </div>
+								</div>
+								<div class="mentor-year_detail__item">
+									<a class="hover-img mentor-year_detail-img img" href="./../../img/mentor-year_detail-3.png" data-fancybox="gallery" data-caption="Изображение" title="Изображение">
+										<img data-src="./../../img/mentor-year_detail-3.png" class="lazyload" alt="Изображение" role="img" />
+									</a>
+                                    <div class="mentor-year_detail-info">
+                                        <h3 class="mentor-year_detail-title h4">"Дорожники"</h3>
+                                        <p class="mentor-year_detail-subtitle">Жемеркин Вячеслав Федорович</p>
+                                        <span class="mentor-year_detail-date">1979</span>
+                                    </div>
+								</div>
+								<div class="mentor-year_detail__item">
+									<a class="hover-img mentor-year_detail-img img" href="./../../img/mentor-year_detail-4.png" data-fancybox="gallery" data-caption="Изображение" title="Изображение">
+										<img data-src="./../../img/mentor-year_detail-4.png" class="lazyload" alt="Изображение" role="img" />
+									</a>
+                                    <div class="mentor-year_detail-info">
+                                        <h3 class="mentor-year_detail-title h4">"Вахтенные пятилетки"</h3>
+                                        <p class="mentor-year_detail-subtitle">Жердзицкий Евгений Федорович</p>
+                                        <span class="mentor-year_detail-date">1975</span>
+                                    </div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</section>
+			</main>
+			
+			<!-- Подвал -->
+				@include("./../common/footer.html")
+			<!-- Подвал -->
+		</div>
+	</body>
+</html>

@@ -1,32 +1,27 @@
 .talents {
-    
-}
-
-.talents-detail {
-    &__items.grid {
-        @include tablet {
-            grid-template-columns: repeat(1, minmax(0, 1fr));
-        }
-    }
     .profile {
         display: flex;
-        gap: 20px 30px;
-        padding: 5px;
-        @include mobile {
-            padding: 20px;
-            flex-direction: column;
+        &:not(.talents__detail .profile) {
+            gap: 20px 30px;
+            padding: 5px;
+            border-radius: calc($border-radius + 5px);
+            border: 1px solid $clr-gray-border;
+            @include mobile {
+                padding: 20px;
+                flex-direction: column;
+            }
         }
-        border-radius: calc($border-radius + 5px);
         overflow: hidden;
-        border: 1px solid $clr-gray-border;
         &__img {
             border-radius: calc($border-radius + 2px);
             overflow: hidden;
-            @include min-mobile {
-                width: 205px;
-            }
-            @include mobile {
-                aspect-ratio: 1;
+            &:not(.talents__detail .profile__img) {
+                @include min-mobile {
+                    width: 205px;
+                }
+                @include mobile {
+                    aspect-ratio: 1;
+                }
             }
         }
         &__content {
@@ -74,16 +69,54 @@
                 background-image: url("data:image/svg+xml,%3Csvg width='16' height='16' viewBox='0 0 16 16' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M14 6.00001L14 2.00001M14 2.00001H9.99999M14 2.00001L8 8M6.66667 2H5.2C4.0799 2 3.51984 2 3.09202 2.21799C2.71569 2.40973 2.40973 2.71569 2.21799 3.09202C2 3.51984 2 4.07989 2 5.2V10.8C2 11.9201 2 12.4802 2.21799 12.908C2.40973 13.2843 2.71569 13.5903 3.09202 13.782C3.51984 14 4.07989 14 5.2 14H10.8C11.9201 14 12.4802 14 12.908 13.782C13.2843 13.5903 13.5903 13.2843 13.782 12.908C14 12.4802 14 11.9201 14 10.8V9.33333' stroke='white' stroke-width='2' stroke-linecap='round' stroke-linejoin='round' /%3E%3C/svg%3E");
             }
         }
-
+    
         &__talent::before,
         &__event::after {
             content: "";
             display: block;
+            flex-shrink: 0;
             width: 16px;
             height: 16px;
             background-size: 16px;
             background-position: center;
             background-repeat: no-repeat;
+        }
+    }
+}
+
+.talents__list {
+    &-items.grid {
+        @include tablet {
+            grid-template-columns: repeat(1, minmax(0, 1fr));
+        }
+    }
+}
+
+
+
+.talents__detail {
+    .profile {
+        align-items: center;
+        column-gap: 40px;
+        @include mobile {
+            flex-direction: column;
+            align-items: start;
+            row-gap: 20px;
+        }
+        padding: 0;
+        border: none;
+        &__img {
+            @include min-mobile {
+                width: 170px;
+                height: 207px;
+            }
+            @include mobile {
+
+            }
+            
+            
+            flex-shrink: 0;
+            border-radius: $border-radius;
         }
     }
 }

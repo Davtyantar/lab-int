@@ -27,7 +27,7 @@ export function initGsap() {
     
         gsap.from(children, {
             opacity: 0,
-            duration: 0.25,
+            duration: 0.15,
             ease: 'power2.out',
             stagger: 0.15,
             scrollTrigger: {

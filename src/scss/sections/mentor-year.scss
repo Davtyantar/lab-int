@@ -1,1 +1,29 @@
 .mentor-year {}
+
+.mentor-year {
+    &__items {
+        row-gap: 60px;
+    }
+    &_detail {
+        &-img {
+            aspect-ratio: 1 / 0.715;
+            max-height: 250px;
+            border-radius: $border-radius;
+            overflow: hidden;
+            margin-bottom: 20px;
+        }
+        &-title {
+            margin-bottom: 10px;
+        }
+        &-subtitle {
+            font-family: $second-family;
+            margin-bottom: 20px;
+        }
+        &-date {
+            display: inline-block;
+            font-family: $second-family;
+            font-size: 12px;
+            color: $clr-gray-light;
+        }
+    }
+}

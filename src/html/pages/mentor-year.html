@@ -41,28 +41,58 @@
 							<div class="mentor-year__items items grid grid--4 unified-grid-arrow">
 								<script>
 									const mentorYearData = [
-										{ title: "Человек Трудав живописи", imgSrc: "./../../img/mentor-year-page-img-1.png"},
-										{ title: "Стихи о наставниках", imgSrc: "./../../img/mentor-year-page-img-2.png"},
-										{ title: "История наставничества", imgSrc: "./../../img/mentor-year-page-img-3.png"},
-										{ title: "Цитаты о наставничестве", imgSrc: "./../../img/mentor-year-page-img-4.png"},
-										{ title: "Воспоминания о наставниках", imgSrc: "./../../img/mentor-year-page-img-5.png"},
-										{ title: "Литературный конкурс “Слово о наставнике”", imgSrc: "./../../img/mentor-year-page-img-6.png"},
-										{ title: "Методичка “Профсоюзное наставничество”", imgSrc: "./../../img/mentor-year-page-img-7.png"},
-										{ title: "Презентация “Профсоюзное наставничество”", imgSrc: "./../../img/mentor-year-page-img-8.png"},
-										{ title: "Презентация “История движения “ни одного отстающего рядом”", imgSrc: "./../../img/mentor-year-page-img-9.png"},
-										{ title: "Мозговой штурм “Наставник - это”", imgSrc: "./../../img/mentor-year-page-img-10.png"},
+										{ 	
+											title: "Человек Труда в живописи",
+											imgSrc: "./../../img/mentor-year-page-img-1.png", link: "./chelovek-truda.html",
+										},
+										{ 	
+											title: "Стихи о наставниках",
+											imgSrc: "./../../img/mentor-year-page-img-2.png", link: "",
+										},
+										{ 	
+											title: "История наставничества",
+											imgSrc: "./../../img/mentor-year-page-img-3.png", link: "",
+										},
+										{ 	
+											title: "Цитаты о наставничестве",
+											imgSrc: "./../../img/mentor-year-page-img-4.png", link: "",
+										},
+										{ 	
+											title: "Воспоминания о наставниках",
+											imgSrc: "./../../img/mentor-year-page-img-5.png", link: "",
+										},
+										{ 	
+											title: "Литературный конкурс “Слово о наставнике”",
+											imgSrc: "./../../img/mentor-year-page-img-6.png", link: "",
+										},
+										{ 	
+											title: "Методичка “Профсоюзное наставничество”",
+											imgSrc: "./../../img/mentor-year-page-img-7.png", link: "",
+										},
+										{ 	
+											title: "Презентация “Профсоюзное наставничество”",
+											imgSrc: "./../../img/mentor-year-page-img-8.png", link: "",
+										},
+										{ 	
+											title: "Презентация “История движения “ни одного отстающего рядом”",
+											imgSrc: "./../../img/mentor-year-page-img-9.png", link: "",
+										},
+										{ 	
+											title: "Мозговой штурм “Наставник - это”",
+											imgSrc: "./../../img/mentor-year-page-img-10.png", link: "",
+										},
 									];
 								
 									const mentorYearContent = document.querySelector('.mentor-year__items');
 								
-									mentorYearData.forEach(project => {
+									mentorYearData.forEach(item => {
 										const mentorYearItem = `
 											<article class="item" role="article">
 												<div class="item__image">
-													<img data-src="${project.imgSrc}" class="lazyload" alt="${project.title}">
+													<img data-src="${item.imgSrc}" class="lazyload" alt="${item.title}">
 												</div>
-												<a href="#" class="item__link" target="_blank" title="${project.title}">
-													<h3 class="item__title">${project.title}</h3>
+												<a href="${item.link}" class="item__link" title="${item.title}">
+													<h3 class="item__title">${item.title}</h3>
 												</a>
 											</article>
 										`;

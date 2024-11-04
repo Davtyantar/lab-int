@@ -39,30 +39,22 @@
 					<div class="container">
 						<div class="section_content">
                             <div class="text-content">
-                                <p>Жизнеутверждающие высказывания известных людей на каждый день. Есть над чем задуматься, есть к чему стремиться.</p>
+                                <p>Жизнеутверждающие высказывания известных людей на каждый день. <br>
+									Есть над чем задуматься, есть к чему стремиться.</p>
                             </div>
-
 							<div class="quote-of-the-day__items grid grid--3 items">
-								<script>
-									const quoteOfTheDayData = [
-										{ quote: "Автомобиль — любимая игрушка взрослых мужчин.", author: "Марлен Дитрих",},
-										{ quote: "Автомобиль стал частью одежды, без которой мы чувствуем себя неуверенными, неприкрытыми и незакомплексованными.", author: "Маршал Маклюэн"},
-										{ quote: "Анонимные письма хороши уже тем, что на них не надо отвечать.", author: "Александр Дюма-сын"},
-									];
-								
-									const quoteOfTheDayContent = document.querySelector('.quote-of-the-day__items');
-								
-									quoteOfTheDayData.forEach(item => {
-										const quoteOfTheDayItem = `
-											<div class="quote-of-the-day__item lazyload">
-												<div class="item__quote">${item.quote}</div>
-												<div class="item__quote-author">${item.author}</div>
-											</div>
-										`;
-										quoteOfTheDayContent.innerHTML += quoteOfTheDayItem;
-									});
-								</script>
-								
+								<div class="quote-of-the-day__item">
+									<div class="item__quote">Автомобиль — любимая игрушка взрослых мужчин.</div>
+									<div class="item__quote-author">Марлен Дитрих</div>
+								</div>
+								<div class="quote-of-the-day__item">
+									<div class="item__quote">Автомобиль стал частью одежды, без которой мы чувствуем себя неуверенными, неприкрытыми и незакомплексованными.</div>
+									<div class="item__quote-author">Маршал Маклюэн</div>
+								</div>
+								<div class="quote-of-the-day__item">
+									<div class="item__quote">Анонимные письма хороши уже тем, что на них не надо отвечать.</div>
+									<div class="item__quote-author">Александр Дюма-сын</div>
+								</div>
 							</div>
 							@include("./../components/pagination.html")
 						</div>
