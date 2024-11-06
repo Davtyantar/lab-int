@@ -1,5 +1,5 @@
 import { initFancybox } from './libs/fancyboxInit.js';
-import { initSwiper } from './libs/swiperInit.js';
+// import { initSwiper } from './libs/swiperInit.js';
 import { initGsap } from './libs/gsapInit.js';
 import { start } from './components/start.js';
 
@@ -21,7 +21,7 @@ import { toggleSubmitButtonState } from './components/toggleSubmitButtonState.js
 
 document.addEventListener('DOMContentLoaded', function () {
     start();
-    initSwiper();
+    // initSwiper();
     initFancybox();
     initGsap();
 });
