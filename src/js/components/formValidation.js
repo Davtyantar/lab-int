@@ -70,22 +70,28 @@ export const setupFormValidation = () => {
 
         validation.onSuccess(event => {
             event.preventDefault();
+            
             const formWrapper = form.closest('.form-wrapper');
             const formSuccess = formWrapper?.querySelector('.form__success');
             const formData = new FormData(form);
             const formValues = Object.fromEntries(formData.entries());
-
+        
             console.log('Form data:', formValues);
-
+        
+            const resetForm = () => {
+                form.reset();
+                formSuccess?.classList.remove('is-visible');
+            };
+        
             if (formSuccess) {
                 formSuccess.classList.add('is-visible');
+            
                 setTimeout(() => {
                     Fancybox.close();
-                    if (!form.closest('#callback_form')) {
-                        form.reset();
-                        formSuccess.classList.remove('is-visible');
-                    }
+                    form.closest('#callback_form') ? setTimeout(resetForm, 500) : resetForm();
                 }, 2000);
+            } else {
+                resetForm();
             }
         });
     });

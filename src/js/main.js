@@ -16,6 +16,7 @@ import { setVh } from './components/setVh.js';
 import { headerFunctions } from './components/headerFunctions.js';
 import { updateActiveNavLink } from './components/activeNavLink.js';
 import { setActiveSidebarLink } from './components/setActiveSidebarLink.js';
+import { toggleSubmitButtonState } from './components/toggleSubmitButtonState.js';
 
 
 document.addEventListener('DOMContentLoaded', function () {

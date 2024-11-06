@@ -30,15 +30,11 @@ export const setActiveSidebarLink = () => {
     window.addEventListener('scroll', updateActiveLink);
 };
 
-// Функция для инициализации или удаления активных ссылок в зависимости от устройства
 const initializeSidebarLink = () => {
     if (!isMobile()) {
         setActiveSidebarLink();
     }
 };
 
-// Вызов функции при загрузке страницы
 document.addEventListener("DOMContentLoaded", initializeSidebarLink);
-
-// Вызов функции при изменении размера окна
 window.addEventListener('resize', initializeSidebarLink);

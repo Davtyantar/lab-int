@@ -55,8 +55,13 @@
             outline: none;
         }
     }
+    &-privacy {
+        font-family: $second-family;
+        margin-bottom: 15px;
+        font-size: 14px;
+    }
     textarea {
-        height: 50px;
+        height: 75px;
     }
 }
 
@@ -70,7 +75,7 @@
     background-color: transparent;
     width: 95% !important;
     @include min-mobile {
-        max-width: 450px;
+        max-width: 500px;
     }
 }
 
@@ -80,7 +85,6 @@
     background-color: $clr-white;
     overflow: hidden;
     padding: 30px;
-    
     & > form {
         width: 100%;
     }
@@ -98,7 +102,6 @@
         padding: 15px 0;
     }
 }
-
 
 .message-container {
     margin-top: 10px;

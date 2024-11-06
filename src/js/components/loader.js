@@ -18,4 +18,4 @@ export const loader = () => {
 
 
 
-window.addEventListener("load", loader );
+window.addEventListener("load", loader);

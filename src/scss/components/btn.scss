@@ -22,7 +22,7 @@
     letter-spacing: 0.04em;
     text-transform: uppercase;
 
-    transition: color .3s, background-color .3s;
+    transition: color $t-base, background-color $t-base, opacity $t-base;
     & > .icon {
         width: 16px;
         height: 16px;
@@ -40,7 +40,7 @@
         height: 14px;
         background-image: url("data:image/svg+xml,%3Csvg width='14' height='14' viewBox='0 0 14 14' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M5.25 10.5L8.75 7L5.25 3.5' stroke='white' stroke-width='2' stroke-linecap='round' stroke-linejoin='round' /%3E%3C/svg%3E");
 
-        transition: transform .3s ease-in-out;
+        transition: transform $t-base;
     }
     &:hover::after {
         transform: translateX(5px);

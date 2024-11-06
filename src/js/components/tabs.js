@@ -8,7 +8,6 @@ export const Tabs = () => {
         });
 
         tabs.forEach((tab, index) => {
-            // Установка начального значения aria-selected
             tab.setAttribute("aria-selected", index === 0 ? "true" : "false");
             
             tab.addEventListener("click", function() {

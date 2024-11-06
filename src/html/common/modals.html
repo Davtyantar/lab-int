@@ -19,7 +19,14 @@
                 <label for="message" class="form-label">Ваше сообщение:</label>
                 <textarea name="message" id="message" class="form-input"></textarea>
             </div>
-            
+            <div class="form-privacy">
+                <label class="custom-checkbox">
+                    <input type="checkbox" class="custom-checkbox__field" checked>
+                    <span class="custom-checkbox__content">
+                        <span>согласен с <a href="policy" class="head__nav_link white-text">политикой конфиденциальности</a></span>
+                    </span>
+                </label>
+            </div>
             <button type="submit" class="btn btn-primary btn_full">Отправить</button>
         </form>
         @include("../components/formSuccess.html")

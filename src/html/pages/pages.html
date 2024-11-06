@@ -1,195 +1,175 @@
 <!DOCTYPE html>
 <html lang="ru">
-	<head>
-		<meta charset="UTF-8" />
-		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
-		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		<link rel="preconnect" href="https://fonts.googleapis.com" />
-		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-		<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet" />
-		<title>Страницы сайта</title>
-		<style>
-			:root {
-				--color-background: #ffffff;
-				--color-text: #272727;
-				--color-black: #272727;
-			}
-			@media (prefers-color-scheme: dark) {
-				:root {
-					--color-background: #272727;
-					--color-text: #ffffff;
-				}
-			}
-			* {
-				box-sizing: border-box;
-				margin: 0;
-				padding: 0;
-			}
-			body {
-				font-family: 'Montserrat', sans-serif;
-				background-color: var(--color-background);
-				color: var(--color-text);
-			}
-			main {
-				width: 100%;
-				max-width: 1230px;
-				margin-left: auto;
-				margin-right: auto;
-				padding: 50px 15px;
-			}
-			h1 {
-				font-size: 24px;
-				font-weight: 700;
-				margin-bottom: 40px;
-			}
-			h2 {
-				font-size: 18px;
-				font-weight: 700;
-				margin-bottom: 24px;
-			}
-			ol {
-				margin-bottom: 40px;
-				padding-left: 20px;
-				list-style-position: inside;
-			}
-			ol ul {
-				padding-left: 40px;
-				margin: 20px 0;
-			}
-			ol:last-of-type {
-				margin-bottom: 70px;
-			}
-			ol li:not(:last-child) {
-				margin-bottom: 14px;
-			}
-			ol li a {
-				color: var(--color-text);
-				text-decoration: none;
-			}
-			ol li a:hover {
-				text-decoration: underline;
-			}
-			.copy {
-				font-weight: 700;
-			}
-			@media screen and (max-width: 768px) {
-				main {
-					padding: 40px 30px;
-				}
-			}
-			@media screen and (max-width: 475px) {
-				h1 {
-					font-size: 20px;
-					margin-bottom: 30px;
-				}
-				ol {
-					margin-bottom: 30px;
-				}
-				ol:last-of-type {
-					margin-bottom: 40px;
-				}
-			}
-		</style>
-	</head>
+		@include("./../common/head.html", { "title": "Азбука водителя" })
 	<body>
-		<main class="text-content">
-			<div class="pages-menu text-content">
-				<h3>Листинг страниц верстки</h3>
-				<ol>
-					<li><a target="_blank" href="index.html">Главная</a></li>
-					
-					<li>
-						<a target="_blank" href="./organization.html">Организация</a>
-						<ul>
-							<li><a target="_blank" href="./org-docs.html">Документы организации</a></li>
-							<li><a target="_blank" href="./zaslugi.html">Заслуги</a></li>
-							<li>
-								<a target="_blank" href="./history.html">История профсоюза</a>
-								<ul>
-									<li><a target="_blank" href="./predsedateli.html">Председатели</a></li>
-								</ul>
-							</li>
-							<li>
-								<a target="_blank" href="./otdyx.html">Отдохните</a>
-								<ul>
-									<li><a target="_blank" href="./sanatory.html">Санаторий "Городецкий"</a></li>
-								</ul>
-							</li>
-						</ul>
-					</li>
-			
-					<li>
-						<a target="_blank" href="./projects.html">Проекты</a>
-						<ul>
-							<li>
-								<a target="_blank" href="./union-meeting.html">Слет профгрупоргов</a>
-								<ul>
-									<li><a target="_blank" href="./union-meeting-detail.html">Детальная страница</a></li>
-								</ul>
-							</li>
-							<li><a target="_blank" href="./prof-tv.html">Проф-тв</a></li>
-							<li><a target="_blank" href="./competitions.html">Конкурсы</a></li>
-							<li><a target="_blank" href="./congrats.html">Поздравляем</a></li>
-							<li><a target="_blank" href="./perechitay.html">Перечитай</a></li>
-							<li><a target="_blank" href="./kinofraza.html">Кинофраза</a></li>
-							<li>
-								<a target="_blank" href="./kak-sebya-vesti.html">Как себя вести</a>
-								<ul>
-									<li><a target="_blank" href="./kak-sebya-vesti.html">Детальная страница</a></li>
-								</ul>
-							</li>
-							<li><a target="_blank" href="./quote-of-the-day.html">Цитата дня</a></li>
-							<li><a target="_blank" href="./do-you-know.html">А вы знали?</a></li>
-							<li><a target="_blank" href="./mentor-year.html">Год наставника</a></li>
-							<li><a target="_blank" href="./bilet-85.html">Билет 085</a></li>
-							<li><a target="_blank" href="./bilet-90.html">Билет 090</a></li>
-							<li>
-								<a target="_blank" href="./azbuka-voditelya.html">Азбука водителя</a>
-								<ul>
-									<li><a target="_blank" href="./azbuka-voditelya-detail.html">Детальная страница</a></li>
-								</ul>
-							</li>
-							<li>
-								<a target="_blank" href="./press-center.html">Пресс-центр</a>
-								<ul>
-									<li><a target="_blank" href="./periodika.html">Периодика</a></li>
-									<li><a target="_blank" href="./smi.html">СМИ</a></li>
+		<div class="page-wrapper">
+			<!-- Шапка -->
+			@include("./../common/header.html")
+			<!-- Шапка -->
+
+			<main class="main">
+				<div class="page-heading">
+					<div class="container">
+						<div class="page-title__wrapper">
+							<h1 class="page-title">Листинг страниц</h1>
+						</div>
+					</div>
+				</div>
+                <section class="drivers-alphabet">
+                    <div class="container">
+                        <div class="section_content">
+                            
+                            <div class="pages-menu text-content">
+								<h3>Листинг страниц верстки</h3>
+								<ol>
+									<li><a href="index.html">Главная</a></li>
 									<li>
-										<a target="_blank" href="./profsoyuz-xronika.html">Профсоюзная хроника</a>
+										<a href="./organization.html">Организация</a>
 										<ul>
-											<li><a target="_blank" href="./profsoyuz-xronika-detail.html">Детальная страница</a></li>
+											<li><a href="./org-docs.html">Документы организации</a></li>
+											<li><a href="./zaslugi.html">Заслуги</a></li>
+											<li>
+												<a href="./history.html">История профсоюза</a>
+												<ul>
+													<li><a href="./predsedateli.html">Председатели</a></li>
+												</ul>
+											</li>
+											<li>
+												<a href="./otdyx.html">Отдохните</a>
+												<ul>
+													<li><a href="./sanatory.html">Санаторий "Городецкий"</a></li>
+												</ul>
+											</li>
 										</ul>
 									</li>
-								</ul>
-							</li>
-							<li>
-								<a target="_blank" href="./best-workers.html">Лучшие из лучших</a>
-								<ul>
-									<li><a target="_blank" href="./best-workers-detail.html">Детальная страница</a></li>
-								</ul>
-							</li>
-						   
+									<li>
+										<a href="./projects.html">Проекты</a>
+										<ul>
+											<li>
+												<a href="./union-meeting.html">Слет профгрупоргов</a>
+												<ul>
+													<li><a href="./union-meeting-detail.html">Детальная страница</a></li>
+												</ul>
+											</li>
+											<li><a href="./prof-tv.html">Проф-тв</a></li>
+											<li><a href="./competitions.html">Конкурсы</a></li>
+											<li>
+												<a href="./talents.html">Твои таланты</a>
+												<ul>
+													<li>
+														<a href="./talents-list.html">Раздаточная страница</a>
+														<ul>
+															<li><a href="./talents-detail-profile.html">Детальная страница</a></li>
+														</ul>
+													</li>
+												</ul>
+											</li>
+											<li><a href="./congrats.html">Поздравляем</a></li>
+											<li><a href="./perechitay.html">Перечитай</a></li>
+											<li><a href="./kinofraza.html">Кинофраза</a></li>
+											<li>
+												<a href="./kak-sebya-vesti.html">Как себя вести</a>
+												<ul>
+													<li><a href="./kak-sebya-vesti-detail.html">Детальная страница</a></li>
+												</ul>
+											</li>
+											<li><a href="./quote-of-the-day.html">Цитата дня</a></li>
+											<li><a href="./do-you-know.html">А вы знали?</a></li>
+											<li>
+												<a href="./mentor-year.html">Год наставника</a>
+												<ul>
+													<li><a href="./chelovek-truda.html">Человек труда в живописи</a></li>
+													<li><a href="./chelovek-truda-detail.html">Человек труда детальная</a></li>
+													<li><a href="./mentoring-history.html">История наставничества</a></li>
+												</ul>
+											</li>
+											<li><a href="./bilet-85.html">Билет 085</a></li>
+											<li><a href="./bilet-90.html">Билет 090</a></li>
+											<li>
+												<a href="./azbuka-voditelya.html">Азбука водителя</a>
+												<ul>
+													<li><a href="./azbuka-voditelya-detail.html">Детальная страница</a></li>
+												</ul>
+											</li>
+											<li>
+												<a href="./best-workers.html">Лучшие из лучших</a>
+												<ul>
+													<li><a href="./best-workers-detail.html">Детальная страница</a></li>
+												</ul>
+											</li>
+										</ul>
+									</li>
+									<li>
+										<a href="./press-center.html">Пресс-центр</a>
+										<ul>
+											<li><a href="./periodika.html">Периодика</a></li>
+											<li><a href="./smi.html">СМИ</a></li>
+											<li>
+												<a href="./profsoyuz-xronika.html">Профсоюзная хроника</a>
+												<ul>
+													<li><a href="./profsoyuz-xronika-detail.html">Детальная страница</a></li>
+												</ul>
+											</li>
+										</ul>
+									</li>
+									<li>
+										<a href="./promotions.html">Акции</a>
+										<ul>
+											<li><a href="./promotions-detail.html">Детальная страница</a></li>
+										</ul>
+									</li>
+									<li>
+										<a href="./union-portraits.html">Профсоюз в лицах</a>
+										<ul>
+											<li>
+												<a href="./union-portraits-detail.html">Детальная страница</a>
+											</li>
+										</ul>
+									</li>
+									<li><a href="./search.html">Результаты поиска</a></li>
+									<li><a href="./contacts.html">Контакты</a></li>
+								</ol>
+							</div>
+							<style>
+								.pages-menu ol {
+									list-style-position: inside;
+									margin-left: 0;
+									padding-left: 0;
+								}
+								.pages-menu ol > li {
+									padding-bottom: 15px;
+								}
+								.pages-menu ol > li > a {
+									padding-bottom: 15px;
+									font-weight: 700;
+								}
+								.pages-menu ol ul {
+									list-style-type: decimal;
+									padding-left: 70px;
+									margin: 10px 0;
+								}
+								.pages-menu ol:last-of-type {
+									margin-bottom: 70px;
+								}
+								.pages-menu ol li:not(:last-child) {
+									margin-bottom: 5px;
+								}
+								.pages-menu ol li a {
+									color: var(--color-text);
+									text-decoration: none;
+								}
+								.pages-menu ol li a:hover {
+									text-decoration: underline;
+								}
+							</style>
+                        </div>
+                    </div>
+                </section>
+			</main>
 			
-						</ul>
-					</li>
-					<li>
-						<a target="_blank" href="./promotions.html">Акции</a>
-						<ul>
-							<li><a target="_blank" href="./promotions-detail.html">Детальная страница</a></li>
-						</ul>
-					</li>
-					<li>
-						<a target="_blank" href="./union-portraits.html">Профсоюз в лицах</a>
-						<ul>
-							<li>
-								<a target="_blank" href="./union-portraits-detail.html">Детальная страница</a>
-							</li>
-						</ul>
-					</li>
-					<li><a target="_blank" href="./search.html">Результаты поиска</a></li>
-					<li><a target="_blank" href="./contacts.html">Контакты</a></li>
-				</ol>
-			</div>
-		</main>
+			<!-- Подвал -->
+				@include("./../common/footer.html")
+			<!-- Подвал -->
+		</div>
 	</body>
 </html>

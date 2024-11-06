@@ -34,11 +34,9 @@
             font-weight: 500;
             color: $sidebar-clr;
             transition: color $t-base;
-            &:hover {
-                color: $clr-primary;
-            }
+            &:hover,
             &.is-active {
-                position: relative;
+                color: $clr-primary;
             }
             @include mobile {
                 font-size: 14px;
