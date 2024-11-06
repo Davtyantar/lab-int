@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="ru">
 		@include("./../common/head.html", { "title": "История наставничества" })
-	<body>
+	<body itemscope itemtype="https://schema.org/WebPage">
 		<div class="page-wrapper">
 			<!-- Шапка -->
 			@include("./../common/header.html")
@@ -38,6 +38,7 @@
                 <!-- то же самое что на главной -->
                 <section class="mentoring-history">
                     <div class="container">
+                        <h2 class="visually-hidden">История наставничества</h2>
                         <div class="section_content">
                             <div class="mentoring-history__items grid grid--4 items mobile-col">
                                 <script>
@@ -64,14 +65,14 @@
                                 
                                     mentoringHistoryData.forEach(item => {
                                         const mentoringHistoryItem = `
-                                            <article class="mentoring-history__item" role="article">
-                                                <a href="./profsoyuz-xronika-detail.html" class="item__link" title="${item.title}">
-                                                    <div class="item__img img">
-                                                        <img data-src="${item.imgSrc}" class="lazyload" alt="${item.title}">
+                                            <article class="mentoring-history__item">
+                                                <a href="./profsoyuz-xronika-detail.html" class="item__link" title="${item.title}" itemscope itemtype="http://schema.org/ImageObject">
+                                                     <div class="item__img img">
+                                                        <img src="${item.imgSrc}" alt="${item.title}"  itemprop="contentUrl">
                                                     </div>
                                                     <div class="item__description">
-                                                        <h3 class="item__title">${item.title}</h3>
-                                                        <span class="item__date">03.10.2024</span>
+                                                        <h3 class="item__title" itemprop="name">${item.title}</h3>
+                                                        <span class="item__date" itemprop="datePublished">03.10.2024</span>
                                                     </div>
                                                 </a>
                                             </article>

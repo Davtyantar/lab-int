@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="ru">
 		@include("./../common/head.html", { "title": "Проф-тв" })
-	<body>
+	<body itemscope itemtype="https://schema.org/WebPage">
 		<div class="page-wrapper">
 			<!-- Шапка -->
 			@include("./../common/header.html")
@@ -39,6 +39,7 @@
 				</div>
 				<section class="prof-tv">
 					<div class="container">
+                        <h2 class="visually-hidden">Проф-тв</h2>
                         <div class="section_content">
                             <div class="prof-tv_items items grid grid--4 mobile-col">
                                 <script>
@@ -90,16 +91,16 @@
                                     profTvData.forEach(item => {
                                         const profTvItem = `
                                         <div class="prof-tv__item">
-                                            <div class="item__link" target="_blank" title="${item.title}">
-                                                <div class="item__img img">
+                                            <div class="item__link" target="_blank" title="${item.title}" itemscope itemtype="http://schema.org/ImageObject">
+                                                 <div class="item__img img">
                                                     <a data-fancybox="" data-src="#iframe_modal" data-src-video="${item.videoSrc}" class="prof-tv__item-link">
-                                                        <img data-src="${item.imgSrc}" class="item__image lazyload" alt="${item.title}">
+                                                        <img src="${item.imgSrc}" class="item__image " itemprop="contentUrl" alt="${item.title}">
                                                         <button class="play-btn"></button>
                                                     </a>
                                                 </div>
                                                 <div class="item__description">
-                                                    <h3 class="item__title">${item.title}</h3>
-                                                    <span class="prof-tv__date item__date">28.12.2020</span>
+                                                    <h3 class="item__title" itemprop="name">${item.title}</h3>
+                                                    <span class="prof-tv__date item__date" itemprop="datePublished">28.12.2020</span>
                                                 </div>
                                             </div>
                                         </div>

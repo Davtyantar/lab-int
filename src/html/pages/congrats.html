@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="ru">
 		@include("./../common/head.html", { "title": "Поздравляем" })
-	<body>
+	<body itemscope itemtype="https://schema.org/WebPage">
 		<div class="page-wrapper">
 			<!-- Шапка -->
 			@include("./../common/header.html")
@@ -37,6 +37,7 @@
 				</div>
 				<section class="congrats">
 					<div class="container">
+						<h2 class="visually-hidden">Поздравляем</h2>
 						<div class="section_content">
 							<div class="congrats__items items">
 								<script>
@@ -71,14 +72,14 @@
 								
 									congratsData.forEach(item => {
 										const congratsItem = `
-											<div class="congrats__item">
+											<div class="congrats__item" itemscope itemtype="http://schema.org/ImageObject">
 												<div class="congrats__image img">
-													<img data-src="${item.imgSrc}" class="lazyload" alt="${item.title}">
+													<img src="${item.imgSrc}" alt="${item.title}" itemprop="contentUrl">
 												</div>
 												<div class="congrats__descr">
 													<div class="congrats__descr-head">
-														<div class="congrats__title item__title">${item.title}</div>
-														<div class="congrats__descr-text">
+														<div class="congrats__title item__title" itemprop="name">${item.title}</div>
+														<div class="congrats__descr-text" itemprop="description">
 															Наш коллектив Вас поздравляет
 															И только лучшего желает!
 															Руководить всегда не просто,
@@ -89,7 +90,7 @@
 															Вас поздравляем с днем рождения!!!
 														</div>
 													</div>
-													<span class="congrats__date">17.10.2024</span>
+													<span class="congrats__date" itemprop="datePublished>17.10.2024</span>
 												</div>
 											</div>
 										`;

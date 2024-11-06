@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="ru">
 		@include("./../common/head.html", { "title": "История профсоюза" })
-	<body>
+	<body itemscope itemtype="https://schema.org/WebPage">
 		<div class="page-wrapper">
 			<!-- Шапка -->
 			@include("./../common/header.html")
@@ -39,6 +39,7 @@
 				</div>
 				<section class="history">
 					<div class="container">
+						<h2 class="visually-hidden">История профсоюза</h2>
 						<div class="section_content">
 							<div class="has-sidebar">
 								<aside class="sidebar">
@@ -95,7 +96,7 @@
                                         
                                             historyData.forEach(item => {
                                                 const historyItem = `
-                                                    <article class="item" role="article">
+                                                    <article class="item">
                                                         <a href="${item.link}" class="item__link" target="_blank" title="${item.title}">
                                                             <h3 class="item__title">${item.title}</h3>
                                                         </a>

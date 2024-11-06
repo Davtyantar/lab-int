@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="ru">
 		@include("./../common/head.html", { "title": "Проекты" })
-	<body>
+	<body itemscope itemtype="https://schema.org/WebPage">
 		<div class="page-wrapper">
 			<!-- Шапка -->
 			@include("./../common/header.html")
@@ -31,6 +31,7 @@
 				</div>
                 <section class="projects">
                     <div class="container">
+                        <h2 class="visually-hidden">Проекты</h2>
                         <div class="section_content">
                             <div class="projects__items items grid grid--4 unified-grid-arrow mobile-slider">
                                 <script>
@@ -55,17 +56,17 @@
                                         const projectsContent = document.querySelector('.projects__items');
                                     
                                         projectsData.forEach(project => {
-                                            const projectItem = `
-                                                <article class="item" role="article">
+                                            const item = `
+                                                <article class="item" itemscope itemtype="http://schema.org/ImageObject">
                                                     <div class="item__image">
-                                                        <img src="${project.imgSrc}" alt="${project.title}">
+                                                        <img src="${project.imgSrc}" alt="${project.title}"  itemprop="contentUrl">
                                                     </div>
                                                     <a href="${project.link}" class="item__link" title="${project.title}">
-                                                        <h3 class="item__title">${project.title}</h3>
+                                                        <h3 class="item__title" itemprop="name">${project.title}</h3>
                                                     </a>
                                                 </article>
                                             `;
-                                            projectsContent.innerHTML += projectItem;
+                                            projectsContent.innerHTML += item;
                                         });
                                     })
                                 </script>

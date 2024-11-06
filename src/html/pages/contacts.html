@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="ru">
 		@include("./../common/head.html", { "title": "Контакты" })
-	<body>
+	<body itemscope itemtype="https://schema.org/WebPage">
 		<div class="page-wrapper">
 			<!-- Шапка -->
 			@include("./../common/header.html")
@@ -31,7 +31,9 @@
 				</div>
 				<section class="contacts">
 					<div class="container">
-                        <div class="section_content" role="region">
+                        <h2 class="visually-hidden">Контакты</h2>
+                        <div class="section_content" role="region" itemscope itemtype="https://schema.org/Organization">
+                            <meta itemprop="name" content="Контакты - Первичная профсоюзная организация горьковского автозавода">
                             <div class="tabs-head items" role="tablist">
                                 <button class="tab" role="tab" aria-selected="true">Аппарат профсоюзной организации</button>
                                 <button class="tab" role="tab" aria-selected="false">Структурные профсоюзные организации</button>
@@ -39,71 +41,72 @@
                             <div class="tabs-content">
                                 <div class="tab_item" role="tabpanel">
                                     <div class="items grid grid--2">
-                                        <div class="contacts__team-item">
+                                        <div class="contacts__team-item" itemscope itemtype="https://schema.org/Person">
                                             <div class="item__img img">
-                                                <img data-src="./../../img/team_img-1.png" class="lazyload" alt="Солодов Сергей Викторович" title="Солодов Сергей Викторович">
+                                                <img src="./../../img/team_img-1.png" itemprop="image" alt="Солодов Сергей Викторович" title="Солодов Сергей Викторович">
                                             </div>
                                             <div class="item__info">
                                                 <div class="info__head">
-                                                    <div class="item__title">Солодов Сергей Викторович</div>
-                                                    <div class="item__subtitle">Председатель Первичной профсоюзной организации Горьковского автозавода</div>
+                                                    <div class="item__title" itemprop="name">Солодов Сергей Викторович</div>
+                                                    <div class="item__subtitle" itemprop="jobTitle">Председатель Первичной профсоюзной организации Горьковского автозавода</div>
                                                 </div>
                                                 <div class="info__foot">
-                                                    <a href="tel:+(831) 295-90-97">(831) 295-90-97</a>
-                                                    <a href="tel:+3-40-83">3-40-83</a>
+                                                    <a href="tel:+(831) 295-90-97" itemprop="telephone">(831) 295-90-97</a>
+                                                    <a href="tel:+3-40-83" itemprop="telephone">3-40-83</a>
 
                                                     <!-- могут и не быть -->
-                                                    <a href="tel:+(831) 295-90-97">(831) 295-90-97 - факс</a>
-                                                    <a href="mailto:почта@yandex.ru">почта@yandex.ru</a>
+                                                    <a href="tel:+(831) 295-90-97" itemprop="faxNumber">(831) 295-90-97 - факс</a>
+                                                    <a href="mailto:почта@yandex.ru" itemprop="email">почта@yandex.ru</a>
                                                     <!-- могут и не быть -->
                                                 </div>
                                             </div>
                                         </div>
-                                        <div class="contacts__team-item">
+                                        <div class="contacts__team-item" itemscope itemtype="https://schema.org/Person">
                                             <div class="item__img img">
-                                                <img data-src="./../../img/team_img-2.png" class="lazyload" alt="Волынская Татьяна Ивановна" title="Волынская Татьяна Ивановна">
+                                                <img src="./../../img/team_img-2.png" itemprop="image" alt="Волынская Татьяна Ивановна" title="Волынская Татьяна Ивановна">
                                             </div>
                                             <div class="item__info">
                                                 <div class="info__head">
-                                                    <div class="item__title">Волынская Татьяна Ивановна</div>
-                                                    <div class="item__subtitle">Заместитель председателя Первичной профсоюзной организации Горьковского автозавода - заведующий отделом организационной работы, председатель комиссии по организационной работе профкома</div>
+                                                    <div class="item__title" itemprop="name">Волынская Татьяна Ивановна</div>
+                                                    <div class="item__subtitle" itemprop="jobTitle">Заместитель председателя Первичной профсоюзной организации</div>
                                                 </div>
                                                 <div class="info__foot">
-                                                    <a href="tel:+(831) 295-90-97">(831) 295-90-97</a>
-                                                    <a href="tel:+3-40-83">3-40-83</a>
+                                                    <a href="tel:+8312959097" itemprop="telephone">(831) 295-90-97</a>
                                                 </div>
                                             </div>
                                         </div>
-                                        <div class="contacts__team-item">
+                                        <div class="contacts__team-item" itemscope itemtype="https://schema.org/Person">
                                             <div class="item__img img">
-                                                <img data-src="./../../img/team_img-3.png" class="lazyload" alt="Митрофанов Леонид Эдуардович" title="Митрофанов Леонид Эдуардович">
+                                                <img src="./../../img/team_img-3.png" itemprop="image" alt="Митрофанов Леонид Эдуардович" title="Митрофанов Леонид Эдуардович">
                                             </div>
                                             <div class="item__info">
                                                 <div class="info__head">
-                                                    <div class="item__title">Митрофанов Леонид Эдуардович</div>
-                                                    <div class="item__subtitle">Заместитель председателя Первичной профсоюзной организации Горьковского автозавода - председатель комиссии по культуре и спорту профкома</div>
+                                                    <div class="item__title" itemprop="name">Митрофанов Леонид Эдуардович</div>
+                                                    <div class="item__subtitle" itemprop="jobTitle">Заместитель председателя Первичной профсоюзной организации Горьковского автозавода - председатель комиссии по культуре и спорту профкома</div>
                                                 </div>
                                                 <div class="info__foot">
-                                                    <a href="tel:+(831) 295-90-97">(831) 295-90-97</a>
-                                                    <a href="tel:+3-40-83">3-40-83</a>
+                                                    <a href="tel:+8312959097" itemprop="telephone">(831) 295-90-97</a>
+                                                    <a href="tel:+34083" itemprop="telephone">3-40-83</a>
                                                 </div>
                                             </div>
                                         </div>
-                                        <div class="contacts__team-item">
+                                        
+                                        <div class="contacts__team-item" itemscope itemtype="https://schema.org/Person">
                                             <div class="item__img img">
-                                                <img data-src="./../../img/team_img-4.png" class="lazyload" alt="Слепов Владимир Александрович" title="Слепов Владимир Александрович">
+                                                <img src="./../../img/team_img-4.png" itemprop="image" alt="Слепов Владимир Александрович" title="Слепов Владимир Александрович">
                                             </div>
                                             <div class="item__info">
                                                 <div class="info__head">
-                                                    <div class="item__title">Слепов Владимир Александрович</div>
-                                                    <div class="item__subtitle">Заместитель заведующего отделом организационной работы Первичной профсоюзной организации Горьковского автозавода</div>
+                                                    <div class="item__title" itemprop="name">Слепов Владимир Александрович</div>
+                                                    <div class="item__subtitle" itemprop="jobTitle">Заместитель заведующего отделом организационной работы Первичной профсоюзной организации Горьковского автозавода</div>
                                                 </div>
                                                 <div class="info__foot">
-                                                    <a href="tel:+(831) 295-90-97">(831) 295-90-97</a>
-                                                    <a href="tel:+3-40-83">3-40-83</a>
+                                                    <a href="tel:+8312959097" itemprop="telephone">(831) 295-90-97</a>
+                                                    <a href="tel:+34083" itemprop="telephone">3-40-83</a>
                                                 </div>
                                             </div>
                                         </div>
+                                        
                                     </div>
                                 </div>
                                 <div class="tab_item" role="tabpanel">

@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="ru">
 		@include("./../common/head.html", { "title": "Год наставника" })
-	<body>
+	<body itemscope itemtype="https://schema.org/WebPage">
 		<div class="page-wrapper">
 			<!-- Шапка -->
 			@include("./../common/header.html")
@@ -37,6 +37,7 @@
 				</div>
 				<section class="mentor-year">
 					<div class="container">
+						<h2 class="visually-hidden">Год наставника</h2>
 						<div class="section_content">
 							<div class="mentor-year__items items grid grid--4 unified-grid-arrow">
 								<script>
@@ -87,12 +88,12 @@
 								
 									mentorYearData.forEach(item => {
 										const mentorYearItem = `
-											<article class="item" role="article">
+											<article class="item" itemscope itemtype="http://schema.org/ImageObject">
 												<div class="item__image">
-													<img data-src="${item.imgSrc}" class="lazyload" alt="${item.title}">
+													<img src="${item.imgSrc}" alt="${item.title}" itemprop="contentUrl">
 												</div>
 												<a href="${item.link}" class="item__link" title="${item.title}">
-													<h3 class="item__title">${item.title}</h3>
+													<h3 class="item__title" itemprop="name">${item.title}</h3>
 												</a>
 											</article>
 										`;

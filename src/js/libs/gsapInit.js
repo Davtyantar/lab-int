@@ -8,35 +8,38 @@ export function initGsap() {
     const heroBgImage = document.querySelector('.hero__bg > img');
     const headings = document.querySelectorAll('h1, h2.section__title');
 
-    headings.forEach((heading) => {
-        gsap.from(heading, {
+    if (headings.length) {
+        gsap.from(headings, {
             opacity: 0,
             duration: 0.5,
             y: 100,
             ease: 'power2.out',
             scrollTrigger: {
-                trigger: heading,
+                trigger: headings,
                 start: 'top 110%',
                 end: 'top 100%',
             },
         });
-    });
-    
-    itemBlocks.forEach((block) => {
-        const children = block.children;
-    
-        gsap.from(children, {
-            opacity: 0,
-            duration: 0.15,
-            ease: 'power2.out',
-            stagger: 0.15,
-            scrollTrigger: {
-                trigger: block,
-                start: 'top 100%',
-                end: 'bottom 80%',
-            },
+    }
+
+    if (itemBlocks.length) {
+        itemBlocks.forEach((block) => {
+            const children = block.children;
+            if (children.length) {
+                gsap.from(children, {
+                    opacity: 0,
+                    duration: 0.15,
+                    ease: 'power2.out',
+                    stagger: 0.15,
+                    scrollTrigger: {
+                        trigger: block,
+                        start: 'top 100%',
+                        end: 'bottom 80%',
+                    },
+                });
+            }
         });
-    });
+    }
 
     if (heroBgImage) {
         gsap.from(heroBgImage, {

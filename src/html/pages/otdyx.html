@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="ru">
 		@include("./../common/head.html", { "title": "Отдохните" })
-	<body>
+	<body itemscope itemtype="https://schema.org/WebPage">
 		<div class="page-wrapper">
 			<!-- Шапка -->
 			@include("./../common/header.html")
@@ -39,6 +39,7 @@
 				</div>
 				<section class="rest">
 					<div class="container">
+                        <h2 class="visually-hidden">Отдохните</h2>
                         <div class="section_content">
                             <div class="rest__items items grid grid--4 unified-grid-arrow mobile-slider">
                                 <script>
@@ -56,12 +57,12 @@
                                 
                                     restData.forEach(project => {
                                         const restItem = `
-                                            <article class="item" role="article">
+                                            <article class="item" itemscope itemtype="http://schema.org/ImageObject">
                                                 <div class="item__image">
-                                                    <img data-src="${project.imgSrc}" class="lazyload" alt="${project.title}">
+                                                    <img src="${project.imgSrc}" alt="${project.title}" itemprop="contentUrl">
                                                 </div>
                                                 <a href="./sanatory.html" class="item__link" title="${project.title}">
-                                                    <h3 class="item__title">${project.title}</h3>
+                                                    <h3 class="item__title" itemprop="name">${project.title}</h3>
                                                 </a>
                                             </article>
                                         `;

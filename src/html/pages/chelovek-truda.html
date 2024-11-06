@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="ru">
 		@include("./../common/head.html", { "title": "Человек труда в живописи" })
-	<body>
+	<body itemscope itemtype="https://schema.org/WebPage">
 		<div class="page-wrapper">
 			<!-- Шапка -->
 			@include("./../common/header.html")
@@ -43,45 +43,46 @@
 				</div>
 				<section class="mentor-year_detail">
 					<div class="container">
+						<h2 class="visually-hidden">Человек труда в живописи</h2>
 						<div class="section_content">
 							<div class="mentor-year_detail__items grid grid--4 items">
-								<div class="mentor-year_detail__item">
+								<div class="mentor-year_detail__item" itemscope itemtype="http://schema.org/ImageObject">
 									<a class="hover-img mentor-year_detail-img img" href="./../../img/mentor-year_detail-1.png" data-fancybox="gallery" data-caption="Изображение" title="Изображение">
-										<img data-src="./../../img/mentor-year_detail-1.png" class="lazyload" alt="Изображение" role="img" />
+										<img src="./../../img/mentor-year_detail-1.png" itemprop="contentUrl"  alt="Изображение" />
 									</a>
                                     <div class="mentor-year_detail-info">
-                                        <h3 class="mentor-year_detail-title h4">"Столяр"</h3>
-                                        <p class="mentor-year_detail-subtitle">Бутов Алексей Иванович</p>
+                                        <h3 class= "mentor-year_detail-title h4" itemprop="name">"Столяр"</h3>
+                                        <p class="mentor-year_detail-subtitle" itemprop="author">Бутов Алексей Иванович</p>
                                         <span class="mentor-year_detail-date">1979</span>
                                     </div>
 								</div>
-								<div class="mentor-year_detail__item">
+								<div class="mentor-year_detail__item" itemscope itemtype="http://schema.org/ImageObject">
 									<a class="hover-img mentor-year_detail-img img" href="./../../img/mentor-year_detail-2.png" data-fancybox="gallery" data-caption="Изображение" title="Изображение">
-										<img data-src="./../../img/mentor-year_detail-2.png" class="lazyload" alt="Изображение" role="img" />
+										<img src="./../../img/mentor-year_detail-2.png" itemprop="contentUrl"  alt="Изображение" />
 									</a>
                                     <div class="mentor-year_detail-info">
-                                        <h3 class="mentor-year_detail-title h4">"Рабочая династия. Герой Социалистического труда Н.А.Волков с сыновьями Юрием и Валерием"</h3>
-                                        <p class="mentor-year_detail-subtitle">Егуткин Аркадий Ефимович</p>
+                                        <h3 class= "mentor-year_detail-title h4" itemprop="name">"Рабочая династия. Герой Социалистического труда Н.А.Волков с сыновьями Юрием и Валерием"</h3>
+                                        <p class="mentor-year_detail-subtitle" itemprop="author">Егуткин Аркадий Ефимович</p>
                                         <span class="mentor-year_detail-date">1979</span>
                                     </div>
 								</div>
-								<div class="mentor-year_detail__item">
+								<div class="mentor-year_detail__item" itemscope itemtype="http://schema.org/ImageObject">
 									<a class="hover-img mentor-year_detail-img img" href="./../../img/mentor-year_detail-3.png" data-fancybox="gallery" data-caption="Изображение" title="Изображение">
-										<img data-src="./../../img/mentor-year_detail-3.png" class="lazyload" alt="Изображение" role="img" />
+										<img src="./../../img/mentor-year_detail-3.png" itemprop="contentUrl"  alt="Изображение" />
 									</a>
                                     <div class="mentor-year_detail-info">
-                                        <h3 class="mentor-year_detail-title h4">"Дорожники"</h3>
-                                        <p class="mentor-year_detail-subtitle">Жемеркин Вячеслав Федорович</p>
+                                        <h3 class= "mentor-year_detail-title h4" itemprop="name">"Дорожники"</h3>
+                                        <p class="mentor-year_detail-subtitle" itemprop="author">Жемеркин Вячеслав Федорович</p>
                                         <span class="mentor-year_detail-date">1979</span>
                                     </div>
 								</div>
-								<div class="mentor-year_detail__item">
+								<div class="mentor-year_detail__item" itemscope itemtype="http://schema.org/ImageObject">
 									<a class="hover-img mentor-year_detail-img img" href="./../../img/mentor-year_detail-4.png" data-fancybox="gallery" data-caption="Изображение" title="Изображение">
-										<img data-src="./../../img/mentor-year_detail-4.png" class="lazyload" alt="Изображение" role="img" />
+										<img src="./../../img/mentor-year_detail-4.png" itemprop="contentUrl"  alt="Изображение" />
 									</a>
                                     <div class="mentor-year_detail-info">
-                                        <h3 class="mentor-year_detail-title h4">"Вахтенные пятилетки"</h3>
-                                        <p class="mentor-year_detail-subtitle">Жердзицкий Евгений Федорович</p>
+                                        <h3 class= "mentor-year_detail-title h4" itemprop="name">"Вахтенные пятилетки"</h3>
+                                        <p class="mentor-year_detail-subtitle" itemprop="author">Жердзицкий Евгений Федорович</p>
                                         <span class="mentor-year_detail-date">1975</span>
                                     </div>
 								</div>

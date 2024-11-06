@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="ru">
 		@include("./../common/head.html", { "title": "Конкурсы" })
-	<body>
+	<body itemscope itemtype="https://schema.org/WebPage">
 		<div class="page-wrapper">
 			<!-- Шапка -->
 			@include("./../common/header.html")
@@ -37,6 +37,7 @@
 				</div>
 				<section class="competitions">
 					<div class="container">
+						<h2 class="visually-hidden">Конкурсы</h2>
 						<div class="section_content">
 							<div class="competitions__items items grid grid--4 unified-grid-arrow">
 								<script>
@@ -70,12 +71,12 @@
 								
 									competitionsData.forEach(project => {
 										const competitionItem = `
-											<article class="item" role="article">
+											<article class="item" itemscope itemtype="http://schema.org/ImageObject">
 												<div class="item__image">
-													<img data-src="${project.imgSrc}" class="lazyload" alt="${project.title}">
+													<img src="${project.imgSrc}" alt="${project.title}"  itemprop="contentUrl">
 												</div>
 												<a href="#" class="item__link" target="_blank" title="${project.title}">
-													<h3 class="item__title">${project.title}</h3>
+													<h3 class="item__title" itemprop="name">${project.title}</h3>
 												</a>
 											</article>
 										`;

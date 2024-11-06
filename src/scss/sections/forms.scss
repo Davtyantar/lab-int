@@ -41,13 +41,20 @@
         }
     }
     &-label {
-        display: block;
+        display: flex;
+        column-gap: 5px;
         font-size: 14px;
+        margin-bottom: 10px; 
+        .required-star {
+            color: rgb(184, 17, 17);
+        }
     }
     &-input {
+        font-family: $second-family;
         width: 100%;
-        padding: 10px 10px 10px 0px; 
-        border-bottom: 1px solid $clr-gray;
+        padding: 12.5px 10px; 
+        border: 1px solid $clr-gray;
+        border-radius: 5px;
         transition: border-color 0.3s;
         font-size: 14px;
         &:focus {

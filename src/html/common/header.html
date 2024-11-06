@@ -1,13 +1,14 @@
-<header class="header" id="mainHeader" role="banner" aria-label="Основная навигация">
+<header class="header" aria-label="Основная навигация">
     <div class="header__container container">
         <div class="header__inner">
-            <a href="/" class="header__logo-link" aria-label="На главную">
-                <img src="./../../img/logo.svg" alt="Логотип организации" class="header__logo">
+            <a href="index.html" class="header__logo-link" aria-label="На главную" itemprop="url">
+                <img src="./../../img/logo.svg" alt="Логотип организации" class="header__logo" itemprop="logo">
             </a>
+            
             <div class="header__nav-wrapper">
-                <span class="header__title">первичная профсоюзная организация горьковского автозавода</span>
-                <nav class="header__nav nav" role="navigation" aria-label="Главное меню" data-move="991" data-to="mobile-menu_nav">
-                    <ul class="nav__list" itemscope itemtype="http://schema.org/SiteNavigationElement">
+                <span class="header__title" itemprop="name">первичная профсоюзная организация горьковского автозавода</span>
+                <nav class="header__nav nav" aria-label="Главное меню" data-move="991" data-to="mobile-menu_nav" itemscope itemtype="http://schema.org/SiteNavigationElement">
+                    <ul class="nav__list">
                         <li class="nav__item"><a itemprop="url" href="./organization.html" class="nav__link nav__link--current" title="Перейти к разделу Организация" aria-label="Раздел Организация">Организация</a></li>
                         <li class="nav__item"><a itemprop="url" href="./projects.html" class="nav__link" title="Перейти к разделу Проекты" aria-label="Раздел Проекты">Проекты</a></li>
                         <li class="nav__item"><a itemprop="url" href="./press-center.html" class="nav__link" title="Перейти к разделу Пресс-центр" aria-label="Раздел Пресс-центр">Пресс-центр</a></li>
@@ -18,29 +19,31 @@
                     </ul>
                 </nav>
             </div>
+            
             <div class="header__actions">
+                <!-- Кнопка "Написать нам" -->
                 <button class="header__btn btn btn-primary" data-fancybox="" data-src="#callback_form" data-move="576" data-to="mobile-menu__email" 
-                    title="Написать нам"
-                    aria-label="Написать нам"
+                    title="Написать нам" aria-label="Написать нам">
+                    <svg class="icon"><use xlink:href="./img/sprite.svg#email"></use></svg>
+                    <span>Напишите нам</span>
+                </button>
 
-                    data-content='
-                    "title":"Напишите нам",
-                    "subtitle":"Оставьте сообщение, и мы ответим вам в кратчайшие сроки.",
-                    "theme":"Письмо"'
-                    >
-
-					<svg class="icon"><use xlink:href="./img/sprite.svg#email"></use></svg>
-					<span>Напишите нам</span>
-				</button>
-                <div class="header__search header-search">
-                    <form action="./search.html" class="search__form" role="search" aria-label="Поиск по сайту">
-                        <input type="text" class="search__input" placeholder="Поиск по сайту" aria-label="Введите текст для поиска">
-						<button type="submit"><svg class="icon"><use xlink:href="./img/sprite.svg#search"></use></svg></button>
+                <div class="header__search header-search" itemscope itemtype="http://schema.org/WebSite">
+                    <form action="./search.html" class="search__form" role="search" aria-label="Поиск по сайту" itemprop="potentialAction" itemscope itemtype="http://schema.org/SearchAction">
+                        <meta itemprop="target" content="/search/?q={query}">
+                        <input type="text" class="search__input" name="q" placeholder="Поиск по сайту" aria-label="Введите текст для поиска" itemprop="query-input">
+                        <button type="submit">
+                            <svg class="icon">
+                                <use xlink:href="./img/sprite.svg#search"></use>
+                            </svg>
+                        </button>
                     </form>
                 </div>
+
                 <div class="header__search-mobile-icon v576">
                     <svg class="icon"><use xlink:href="./img/sprite.svg#search"></use></svg>
                 </div>
+
                 <div class="burger" id="burger" aria-label="Открыть меню" aria-expanded="false" role="button">
                     <span>МЕНЮ</span>
                     <svg class="burger-icon" width="35" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 10 10" stroke="#252B33" stroke-width=".6" fill="rgba(0,0,0,0)" stroke-linecap="round" style="cursor: pointer">
@@ -60,7 +63,8 @@
             </div>
         </div>
     </div>
-</header> 
+</header>
+
 
 
 <!-- Мобильное меню -->

@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="ru">
 		@include("./../common/head.html", { "title": "Перечитай" })
-	<body>
+	<body itemscope itemtype="https://schema.org/WebPage">
 		<div class="page-wrapper">
 			<!-- Шапка -->
 			@include("./../common/header.html")
@@ -37,6 +37,7 @@
 				</div>
 				<section class="reread">
 					<div class="container">
+						<h2 class="visually-hidden">Перечитай</h2>
 						<div class="section_content">
 
                             <div class="text-content">
@@ -58,17 +59,17 @@
 								
 									rereadData.forEach(item => {
 										const rereadItem = `
-											<div class="reread__item">
+											<div class="reread__item" itemscope itemtype="http://schema.org/ImageObject">
 												<div class="reread__item-img img">
-													<img data-src="${item.imgSrc}" class="lazyload" alt="${item.title}  title="${item.title}">
+													<img src="${item.imgSrc}" alt="${item.title}  title="${item.title}" itemprop="contentUrl">
 												</div>
 												<div class="reread__item-info" target="_blank"">
                                                     <div class="reread__item-info_head">
-                                                        <h4 class="reread__item-title h4">${item.title}</h4>
-                                                        <p class="reread__item-subtitle">${item.author}</p>                                           
+                                                        <h4 class="reread__item-title h4" itemprop="name">${item.title}</h4>
+                                                        <p class="reread__item-subtitle" itemprop="author">${item.author}</p>                                           
                                                     </div>
                                                     <div class="reread__item-info_foot">
-                                                        <span class="reread__item-date">28.12.2015</span>
+                                                        <span class="reread__item-date" itemprop="datePublished">28.12.2015</span>
                                                         <a href="./file.pdf" download title="Скачать '${item.title}'" aria-label="Скачать '${item.title}'">
                                                             СКАЧАТь
                                                         </a>

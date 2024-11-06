@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="ru">
 		@include("./../common/head.html", { "title": "Как себя вести" })
-	<body>
+	<body itemscope itemtype="https://schema.org/WebPage">
 		<div class="page-wrapper">
 			<!-- Шапка -->
 			@include("./../common/header.html")
@@ -37,6 +37,7 @@
 				</div>
 				<section class="self-conduct">
 					<div class="container">
+						<h2 class="visually-hidden">Как себя вести</h2>
 						<div class="section_content">
                             <div class="text-content">
                                 <p>2016 год официально объявлен В.В.Путиным годом кино и профсоюзная организация решила поддержать инициативу Президента РФ, запустив интерактивный проект "Как себя вести".</p>
@@ -62,23 +63,23 @@
 								
                                     selfConductData.forEach(item => {
                                         const selfConductItem = `
-                                            <article class="self-conduct__item" role="article">
-                                                <a href="./kak-sebya-vesti-detail.html" class="item__link">
-                                                    <div class="item__img img">
-                                                        <img data-src="${item.imgSrc}" class="lazyload" alt="${item.title}" title="${item.title}">
+                                            <article class="self-conduct__item">
+                                                <a href="./kak-sebya-vesti-detail.html" class="item__link" itemscope itemtype="http://schema.org/ImageObject">
+                                                     <div class="item__img img">
+                                                        <img src="${item.imgSrc}" alt="${item.title}" title="${item.title} itemprop="contentUrl"">
                                                     </div>
                                                     <div class="item__description">
 														<div class="item__description-head">
-															<h3 class="item__title">${item.title}</h3>
+															<h3 class="item__title" itemprop="name">${item.title}</h3>
 															<span class="item__source" 
 																  data-fancybox="" 
-																  data-src="./../../img/beseda-source.jpg"
+																  src="./../../img/beseda-source.jpg"
 																  title="Посмотреть первоисточник"
 																  aria-label="Посмотреть первоисточник">
 																Первоисточник
 															</span>
 														</div>
-                                                        <span class="item__date">04.12.2020</span>
+                                                        <span class="item__date" itemprop="datePublished">04.12.2020</span>
                                                     </div>
                                                 </a>
                                             </article>

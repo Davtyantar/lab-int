@@ -28,17 +28,17 @@
                     const projectsContent = document.querySelector('.projects__items');
                 
                     projectsData.forEach(project => {
-                        const projectItem = `
-                            <article class="item" role="article">
+                        const item = `
+                            <article class="item" itemscope itemtype="http://schema.org/ImageObject">
                                 <div class="item__image">
-                                    <img src="${project.imgSrc}" alt="${project.title}">
+                                    <img src="${project.imgSrc}" alt="${project.title}" itemprop="contentUrl">
                                 </div>
                                 <a href="${project.link}" class="item__link" title="${project.title}">
-                                    <h3 class="item__title">${project.title}</h3>
+                                    <h3 class="item__title" itemprop="name">${project.title}</h3>
                                 </a>
                             </article>
                         `;
-                        projectsContent.innerHTML += projectItem;
+                        projectsContent.innerHTML += item;
                     });
                 </script>
             </div>

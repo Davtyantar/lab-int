@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="ru">
 		@include("./../common/head.html", { "title": "Лучшие из лучших" })
-	<body>
+	<body itemscope itemtype="https://schema.org/WebPage">
 		<div class="page-wrapper">
 			<!-- Шапка -->
 			@include("./../common/header.html")
@@ -37,6 +37,7 @@
 				</div>
 				<section class="best-workers">
 					<div class="container">
+						<h2 class="visually-hidden">Лучшие из лучших</h2>
 						<div class="section_content">
 							<div class="section_content">
                                 <div class="best-workers__items items grid grid--4 unified-grid-arrow">
@@ -54,12 +55,12 @@
                                     
                                         bestWorkersData.forEach(best => {
                                             const bestWorkersItem = `
-                                                <article class="item" role="article">
+                                                <article class="item" itemscope itemtype="http://schema.org/ImageObject">
                                                     <div class="item__image">
-														<img data-src="./../../img/best-workers-bgImg.png" class="lazyload" alt="Alt изображения">
+														<img src="./../../img/best-workers-bgImg.png" alt="Alt изображения">
                                                     </div>
                                                     <a href="./best-workers-detail.html" class="item__link" title="${best.title}">
-                                                        <h3 class="item__title">${best.title}</h3>
+                                                        <h3 class="item__title" itemprop="name">${best.title}</h3>
                                                     </a>
                                                 </article>
                                             `;

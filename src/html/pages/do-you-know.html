@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="ru">
 		@include("./../common/head.html", { "title": "А вы знали?" })
-	<body>
+	<body itemscope itemtype="https://schema.org/WebPage">
 		<div class="page-wrapper">
 			<!-- Шапка -->
 			@include("./../common/header.html")
@@ -37,6 +37,7 @@
 				</div>
 				<section class="do-you-know">
 					<div class="container">
+						<h2 class="visually-hidden">А вы знали?</h2>
 						<div class="section_content">
                             <div class="text-content">
                                 <p>Профсоюзная организация Горьковского автозавода объявляет с 10 сентября по 6 октября 2024 года творческий конкурс с одноименным названием!</p>
@@ -50,14 +51,14 @@
                             </div>
 
 							<div class="do-you-know__items grid grid--3 items">
-								<a class="do-you-know__item hover-img img" href="./../../img/do-you-know__item-1.png" data-fancybox="gallery" data-caption="Факт - 1" title="Факт - 1">
-									<img data-src="./../../img/do-you-know__item-1.png" class="lazyload" alt="Факт - 1" role="img" />
+								<a class="do-you-know__item hover-img img" href="./../../img/do-you-know__item-1.png" data-fancybox="gallery" data-caption="Факт - 1" title="Факт - 1" itemscope itemtype="http://schema.org/ImageObject">
+									<img src="./../../img/do-you-know__item-1.png" alt="Факт - 1" itemprop="contentUrl" />
 								</a>
-								<a class="do-you-know__item hover-img img" href="./../../img/do-you-know__item-2.png" data-fancybox="gallery" data-caption="Факт - 2" title="Факт - 2">
-									<img data-src="./../../img/do-you-know__item-2.png" class="lazyload" alt="Факт - 2" role="img" />
+								<a class="do-you-know__item hover-img img" href="./../../img/do-you-know__item-2.png" data-fancybox="gallery" data-caption="Факт - 2" title="Факт - 2" itemscope itemtype="http://schema.org/ImageObject">
+									<img src="./../../img/do-you-know__item-2.png" alt="Факт - 2" itemprop="contentUrl" />
 								</a>
-								<a class="do-you-know__item hover-img img" href="./../../img/do-you-know__item-3.png" data-fancybox="gallery" data-caption="Факт - 3" title="Факт - 3">
-									<img data-src="./../../img/do-you-know__item-3.png" class="lazyload" alt="Факт - 3" role="img" />
+								<a class="do-you-know__item hover-img img" href="./../../img/do-you-know__item-3.png" data-fancybox="gallery" data-caption="Факт - 3" title="Факт - 3" itemscope itemtype="http://schema.org/ImageObject">
+									<img src="./../../img/do-you-know__item-3.png" alt="Факт - 3" itemprop="contentUrl" />
 								</a>
 							</div>
 							@include("./../components/pagination.html")

@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="ru">
 		@include("./../common/head.html", { "title": "Заслуги" })
-	<body>
+	<body itemscope itemtype="https://schema.org/WebPage">
 		<div class="page-wrapper">
 			<!-- Шапка -->
 			@include("./../common/header.html")
@@ -40,6 +40,7 @@
 				</div>
 				<section class="merits">
 					<div class="container">
+                        <h2 class="visually-hidden">Заслуги</h2>
                         <div class="section_content">
                             <div class="merits__items items grid grid--4">
                                 <script>
@@ -92,13 +93,13 @@
                                     meritsData.forEach(item => {
                                         const meritItem = `
                                             <div class="merits__item">
-                                                <a class="merits__item-img hover-img" data-caption="${item.title}" data-fancybox="gallery" href="${item.imgSrc}">
-                                                    <img data-src="${item.imgSrc}" class="lazyload" title="${item.title}" alt="${item.title}" />
+                                                <a class="merits__item-img hover-img" data-caption="${item.title}" data-fancybox="gallery" href="${item.imgSrc}" itemscope itemtype="http://schema.org/ImageObject">
+                                                    <img src="${item.imgSrc}" title="${item.title}" alt="${item.title}" itemprop="contentUrl" />
                                                 </a>
                                                 <div class="merits__item-info">
                                                     <div class="merits__item-info-head">
-                                                        <div class="merits__item-title">${item.title}</div>
-                                                        <div class="merits__item-descr">${item.description}</div>
+                                                        <div class="merits__item-title" itemprop="name">${item.title}</div>
+                                                        <div class="merits__item-descr" itemprop="description">${item.description}</div>
                                                     </div>
                                                     <span class="merits__item-date">2014 год</span>
                                                 </div>

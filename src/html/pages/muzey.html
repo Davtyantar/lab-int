@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="ru">
 		@include("./../common/head.html", { "title": "Музей" })
-	<body>
+	<body itemscope itemtype="https://schema.org/WebPage">
 		<div class="page-wrapper">
 			<!-- Шапка -->
 			@include("./../common/header.html")
@@ -31,6 +31,7 @@
 				</div>
                 <section class="museum">
                     <div class="container">
+                        <h2 class="visually-hidden">Музей</h2>
                         <div class="section_content">
                             <div class="text-content">
                                 Профсоюзный музей распахнул свои двери 13 мая 2015 года к юбилею - 85-летию Первичной профсоюзной организации в ОАО "Горьковский автомобильный завод".
@@ -54,29 +55,29 @@
                                 <div class="tab_item" role="tabpanel">
                                         <div class="gallery gallery--grid">
                                             <div class="gallery__items items grid grid--4" role="region" aria-label="Галерея">
-                                                <a class="gallery__item hover-img img" href="./../../img/museum-item-1-img.png" data-fancybox="gallery-1" data-caption="Изображение 1" alt="Изображение 1" title="Изображение 1">
-                                                    <img data-src="./../../img/museum-item-1-img.png" class="lazyload" title="Изображение 1" role="img" />
+                                                <a class="gallery__item hover-img img" itemscope itemtype="http://schema.org/ImageObject" href="./../../img/museum-item-1-img.png" data-fancybox="gallery-1" data-caption="Изображение 1" alt="Изображение 1" title="Изображение 1">
+                                                    <img src="./../../img/museum-item-1-img.png" alt="Описание" itemprop="contentUrl"/>
                                                 </a>
-                                                <a class="gallery__item hover-img img" href="./../../img/museum-item-1-img.png" data-fancybox="gallery-1" data-caption="Изображение 2" alt="Изображение 2" title="Изображение 2">
-                                                    <img data-src="./../../img/museum-item-1-img.png" class="lazyload" role="img" />
+                                                <a class="gallery__item hover-img img" itemscope itemtype="http://schema.org/ImageObject" href="./../../img/museum-item-1-img.png" data-fancybox="gallery-1" data-caption="Изображение 2" alt="Изображение 2" title="Изображение 2">
+                                                    <img src="./../../img/museum-item-1-img.png" alt="Описание" itemprop="contentUrl" />
                                                 </a>
-                                                <a class="gallery__item hover-img img" href="./../../img/museum-item-1-img.png" data-fancybox="gallery-1" data-caption="Изображение 3" alt="Изображение 3" title="Изображение 3">
-                                                    <img data-src="./../../img/museum-item-1-img.png" class="lazyload" role="img" />
+                                                <a class="gallery__item hover-img img" itemscope itemtype="http://schema.org/ImageObject" href="./../../img/museum-item-1-img.png" data-fancybox="gallery-1" data-caption="Изображение 3" alt="Изображение 3" title="Изображение 3">
+                                                    <img src="./../../img/museum-item-1-img.png" alt="Описание" itemprop="contentUrl" />
                                                 </a>
-                                                <a class="gallery__item hover-img img" href="./../../img/museum-item-1-img.png" data-fancybox="gallery-1" data-caption="Изображение 4" alt="Изображение 4" title="Изображение 4">
-                                                    <img data-src="./../../img/museum-item-1-img.png" class="lazyload" role="img" />
+                                                <a class="gallery__item hover-img img" itemscope itemtype="http://schema.org/ImageObject" href="./../../img/museum-item-1-img.png" data-fancybox="gallery-1" data-caption="Изображение 4" alt="Изображение 4" title="Изображение 4">
+                                                    <img src="./../../img/museum-item-1-img.png" alt="Описание" itemprop="contentUrl" />
                                                 </a>
-                                                <a class="gallery__item hover-img img" href="./../../img/museum-item-1-img.png" data-fancybox="gallery-1" data-caption="Изображение 5" alt="Изображение 5" title="Изображение 5">
-                                                    <img data-src="./../../img/museum-item-1-img.png" class="lazyload" role="img" />
+                                                <a class="gallery__item hover-img img" itemscope itemtype="http://schema.org/ImageObject" href="./../../img/museum-item-1-img.png" data-fancybox="gallery-1" data-caption="Изображение 5" alt="Изображение 5" title="Изображение 5">
+                                                    <img src="./../../img/museum-item-1-img.png" alt="Описание" itemprop="contentUrl" />
                                                 </a>
-                                                <a class="gallery__item hover-img img" href="./../../img/museum-item-1-img.png" data-fancybox="gallery-1" data-caption="Изображение 6" alt="Изображение 6" title="Изображение 6">
-                                                    <img data-src="./../../img/museum-item-1-img.png" class="lazyload" role="img" />
+                                                <a class="gallery__item hover-img img" itemscope itemtype="http://schema.org/ImageObject" href="./../../img/museum-item-1-img.png" data-fancybox="gallery-1" data-caption="Изображение 6" alt="Изображение 6" title="Изображение 6">
+                                                    <img src="./../../img/museum-item-1-img.png" alt="Описание" itemprop="contentUrl" />
                                                 </a>
-                                                <a class="gallery__item hover-img img" href="./../../img/museum-item-1-img.png" data-fancybox="gallery-1" data-caption="Изображение 7" alt="Изображение 7" title="Изображение 7">
-                                                    <img data-src="./../../img/museum-item-1-img.png" class="lazyload" role="img" />
+                                                <a class="gallery__item hover-img img" itemscope itemtype="http://schema.org/ImageObject" href="./../../img/museum-item-1-img.png" data-fancybox="gallery-1" data-caption="Изображение 7" alt="Изображение 7" title="Изображение 7">
+                                                    <img src="./../../img/museum-item-1-img.png" alt="Описание" itemprop="contentUrl" />
                                                 </a>
-                                                <a class="gallery__item hover-img img" href="./../../img/museum-item-1-img.png" data-fancybox="gallery-1" data-caption="Изображение 8" alt="Изображение 8" title="Изображение 8">
-                                                    <img data-src="./../../img/museum-item-1-img.png" class="lazyload" role="img" />
+                                                <a class="gallery__item hover-img img" itemscope itemtype="http://schema.org/ImageObject" href="./../../img/museum-item-1-img.png" data-fancybox="gallery-1" data-caption="Изображение 8" alt="Изображение 8" title="Изображение 8">
+                                                    <img src="./../../img/museum-item-1-img.png" alt="Описание" itemprop="contentUrl" />
                                                 </a>
                                             </div>
                                         <a href="#" class="get-more_btn">больше фото</a>
@@ -85,29 +86,29 @@
                                 <div class="tab_item" role="tabpanel">
                                     <div class="gallery gallery--grid">
                                         <div class="gallery__items items grid grid--4" role="region" aria-label="Галерея">
-                                            <a class="gallery__item hover-img img" href="./../../img/museum-item-2-img.png" data-fancybox="gallery-2" data-caption="Изображение 1" alt="Изображение 1" title="Изображение 1">
-                                                <img data-src="./../../img/museum-item-2-img.png" class="lazyload" title="Изображение 1" role="img" />
+                                            <a class="gallery__item hover-img img" itemscope itemtype="http://schema.org/ImageObject" href="./../../img/museum-item-2-img.png" data-fancybox="gallery-2" data-caption="Изображение 1" alt="Изображение 1" title="Изображение 1">
+                                                <img src="./../../img/museum-item-2-img.png" title="Изображение 1" />
                                             </a>
-                                            <a class="gallery__item hover-img img" href="./../../img/museum-item-2-img.png" data-fancybox="gallery-2" data-caption="Изображение 2" alt="Изображение 2" title="Изображение 2">
-                                                <img data-src="./../../img/museum-item-2-img.png" class="lazyload" role="img" />
+                                            <a class="gallery__item hover-img img" itemscope itemtype="http://schema.org/ImageObject" href="./../../img/museum-item-2-img.png" data-fancybox="gallery-2" data-caption="Изображение 2" alt="Изображение 2" title="Изображение 2">
+                                                <img src="./../../img/museum-item-2-img.png" itemprop="contentUrl" />
                                             </a>
-                                            <a class="gallery__item hover-img img" href="./../../img/museum-item-2-img.png" data-fancybox="gallery-2" data-caption="Изображение 3" alt="Изображение 3" title="Изображение 3">
-                                                <img data-src="./../../img/museum-item-2-img.png" class="lazyload" role="img" />
+                                            <a class="gallery__item hover-img img" itemscope itemtype="http://schema.org/ImageObject" href="./../../img/museum-item-2-img.png" data-fancybox="gallery-2" data-caption="Изображение 3" alt="Изображение 3" title="Изображение 3">
+                                                <img src="./../../img/museum-item-2-img.png" itemprop="contentUrl" />
                                             </a>
-                                            <a class="gallery__item hover-img img" href="./../../img/museum-item-2-img.png" data-fancybox="gallery-2" data-caption="Изображение 4" alt="Изображение 4" title="Изображение 4">
-                                                <img data-src="./../../img/museum-item-2-img.png" class="lazyload" role="img" />
+                                            <a class="gallery__item hover-img img" itemscope itemtype="http://schema.org/ImageObject" href="./../../img/museum-item-2-img.png" data-fancybox="gallery-2" data-caption="Изображение 4" alt="Изображение 4" title="Изображение 4">
+                                                <img src="./../../img/museum-item-2-img.png" itemprop="contentUrl" />
                                             </a>
-                                            <a class="gallery__item hover-img img" href="./../../img/museum-item-2-img.png" data-fancybox="gallery-2" data-caption="Изображение 5" alt="Изображение 5" title="Изображение 5">
-                                                <img data-src="./../../img/museum-item-2-img.png" class="lazyload" role="img" />
+                                            <a class="gallery__item hover-img img" itemscope itemtype="http://schema.org/ImageObject" href="./../../img/museum-item-2-img.png" data-fancybox="gallery-2" data-caption="Изображение 5" alt="Изображение 5" title="Изображение 5">
+                                                <img src="./../../img/museum-item-2-img.png" itemprop="contentUrl" />
                                             </a>
-                                            <a class="gallery__item hover-img img" href="./../../img/museum-item-2-img.png" data-fancybox="gallery-2" data-caption="Изображение 6" alt="Изображение 6" title="Изображение 6">
-                                                <img data-src="./../../img/museum-item-2-img.png" class="lazyload" role="img" />
+                                            <a class="gallery__item hover-img img" itemscope itemtype="http://schema.org/ImageObject" href="./../../img/museum-item-2-img.png" data-fancybox="gallery-2" data-caption="Изображение 6" alt="Изображение 6" title="Изображение 6">
+                                                <img src="./../../img/museum-item-2-img.png" itemprop="contentUrl" />
                                             </a>
-                                            <a class="gallery__item hover-img img" href="./../../img/museum-item-2-img.png" data-fancybox="gallery-2" data-caption="Изображение 7" alt="Изображение 7" title="Изображение 7">
-                                                <img data-src="./../../img/museum-item-2-img.png" class="lazyload" role="img" />
+                                            <a class="gallery__item hover-img img" itemscope itemtype="http://schema.org/ImageObject" href="./../../img/museum-item-2-img.png" data-fancybox="gallery-2" data-caption="Изображение 7" alt="Изображение 7" title="Изображение 7">
+                                                <img src="./../../img/museum-item-2-img.png" itemprop="contentUrl" />
                                             </a>
-                                            <a class="gallery__item hover-img img" href="./../../img/museum-item-2-img.png" data-fancybox="gallery-2" data-caption="Изображение 8" alt="Изображение 8" title="Изображение 8">
-                                                <img data-src="./../../img/museum-item-2-img.png" class="lazyload" role="img" />
+                                            <a class="gallery__item hover-img img" itemscope itemtype="http://schema.org/ImageObject" href="./../../img/museum-item-2-img.png" data-fancybox="gallery-2" data-caption="Изображение 8" alt="Изображение 8" title="Изображение 8">
+                                                <img src="./../../img/museum-item-2-img.png" itemprop="contentUrl" />
                                             </a>
                                         </div>
                                         <a href="#" class="get-more_btn">больше фото</a>
@@ -116,29 +117,29 @@
                                 <div class="tab_item" role="tabpanel">
                                     <div class="gallery gallery--grid">
                                         <div class="gallery__items items grid grid--4" role="region" aria-label="Галерея">
-                                            <a class="gallery__item hover-img img" href="./../../img/museum-item-3-img.png" data-fancybox="gallery-3" data-caption="Изображение 1" alt="Изображение 1" title="Изображение 1">
-                                                <img data-src="./../../img/museum-item-3-img.png" class="lazyload" title="Изображение 1" role="img" />
+                                            <a class="gallery__item hover-img img" itemscope itemtype="http://schema.org/ImageObject" href="./../../img/museum-item-3-img.png" data-fancybox="gallery-3" data-caption="Изображение 1" alt="Изображение 1" title="Изображение 1">
+                                                <img src="./../../img/museum-item-3-img.png" title="Изображение 1" />
                                             </a>
-                                            <a class="gallery__item hover-img img" href="./../../img/museum-item-3-img.png" data-fancybox="gallery-3" data-caption="Изображение 2" alt="Изображение 2" title="Изображение 2">
-                                                <img data-src="./../../img/museum-item-3-img.png" class="lazyload" role="img" />
+                                            <a class="gallery__item hover-img img" itemscope itemtype="http://schema.org/ImageObject" href="./../../img/museum-item-3-img.png" data-fancybox="gallery-3" data-caption="Изображение 2" alt="Изображение 2" title="Изображение 2">
+                                                <img src="./../../img/museum-item-3-img.png" itemprop="contentUrl" />
                                             </a>
-                                            <a class="gallery__item hover-img img" href="./../../img/museum-item-3-img.png" data-fancybox="gallery-3" data-caption="Изображение 3" alt="Изображение 3" title="Изображение 3">
-                                                <img data-src="./../../img/museum-item-3-img.png" class="lazyload" role="img" />
+                                            <a class="gallery__item hover-img img" itemscope itemtype="http://schema.org/ImageObject" href="./../../img/museum-item-3-img.png" data-fancybox="gallery-3" data-caption="Изображение 3" alt="Изображение 3" title="Изображение 3">
+                                                <img src="./../../img/museum-item-3-img.png" itemprop="contentUrl" />
                                             </a>
-                                            <a class="gallery__item hover-img img" href="./../../img/museum-item-3-img.png" data-fancybox="gallery-3" data-caption="Изображение 4" alt="Изображение 4" title="Изображение 4">
-                                                <img data-src="./../../img/museum-item-3-img.png" class="lazyload" role="img" />
+                                            <a class="gallery__item hover-img img" itemscope itemtype="http://schema.org/ImageObject" href="./../../img/museum-item-3-img.png" data-fancybox="gallery-3" data-caption="Изображение 4" alt="Изображение 4" title="Изображение 4">
+                                                <img src="./../../img/museum-item-3-img.png" itemprop="contentUrl" />
                                             </a>
-                                            <a class="gallery__item hover-img img" href="./../../img/museum-item-3-img.png" data-fancybox="gallery-3" data-caption="Изображение 5" alt="Изображение 5" title="Изображение 5">
-                                                <img data-src="./../../img/museum-item-3-img.png" class="lazyload" role="img" />
+                                            <a class="gallery__item hover-img img" itemscope itemtype="http://schema.org/ImageObject" href="./../../img/museum-item-3-img.png" data-fancybox="gallery-3" data-caption="Изображение 5" alt="Изображение 5" title="Изображение 5">
+                                                <img src="./../../img/museum-item-3-img.png" itemprop="contentUrl" />
                                             </a>
-                                            <a class="gallery__item hover-img img" href="./../../img/museum-item-3-img.png" data-fancybox="gallery-3" data-caption="Изображение 6" alt="Изображение 6" title="Изображение 6">
-                                                <img data-src="./../../img/museum-item-3-img.png" class="lazyload" role="img" />
+                                            <a class="gallery__item hover-img img" itemscope itemtype="http://schema.org/ImageObject" href="./../../img/museum-item-3-img.png" data-fancybox="gallery-3" data-caption="Изображение 6" alt="Изображение 6" title="Изображение 6">
+                                                <img src="./../../img/museum-item-3-img.png" itemprop="contentUrl" />
                                             </a>
-                                            <a class="gallery__item hover-img img" href="./../../img/museum-item-3-img.png" data-fancybox="gallery-3" data-caption="Изображение 7" alt="Изображение 7" title="Изображение 7">
-                                                <img data-src="./../../img/museum-item-3-img.png" class="lazyload" role="img" />
+                                            <a class="gallery__item hover-img img" itemscope itemtype="http://schema.org/ImageObject" href="./../../img/museum-item-3-img.png" data-fancybox="gallery-3" data-caption="Изображение 7" alt="Изображение 7" title="Изображение 7">
+                                                <img src="./../../img/museum-item-3-img.png" itemprop="contentUrl" />
                                             </a>
-                                            <a class="gallery__item hover-img img" href="./../../img/museum-item-3-img.png" data-fancybox="gallery-3" data-caption="Изображение 8" alt="Изображение 8" title="Изображение 8">
-                                                <img data-src="./../../img/museum-item-3-img.png" class="lazyload" role="img" />
+                                            <a class="gallery__item hover-img img" itemscope itemtype="http://schema.org/ImageObject" href="./../../img/museum-item-3-img.png" data-fancybox="gallery-3" data-caption="Изображение 8" alt="Изображение 8" title="Изображение 8">
+                                                <img src="./../../img/museum-item-3-img.png" itemprop="contentUrl" />
                                             </a>
                                         </div>
                                         <a href="#" class="get-more_btn">больше фото</a>

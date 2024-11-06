@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="ru">
 		@include("./../common/head.html", { "title": "Результаты поиска" })
-	<body>
+	<body itemscope itemtype="https://schema.org/WebPage">
 		<div class="page-wrapper">
 			<!-- Шапка -->
 			@include("./../common/header.html")
@@ -32,8 +32,10 @@
 				<section class="search-result">
 					<div class="container container-small">
                         <div class="section_content">
-							<form action="./search.html" class="search__form" role="search" aria-label="Поиск по сайту">
-								<input type="text" class="search__input" placeholder="Поиск по сайту" aria-label="Введите текст для поиска">
+
+							<form action="./search.html" class="search__form" role="search" aria-label="Поиск по сайту" itemscope itemtype="http://schema.org/SearchAction" itemprop="potentialAction">
+								<meta itemprop="target" content="/search/?q={query}">
+								<input type="text" class="search__input" name="q" placeholder="Поиск по сайту" aria-label="Введите текст для поиска" itemprop="query-input">
 								<button type="submit" class="btn btn-primary">Поиск</button>
 							</form>
 

@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="ru">
 		@include("./../common/head.html", { "title": "Кинофраза" })
-	<body>
+	<body itemscope itemtype="https://schema.org/WebPage">
 		<div class="page-wrapper">
 			<!-- Шапка -->
 			@include("./../common/header.html")
@@ -37,6 +37,7 @@
 				</div>
 				<section class="film-phrase">
 					<div class="container">
+						<h2 class="visually-hidden">Кинофраза</h2>
 						<div class="section_content">
                             <div class="text-content">
                                 <p>2016 год официально объявлен В.В.Путиным годом кино и профсоюзная организация решила поддержать инициативу Президента РФ, запустив интерактивный проект "Кинофраза".</p>
@@ -50,23 +51,23 @@
                             </div>
 
 							<div class="film-phrase__items grid grid--3 items">
-								<div class="film-phrase__item">
+								<div class="film-phrase__item" itemscope itemtype="http://schema.org/ImageObject">
 									<a class="hover-img film-phrase__item-img img" href="./../../img/film-phrase__item-1.png" data-fancybox="gallery" data-caption="Изображение" title="Изображение">
-										<img data-src="./../../img/film-phrase__item-1.png" class="lazyload" alt="Изображение" role="img" />
+										<img src="./../../img/film-phrase__item-1.png"  itemprop="contentUrl"  alt="Изображение" />
 									</a>
-									<span class="film-phrase__item-title">Прислала Шаховнина Л.В. (ПГМ)</span>
+									<span class="film-phrase__item-title" itemprop="author">Прислала Шаховнина Л.В. (ПГМ)</span>
 								</div>
-								<div class="film-phrase__item">
+								<div class="film-phrase__item" itemscope itemtype="http://schema.org/ImageObject">
 									<a class="hover-img film-phrase__item-img img" href="./../../img/film-phrase__item-2.png" data-fancybox="gallery" data-caption="Изображение" title="Изображение">
-										<img data-src="./../../img/film-phrase__item-2.png" class="lazyload" alt="Изображение" role="img" />
+										<img src="./../../img/film-phrase__item-2.png"  itemprop="contentUrl"  alt="Изображение" />
 									</a>
-									<span class="film-phrase__item-title">Прислала Шаховнина Л.В. (ПГМ)</span>
+									<span class="film-phrase__item-title" itemprop="author">Прислала Шаховнина Л.В. (ПГМ)</span>
 								</div>
-								<div class="film-phrase__item">
+								<div class="film-phrase__item" itemscope itemtype="http://schema.org/ImageObject">
 									<a class="hover-img film-phrase__item-img img" href="./../../img/film-phrase__item-3.png" data-fancybox="gallery" data-caption="Изображение" title="Изображение">
-										<img data-src="./../../img/film-phrase__item-3.png" class="lazyload" alt="Изображение" role="img" />
+										<img src="./../../img/film-phrase__item-3.png"  itemprop="contentUrl"  alt="Изображение" />
 									</a>
-									<span class="film-phrase__item-title">Прислала Шаховнина Л.В. (ПГМ)</span>
+									<span class="film-phrase__item-title" itemprop="author">Прислала Шаховнина Л.В. (ПГМ)</span>
 								</div>
 							</div>
 							@include("./../components/pagination.html")

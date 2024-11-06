@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="ru">
-		@include("./../common/head.html", { "title": "Арест на трое суток за летнюю резину" })
-	<body>
+		@include("./../common/head.html", { "title": "404" })
+	<body itemscope itemtype="https://schema.org/WebPage">
 		<div class="page-wrapper">
 			<!-- Шапка -->
 			@include("./../common/header.html")
@@ -25,12 +25,16 @@
 							<div class="error-page__actions">
 								<a href="/" class="btn btn-primary">вернуться назад</a>
 								<div>
-									<form action="./search.html" class="search__form" role="search" aria-label="Поиск по сайту">
-										<input type="text" class="search__input" placeholder="Поиск по сайту" aria-label="Введите текст для поиска">
-										<button type="submit"><svg class="icon">
+									<form action="./search.html" class="search__form" role="search" aria-label="Поиск по сайту" itemscope itemtype="http://schema.org/SearchAction" itemprop="potentialAction">
+										<meta itemprop="target" content="/search/?q={query}">
+										<input type="text" class="search__input" name="q" placeholder="Поиск по сайту" aria-label="Введите текст для поиска" itemprop="query-input">
+										<button type="submit">
+											<svg class="icon">
 												<use xlink:href="./img/sprite.svg#search"></use>
-											</svg></button>
+											</svg>
+										</button>
 									</form>
+									
 								</div>
 							</div>
 						</div>

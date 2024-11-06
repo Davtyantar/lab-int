@@ -4,7 +4,7 @@ export const initQrImg = () => {
 
     itemQrs.forEach(img => {
         img.addEventListener('click', () => {
-            const imgSrc = img.getAttribute('data-src');
+            const imgSrc = img.getAttribute('src');
             const imgAlt = img.getAttribute('alt');
             const imgTitle = img.getAttribute('title');
             if (imgSrc) {
@@ -20,4 +20,4 @@ export const initQrImg = () => {
     });
 };
 
-document.addEventListener('DOMContentLoaded', initQrImg);
+document.addEventListener('DOMContentLoaded', initQrImg());

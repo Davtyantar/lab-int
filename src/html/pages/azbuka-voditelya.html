@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="ru">
 		@include("./../common/head.html", { "title": "Азбука водителя" })
-	<body>
+	<body itemscope itemtype="https://schema.org/WebPage">
 		<div class="page-wrapper">
 			<!-- Шапка -->
 			@include("./../common/header.html")
@@ -31,6 +31,7 @@
 				</div>
                 <section class="drivers-alphabet">
                     <div class="container">
+                        <h2 class="visually-hidden">Азбука водителя</h2>
                         <div class="section_content">
                             <div class="drivers-alphabet__items grid grid--4 items mobile-slider">
                                 <script>
@@ -46,14 +47,14 @@
                                 
                                     driversAlphabetData.forEach(item => {
                                         const driversAlphabetItem = `
-                                            <article class="drivers-alphabet__item" role="article">
-                                                <a href="./azbuka-voditelya-detail.html" class="item__link" title="${item.title}">
-                                                    <div class="item__img img">
-                                                        <img data-src="${item.imgSrc}" class="lazyload" alt="${item.title}">
+                                            <article class="drivers-alphabet__item">
+                                                <a href="./azbuka-voditelya-detail.html" class="item__link" title="${item.title}" itemscope itemtype="http://schema.org/ImageObject">
+                                                     <div class="item__img img">
+                                                        <img src="${item.imgSrc}" alt="${item.title}"  itemprop="contentUrl">
                                                     </div>
                                                     <div class="item__description">
-                                                        <h3 class="item__title">${item.title}</h3>
-                                                        <span class="item__date">03.10.2024</span>
+                                                        <h3 class="item__title" itemprop="name">${item.title}</h3>
+                                                        <span class="item__date" itemprop="datePublished">03.10.2024</span>
                                                     </div>
                                                 </a>
                                             </article>

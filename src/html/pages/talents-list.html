@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="ru">
 		@include("./../common/head.html", { "title": "2024 год" })
-	<body>
+	<body itemscope itemtype="https://schema.org/WebPage">
 		<div class="page-wrapper">
 			<!-- Шапка -->
 			@include("./../common/header.html")
@@ -43,58 +43,59 @@
 				</div>
 				<section class="talents talents__list">
 					<div class="container">
+                        <h2 class="visually-hidden">2024 год</h2>
 						<div class="section_content">
 							<div class="talents__list-items grid grid--2 items mobile-slider">
-								<div class="talents__list-profile profile">
+								<div class="talents__list-profile profile" itemscope itemtype="https://schema.org/ImageObject">
                                     <div class="profile__img img">
-                                        <img data-src="./../../img/talents-detail-profile-1.png" class="lazyload" alt="Описание" title="Описание" >
+                                        <img src="./../../img/talents-detail-profile-1.png" alt="Описание" title="Описание" itemprop="contentUrl" >
                                     </div>
                                     <div class="profile__content">
                                         <div class="profile__head">
-                                            <h4 class="profile__name h4">Макарова Светлана Юрьевна</h4>
-                                            <div class="profile__position">Делопроизводитель ЗМА ООО "Нижегородские автокомпоненты</div>
-                                            <div class="profile__talent">Мастер вязаных игрушек</div>
+                                            <h4 class="profile__name h4" itemprop="author">Макарова Светлана Юрьевна</h4>
+                                            <div class="profile__position" itemprop="name">Делопроизводитель ЗМА ООО "Нижегородские автокомпоненты</div>
+                                            <div class="profile__talent" itemprop="description">Мастер вязаных игрушек</div>
                                         </div>
                                         <a href="./talents-detail-profile.html" class="profile__event btn btn-primary">выставка</a>
                                     </div>
                                 </div>
-                                <div class="talents__list-profile profile">
+                                <div class="talents__list-profile profile" itemscope itemtype="https://schema.org/ImageObject">
                                     <div class="profile__img img">
-                                        <img data-src="./../../img/talents-detail-profile-2.png" class="lazyload" alt="Описание" title="Описание" >
+                                        <img src="./../../img/talents-detail-profile-2.png" alt="Описание" title="Описание" itemprop="contentUrl" >
                                     </div>
                                     <div class="profile__content">
                                         <div class="profile__head">
-                                            <h4 class="profile__name h4">Разумова Елена Юрьевна</h4>
-                                            <div class="profile__position">Ведущий специалист ОП УП ЦЛиКП ООО «АЗ «НАЗ»</div>
-                                            <div class="profile__talent">Поэт</div>
+                                            <h4 class="profile__name h4" itemprop="author">Разумова Елена Юрьевна</h4>
+                                            <div class="profile__position" itemprop="name">Ведущий специалист ОП УП ЦЛиКП ООО «АЗ «НАЗ»</div>
+                                            <div class="profile__talent" itemprop="description">Поэт</div>
                                         </div>
                                         <a href="./talents-detail-profile.html" class="profile__event btn btn-primary">выставка</a>
                                     </div>
                                 </div>
-                                <div class="talents__list-profile profile">
+                                <div class="talents__list-profile profile" itemscope itemtype="https://schema.org/ImageObject">
                                     <div class="profile__img img">
-                                        <img data-src="./../../img/talents-detail-profile-3.png" class="lazyload" alt="Описание" title="Описание" >
+                                        <img src="./../../img/talents-detail-profile-3.png" alt="Описание" title="Описание" itemprop="contentUrl" >
                                     </div>
                                     <div class="profile__content">
                                         <div class="profile__head">
-                                            <h4 class="profile__name h4">Беспалова Ольга Николаевна</h4>
-                                            <div class="profile__position">
+                                            <h4 class="profile__name h4" itemprop="author">Беспалова Ольга Николаевна</h4>
+                                            <div class="profile__position" itemprop="name">
                                                 Главный специалист отдела планирования производства УП ЦЛиКП ООО "Автозавод "ГАЗ
                                             </div>
-                                            <div class="profile__talent">Мастер вязаных игрушек</div>
+                                            <div class="profile__talent" itemprop="description">Мастер вязаных игрушек</div>
                                         </div>
                                         <a href="./talents-detail-profile.html" class="profile__event btn btn-primary">выставка</a>
                                     </div>
                                 </div>
-                                <div class="talents__list-profile profile">
+                                <div class="talents__list-profile profile" itemscope itemtype="https://schema.org/ImageObject">
                                     <div class="profile__img img">
-                                        <img data-src="./../../img/talents-detail-profile-4.png" class="lazyload" alt="Описание" title="Описание" >
+                                        <img src="./../../img/talents-detail-profile-4.png" alt="Описание" title="Описание" itemprop="contentUrl" >
                                     </div>
                                     <div class="profile__content">
                                         <div class="profile__head">
-                                            <h4 class="profile__name h4">Минеева Марина Николаевна</h4>
-                                            <div class="profile__position">Обрубщик литья ЗЦЛ</div>
-                                            <div class="profile__talent">Кукольных дел мастер</div>
+                                            <h4 class="profile__name h4" itemprop="author">Минеева Марина Николаевна</h4>
+                                            <div class="profile__position" itemprop="name">Обрубщик литья ЗЦЛ</div>
+                                            <div class="profile__talent" itemprop="description">Кукольных дел мастер</div>
                                         </div>
                                         <a href="./talents-detail-profile.html" class="profile__event btn btn-primary">выставка</a>
                                     </div>

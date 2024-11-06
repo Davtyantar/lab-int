@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="ru">
 		@include("./../common/head.html", { "title": "Организация" })
-	<body>
+	<body itemscope itemtype="https://schema.org/WebPage">
 		<div class="page-wrapper">
 			<!-- Шапка -->
 			@include("./../common/header.html")
@@ -31,6 +31,7 @@
 				</div>
 				<section class="organization">
 					<div class="container">
+						<h2 class="visually-hidden">Организация</h2>
 						<div class="section_content">
 							<div class="text-content">
 								<h2>Профсоюзная организация Горьковского автозавода объявляет с 10 сентября по 6 октября 2024 года творческий конкурс с одноименным названием!</h2>
@@ -68,8 +69,8 @@
 									
 										galleryData.forEach(item => {
 											const galleryItem = `
-												<a class="gallery__item hover-img img" href="${item.imgSrc}" data-fancybox="gallery" data-caption="${item.title}" title="${item.title}">
-													<img data-src="${item.imgSrc}" class="lazyload" alt="${item.title}" role="img" />
+												<a class="gallery__item hover-img img" itemscope itemtype="http://schema.org/ImageObject" href="${item.imgSrc}" data-fancybox="gallery" data-caption="${item.title}" title="${item.title}">
+													<img src="${item.imgSrc}" alt="${item.title}" itemprop="contentUrl" />
 												</a>
 											`;
 											galleryContent.innerHTML += galleryItem;

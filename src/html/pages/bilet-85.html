@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="ru">
 		@include("./../common/head.html", { "title": "Билет 085" })
-	<body>
+	<body itemscope itemtype="https://schema.org/WebPage">
 		<div class="page-wrapper">
 			<!-- Шапка -->
 			@include("./../common/header.html")
@@ -37,6 +37,7 @@
 				</div>
 				<section class="bilet">
 					<div class="container">
+                        <h2 class="visually-hidden">Билет 085</h2>
                         <div class="section_content">
                             <div class="bilet__items items grid grid--2">
                                 <script>
@@ -69,32 +70,32 @@
                                             id: "011085"
                                         },
                                         {   
-                                                name: "Агаркова Анна Васильевна",
-                                                position: "начальник лаборатории член профбюро,председатель совета наставников ДпК ОАО «ГАЗ»",
-                                                imgSrc: "./../../img/bilet-085-item-4-img.png",
-                                                docImgSrc: "./../../img/bilet-085-item-4-img-small.png",
-                                                workHistory: "1975",
-                                                membership: "1975",
-                                                id: "13761085"
-                                            },
+                                            name: "Агаркова Анна Васильевна",
+                                            position: "начальник лаборатории член профбюро,председатель совета наставников ДпК ОАО «ГАЗ»",
+                                            imgSrc: "./../../img/bilet-085-item-4-img.png",
+                                            docImgSrc: "./../../img/bilet-085-item-4-img-small.png",
+                                            workHistory: "1975",
+                                            membership: "1975",
+                                            id: "13761085"
+                                        },
                                     ]
                                     
                                     const biletItemContent = document.querySelector('.bilet__items');
 
                                     bilet85Data.forEach(member => {
                                         const biletTabItem  = `
-                                        <div class="bilet__item">
-                                            <div class="item__img img">
-                                                <img data-src="${member.imgSrc}" class="lazyload" alt="${member.name}" title="${member.name}">
+                                        <div class="bilet__item" itemscope itemtype="http://schema.org/ImageObject">
+                                             <div class="item__img img">
+                                                <img src="${member.imgSrc}" alt="${member.name}" title="${member.name}" itemprop="contentUrl">
                                             </div>
                                             <div class="item__info">
                                                 <div class="info__head">
-                                                    <div class="item__title">${member.name}</div>
-                                                    <div class="item__subtitle">${member.position}</div>
+                                                    <div class="item__title" itemprop="name">${member.name}</div>
+                                                    <div class="item__subtitle" itemprop="description">${member.position}</div>
                                                 </div>
                                                 <div class="info__foot">
                                                     <a class="info__foot-img hover-img img" href="${member.docImgSrc}" data-caption="${member.name}" data-fancybox="gallery">
-                                                        <img data-src="${member.docImgSrc}" class="lazyload" title="${member.name}" alt="${member.name}" />
+                                                        <img src="${member.docImgSrc}" title="${member.name}" alt="${member.name}" />
                                                     </a>
                                                     <div class="info__foot-numbers">
                                                         <span class="work-history">на заводе с ${member.workHistory}г.</span>

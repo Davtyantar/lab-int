@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="ru">
 		@include("./../common/head.html", { "title": "Председатели ВЦСПС" })
-	<body>
+	<body itemscope itemtype="https://schema.org/WebPage">
 		<div class="page-wrapper">
 			<!-- Шапка -->
 			@include("./../common/header.html")
@@ -45,6 +45,7 @@
 				</div>
 				<section class="chairmans">
 					<div class="container">
+                        <h2 class="visually-hidden">Председатели ВЦСПС</h2>
                         <div class="section_content">
                             <div class="chairmans__descr text-content items">
                                 <p>
@@ -115,13 +116,13 @@
                                 
                                     chairmansData.forEach(item => {
                                         const chairmanItem = `
-                                            <div class="chairmans__item">
+                                            <div class="chairmans__item" itemscope itemtype="http://schema.org/ImageObject">
                                                 <div class="chairmans__item-img img">
-                                                    <img data-src="${item.imgSrc}" class="lazyload" title="${item.title}" alt="${item.title}" />
+                                                    <img src="${item.imgSrc}" title="${item.title}" alt="${item.title}" itemprop="contentUrl" />
                                                 </div>
                                                 <div class="chairmans__item-info">
-                                                    <div class="chairmans__item-title">${item.title}</div>
-                                                    <span class="chairmans__item-date">${item.date}</span>
+                                                    <div class="chairmans__item-title" itemprop="name">${item.title}</div>
+                                                    <span class="chairmans__item-date" itemprop="description">${item.date}</span>
                                                 </div>
                                             </div>
                                         `;
