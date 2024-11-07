@@ -20,6 +20,8 @@
     align-items: center;
     justify-content: space-between;
     overflow: hidden;
+    padding-right: 10px;
+    margin-right: -10px;
     @include mobile {
         margin-bottom: 25px;
         align-items: baseline;

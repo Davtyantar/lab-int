@@ -22,7 +22,7 @@
     letter-spacing: 0.04em;
     text-transform: uppercase;
 
-    transition: color $t-base, background-color $t-base, opacity $t-base;
+    transition: color $t-base, background-color $t-base, opacity $t-base, border-color $t-base;
     & > .icon {
         width: 16px;
         height: 16px;
