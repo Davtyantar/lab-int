@@ -73,11 +73,7 @@ export const setupFormValidation = () => {
             
             const formWrapper = form.closest('.form-wrapper');
             const formSuccess = formWrapper?.querySelector('.form__success');
-            const formData = new FormData(form);
-            const formValues = Object.fromEntries(formData.entries());
-        
-            console.log('Form data:', formValues);
-        
+
             const resetForm = () => {
                 form.reset();
                 formSuccess?.classList.remove('is-visible');
