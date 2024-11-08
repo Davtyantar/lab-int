@@ -5,15 +5,13 @@
     overflow-x: hidden;
     --spacing: clamp(3.125rem, 2.367rem + 3.24vw, 6.25rem);
     padding-bottom: var(--spacing);
-
     &.homepage {
-        padding-top: var(--header-height);
         row-gap: var(--spacing);
     }
     &:not(.homepage) {
-        padding-top: calc(var(--header-height) + 40px);
+        padding-top: 40px;
         @include mobile {
-            padding-top: calc(var(--header-height) + 20px);
+            padding-top: 20px;
         }
         & > section:not(:last-child) {
             margin-bottom: var(--spacing);

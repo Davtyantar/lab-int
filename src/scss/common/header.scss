@@ -1,23 +1,21 @@
 .header {
     background-color: $clr-white;
-    position: fixed;
+    position: sticky;
     width: 100%;
+    top: 0;
     left: 0;
     z-index: 25;
     transition: transform $t-base;
     box-shadow: 0px 0px 0px 1px #dedede;
     padding: 5px 0;
-    overflow: hidden;
     &.header-search--transformed {
         z-index: 50;
     }
-
     @include min-mobile {
         &.is-hidden {
             transform: translateY(calc(-105%));
         }
     }
-
     &__logo {
         width: 60px;
         height: 60px;
