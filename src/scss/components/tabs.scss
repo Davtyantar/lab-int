@@ -34,11 +34,13 @@
                 left: 0%;
                 transition: filter $t-base, opacity $t-base, transform $t-base;
             }
-            &.is-active {
-                &::before {
-                    opacity: 1;
-                    filter: blur(0px);
-                    transform: translateY(0);
+            @include min-mobile {
+                &.is-active {
+                    &::before {
+                        opacity: 1;
+                        filter: blur(0px);
+                        transform: translateY(0);
+                    }
                 }
             }
         }

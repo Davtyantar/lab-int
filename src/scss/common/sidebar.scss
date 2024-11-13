@@ -23,7 +23,7 @@
             flex-direction: column;
             row-gap: 20px;
             @include mobile {
-                gap: 10px;
+                gap: 5px;
                 flex-direction: row;
                 flex-wrap: wrap;
             }
@@ -39,10 +39,10 @@
                 color: $clr-primary;
             }
             @include mobile {
+                padding: 5px 10px;
+                border-radius: 100px;
                 font-size: 14px;
                 &.is-active {
-                    padding: 5px 10px;
-                    border-radius: 100px;
                     color: $clr-white;
                     background-color: $clr-primary;
                     border-color: $clr-primary;

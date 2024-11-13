@@ -36,6 +36,9 @@
             font-weight: 700;
             font-size: 20px;
             margin-bottom: 12px;
+            @include mobile {
+                font-size: 16px;
+            }
         }
         .item__subtitle {
             font-family: $second-family;

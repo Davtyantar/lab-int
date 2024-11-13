@@ -57,6 +57,9 @@
         border-radius: 5px;
         transition: border-color 0.3s;
         font-size: 14px;
+        @include mobile {
+            font-size: 16px;
+        }
         &:focus {
             border-color: $clr-primary;
             outline: none;
