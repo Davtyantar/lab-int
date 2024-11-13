@@ -71,6 +71,17 @@ export const headerFunctions = () => {
             lastScrollTop = currentScrollTop;
         });
     }
+
+    const dropdownAccordionItems = document.querySelectorAll(".nav__item.has-dropdown");
+        
+        dropdownAccordionItems.forEach(item => {
+        const dropdownAccordionContent = item.querySelector(".dropdown-menu");
+        const dropdownAccordionBtn = item.querySelector(".has-dropdown__link .icon");
+
+        dropdownAccordionBtn.addEventListener("click", function () {
+            dropdownAccordionContent.classList.toggle("is_open");
+        });
+    });
 };
 
 document.addEventListener('DOMContentLoaded', headerFunctions);
