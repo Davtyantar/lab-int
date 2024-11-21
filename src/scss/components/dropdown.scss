@@ -66,14 +66,16 @@
         display: flex;
         flex-direction: column;
         overflow-y: hidden;
-        padding: 0px 20px;
     }
-    .dropdown-menu__inner li:last-child {
-        padding-bottom: 25px;
+    .dropdown-menu__inner li:not(:last-child) > a {
+        border-bottom: 1px solid $clr-gray-border;
+    }
+    .dropdown-menu__inner li:first-child > a {
+        border-top: 1px solid $clr-gray-border;
     }
     .dropdown-menu__inner li > a {
         display: block;
-        padding: 5px 0;
+        padding: 10px 20px;
     }
     .has-dropdown__link {
         display: flex;
