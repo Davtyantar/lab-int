@@ -1,22 +1,55 @@
-
 .form {
     position: relative;
-    background-color: $clr-white;
-    &:not(#callback_form  &) {
-        padding: 40px;
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 30px 32px;
+    @include mobile {
+        grid-template-columns: repeat(1, minmax(0, 1fr));
+        gap: 20px;
     }
-    margin: 0 auto;
-
     &-wrapper {
         position: relative;
-        max-width: 750px;
-        margin: 0 auto;
-        overflow: hidden;
-        border: 1px solid $clr-gray;
-        border-radius: $border-radius;
     }
     &-group {
-        margin-bottom: 15px;
+        position: relative;
+        padding: 0px 16px 0px 16px;
+        border-radius: var(--btn-border-radius);
+        background: var(--extralight-gray);
+        border: 2px solid var(--extralight-gray);
+        transition: background-color var(--t-base), border-color var(--t-base);
+        &:has(.form-input:focus ){
+            background-color: var(--clr-white);
+            border-color: var(--mid-gray);
+        }
+        &::after {
+            content: "";
+            position: absolute;
+            top: 50%;
+            right: 16px;
+            display: block;
+            width: 20px;
+            height: 20px;
+            transform: translateY(-50%);
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: 0px;
+            border-radius: 50%;
+            transition: background-size var(--t-base);
+        }
+        &:has(.form-input.valid) {
+            border-color: var(--green-success);
+            &::after {
+                background-image: url("data:image/svg+xml,%3Csvg width='20' height='20' viewBox='0 0 20 20' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cg clip-path='url(%23clip0_24_50)'%3E%3Cpath d='M10 0C4.48 0 0 4.48 0 10C0 15.52 4.48 20 10 20C15.52 20 20 15.52 20 10C20 4.48 15.52 0 10 0ZM8 15L3 10L4.41 8.59L8 12.17L15.59 4.58L17 6L8 15Z' fill='%2325CD82' /%3E%3C/g%3E%3Cdefs%3E%3CclipPath id='clip0_24_50'%3E%3Crect width='20' height='20' fill='white' /%3E%3C/clipPath%3E%3C/defs%3E%3C/svg%3E");
+                background-size: 20px;
+            }
+        }
+        &:has(.form-input.invalid) {
+            border-color: var(--dangerous);
+            &::after {
+                background-image: url("data:image/svg+xml,%3Csvg width='20' height='20' viewBox='0 0 20 20' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cg clip-path='url(%23clip0_24_96)'%3E%3Cpath d='M10 0C4.47 0 0 4.47 0 10C0 15.53 4.47 20 10 20C15.53 20 20 15.53 20 10C20 4.47 15.53 0 10 0ZM15 13.59L13.59 15L10 11.41L6.41 15L5 13.59L8.59 10L5 6.41L6.41 5L10 8.59L13.59 5L15 6.41L11.41 10L15 13.59Z' fill='%23F13636' /%3E%3C/g%3E%3Cdefs%3E%3CclipPath id='clip0_24_96'%3E%3Crect width='20' height='20' fill='white' /%3E%3C/clipPath%3E%3C/defs%3E%3C/svg%3E");
+                background-size: 20px;
+            }
+        }
     }
     &__success {
         position: absolute;
@@ -29,7 +62,7 @@
         align-items: center;
         justify-content: center;
         padding: 40px;
-        background-color: $clr-white;
+        background-color: var(--clr-white);
         display: none;
         transition: all .3s;
         text-align: center;
@@ -41,80 +74,54 @@
         }
     }
     &-label {
-        display: flex;
-        column-gap: 5px;
-        font-size: 14px;
-        margin-bottom: 10px; 
-        .required-star {
-            color: rgb(184, 17, 17);
-        }
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        left: 16px;
+        pointer-events: none;
+        color: var(--dark-gray);
+        transition: top var(--t-base), font-size var(--t-base);
     }
     &-input {
-        font-family: $second-family;
         width: 100%;
-        padding: 12.5px 10px; 
-        border: 1px solid $clr-gray;
-        border-radius: 5px;
-        transition: border-color 0.3s;
-        font-size: 14px;
+        font-weight: 400;
+        font-size: 18px;
+        line-height: 178%;
+        color: var(--dark-gray);
+        padding-top: 28px;
+        padding-bottom: 4px;
+        &:not(:focus) {
+            opacity: 0;
+        }
+        &:not(:placeholder-shown) {
+            opacity: 1;
+        }
         @include mobile {
             font-size: 16px;
         }
-        &:focus {
-            border-color: $clr-primary;
-            outline: none;
+        &:focus + .form-label,
+        &:not(:placeholder-shown) + .form-label {
+            top: 35%;
+            font-size: 14px;
         }
+        &::placeholder {
+            color: var(--mid-gray);
+        }
+        transition: opacity var(--t-base), visibility var(--t-base);
     }
     &-privacy {
-        font-family: $second-family;
-        margin-bottom: 15px;
-        font-size: 14px;
-    }
-    textarea {
-        height: 75px;
+        line-height: 175%;
     }
 }
 
-.just-validate-error-label {
-    margin-top: 5px;
-    font-size: 14px;
-}
-
-#callback_form {
-    padding: 0;
-    background-color: transparent;
-    width: 95% !important;
-    @include min-mobile {
-        max-width: 500px;
+.just-validate {
+    &-error-label {
+        position: absolute;
+        left: 0;
+        bottom: -20px;
+        font-weight: 400;
+        font-size: 12px;
+        line-height: 133%;
+        transition: color var(--t-base);
     }
-}
-
-#callback_form .form-wrapper {
-    position: relative;
-    border-radius: $border-radius;
-    background-color: $clr-white;
-    overflow: hidden;
-    padding: 30px;
-    & > form {
-        width: 100%;
-    }
-    .modal__title {
-        font-size: 23px;
-        margin-bottom: 15px; 
-    }
-    .modal__subtitle {
-        font-family: $second-family;
-        margin-bottom: 15px;
-        padding-bottom: 15px;
-    }
-    form button[type="submit"] {
-        font-size: 16px;
-        padding: 15px 0;
-    }
-}
-
-.message-container {
-    margin-top: 10px;
-    color: green;
-    font-size: 14px;
 }

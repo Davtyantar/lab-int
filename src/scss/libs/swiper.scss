@@ -1,74 +1,61 @@
 @import './helpers/variables.scss';
 @import './helpers/mixins.scss';
 
-.swiper {
-    &-pag {
-        .swiper-pagination {
-            position: static !important;
-            margin-top: 20px;
-    
-            display: flex;
-            justify-content: center;
-            gap: 5px;
+body .swiper {
+    &-pagination {
+        position: static;
+        display: flex;
+        justify-content: center;
+        gap: 17px;
+        margin-top: 50px;
+        @include mobile {
+            margin-top: 40px;
         }
-        .swiper-pagination-bullet {
-            margin: 0 !important;
-            width: 25px;
-            height: 2px;
-            border-radius: 0;
-            background: rgba(230, 230, 231, 0.65);
+        &-bullet {
+            width: 8px;
+            height: 8px;
+            background: var(--mid-gray);
             opacity: 1;
+            margin: 0 !important;
             &-active {
-                background: #0078cd;
+                background: var(--clr-primary);
             }
+        
         }
     }
-    &-nav {
-        display: flex;
-        align-items: center;
-        justify-content: end;
-        gap: 10px;
-        
-        @include mobile {
-            display: none;
-        }
-        & > .slider-btn {
-            position: relative;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            margin: 0;
-            inset: unset;
-            width: 40px;
-            height: 40px;
-            flex-shrink: 0;
-            border-radius: 50%;
-            transition: all .3s;
-            color: $clr-text;
-            overflow: hidden;
-            z-index: 5;
-            border: 1px solid $clr-text;
+}
 
-            &::after {
-                content: "";
-                display: none;
-            }
 
-            .icon {
-                width: 12px;
-                height: 12px;
-
-            }
-
-            &:hover {
-                background-color: $clr-primary;
-                border-color: $clr-primary;
-                .icon {
-                    stroke: $clr-white;
-                }
-            }
-
-            
-        }
+body .slider-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0;
+    width: 32px;
+    height: 32px;
+    top: 50%;
+    transform: translateY(-50%);
+    transition: all var(--t-base);
+    color: var(--clr-primary);
+    overflow: hidden;
+    &.swiper-button-next {
+        right: 0px;
+    }
+    &.swiper-button-prev {
+        left: 0px;
+    }
+    &.swiper-button-disabled {
+        color: var(--mid-gray);
+        opacity: 1;
+    }
+    &::after {
+        content: "";
+        display: none;
+    }
+    .icon {
+        fill: currentColor;
+        stroke: none;
+        height: 32px;
+        width: 16px;
     }
 }

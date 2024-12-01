@@ -9,7 +9,7 @@
 		"build": "gulp build --build",
 		"start": "gulp start"
 	},
-	"author": "Yuumatov.ru",
+	"author": "Taronzo",
 	"license": "ISC",
 	"devDependencies": {
 		"browser-sync": "^2.28.3",
@@ -37,7 +37,6 @@
 		"webpack-stream": "^7.0.0"
 	},
 	"dependencies": {
-		"@fancyapps/ui": "^5.0.36",
 		"gsap": "^3.12.5",
 		"inputmask": "^5.0.9",
 		"just-validate": "^4.3.0",

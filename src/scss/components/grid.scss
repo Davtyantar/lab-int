@@ -1,27 +1,23 @@
 .grid {
     display: grid;
-    gap: clamp(0.938rem, 0.653rem + 1.21vw, 1.563rem);
+    gap: 32px;
     
-    &:not(.grid--2) {
-        grid-template-columns: repeat(auto-fill, minmax(var(--elem-width), 1fr));
-    }
-
-    &.grid--5 { --elem-width: 235px; }
-
-    &.grid--4 { --elem-width: 255px; }
-    
-    &.grid--3 { 
-        &:not(.content-area &) {
-            --elem-width: 325px;
+    &.grid--4 {
+        grid-template-columns: repeat(4, minmax(0, 1fr));
+        @include tablet {
+            grid-template-columns: repeat(3, minmax(0, 1fr));
         }
         @include small-tablet {
-            --elem-width: 235px;
+            grid-template-columns: repeat(2, minmax(0, 1fr));
         }
-        .content-area & {
-            --elem-width: 250px;
+        @include mobile {
+            grid-template-columns: repeat(1, minmax(0, 1fr));
         }
     }
-    &.grid--2 { 
-        grid-template-columns: repeat(2, minmax(0, 1fr));
+
+    @include min-mobile {
+        &.grid--2 { 
+            grid-template-columns: repeat(2, minmax(0, 1fr));
+        }
     }
 }

@@ -1,66 +1,14 @@
 <footer class="footer" itemscope itemtype="http://schema.org/WPFooter">
     <div class="container">
         <div class="footer__inner">
-            <a href="/" class="footer__logo-link" aria-label="На главную" itemprop="url">
-                <img src="./../../img/logo.svg" alt="Логотип организации" class="footer__logo" itemprop="logo">
-            </a>
-            
-            <div class="footer__nav-wrapper">
-                <nav class="footer__nav nav" aria-label="Главное меню" itemscope itemtype="http://schema.org/SiteNavigationElement">
-                    <ul class="nav__list">
-                        <li class="nav__item">
-                            <a itemprop="url" href="./organization.html" class="nav__link nav__link--current" title="Перейти к разделу Организация" aria-label="Раздел Организация">Организация</a>
-                        </li>
-                        <li class="nav__item">
-                            <a itemprop="url" href="./projects.html" class="nav__link" title="Перейти к разделу Проекты" aria-label="Раздел Проекты">Проекты</a>
-                        </li>
-                        <li class="nav__item">
-                            <a itemprop="url" href="./press-center.html" class="nav__link" title="Перейти к разделу Пресс-центр" aria-label="Раздел Пресс-центр">Пресс-центр</a>
-                        </li>
-                        <li class="nav__item">
-                            <a itemprop="url" href="./promotions.html" class="nav__link" title="Перейти к разделу Акции" aria-label="Раздел Акции">Акции</a>
-                        </li>
-                        <li class="nav__item">
-                            <a itemprop="url" href="./museum.html" class="nav__link" title="Перейти к разделу Музей" aria-label="Раздел Музей">Музей</a>
-                        </li>
-                        <li class="nav__item">
-                            <a itemprop="url" href="./union-portraits.html" class="nav__link" title="Перейти к разделу Профсоюз в лицах" aria-label="Раздел Профсоюз в лицах">Профсоюз в лицах</a>
-                        </li>
-                        <li class="nav__item">
-                            <a itemprop="url" href="./contacts.html" class="nav__link" title="Перейти к разделу Контакты" aria-label="Раздел Контакты">Контакты</a>
-                        </li>
-                    </ul>
-                </nav>
-            </div>
-            
-            <div class="footer__socials" itemscope itemtype="http://schema.org/Organization">
-                <p class="footer__socials-title">Соц-сети:</p>
-                <div class="footer__socials-items">
-                    <div class="footer__socials-item" itemprop="sameAs" content="https://vk.com">
-                        <div class="item_qr">
-                            <img src="./../../img/qr-vk.png" alt="QR-код ВКонтакте" title="QR-код ВКонтакте">
-                        </div>
-                        <a href="https://vk.com" class="icon item__icon animate-link" target="_blank" rel="noopener noreferrer" aria-label="Перейти в социальную сеть ВКонтакте">
-                            <svg class="icon"><use xlink:href="./img/sprite.svg#vk"></use></svg>
-                        </a>
-                    </div>
-                    <div class="footer__socials-item" itemprop="sameAs" content="https://t.me">
-                        <div class="item_qr">
-                            <img src="./../../img/qr-tg.png" alt="QR-код Telegram" title="QR-код Telegram">
-                        </div>
-                        <a href="https://t.me" class="icon item__icon animate-link" target="_blank" rel="noopener noreferrer" aria-label="Перейти в социальную сеть Telegram">
-                            <svg class="icon"><use xlink:href="./img/sprite.svg#tg"></use></svg>
-                        </a>
-                    </div>
-                </div>
-            </div>
+            © <span class="footer__year"></span> Лаборатория интернет
         </div>
     </div>
 </footer>
+
 
 <div class="overlay"></div>
 <div class="loader"><div class="spinner"></div></div>
 <div class="pageup" id="pageup"></div>
 
-@include("./../common/modals.html")
 <script src="./js/build.js" defer></script>

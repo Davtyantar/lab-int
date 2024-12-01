@@ -1,5 +1,5 @@
 .loader {
-    background: none repeat scroll 0 0 $clr-white;
+    background: none repeat scroll 0 0 var(--clr-white);
     height: 100%;
     width: 100%;
     position: fixed;
@@ -16,7 +16,7 @@
     padding: 3px;
     aspect-ratio: 1;
     border-radius: 50%;
-    background: $clr-primary;
+    background: var(--clr-primary);
     --mask: conic-gradient(#0000 10%, #000), linear-gradient(#000 0 0) content-box; -webkit-mask: var(--_m);
     mask: var(--mask);
     -webkit-mask-composite: source-out;

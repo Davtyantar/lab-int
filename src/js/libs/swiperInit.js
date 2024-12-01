@@ -1,18 +1,17 @@
 // swiperInit.js
 import Swiper from 'swiper';
 import { Navigation, Pagination} from 'swiper/modules';
-// import 'swiper/css';
-// import 'swiper/css/navigation';
-// import 'swiper/css/pagination';
-// import 'swiper/css/grid';
+import 'swiper/css';
+import 'swiper/css/navigation';
+import 'swiper/css/pagination';
+import 'swiper/css/grid';
 
 export function initSwiper() {
-  const sliders = document.querySelectorAll('.swiper.sanatory__slider');
+  const slider = document.querySelector('.reviews');
 
-  sliders.forEach((slider) => {
-    const sliderInstance = new Swiper(slider, {
+  if (slider) {
+    const reviewsSlider = new Swiper(slider.querySelector('.swiper'), {
       modules: [Navigation, Pagination],
-      spaceBetween: 25,
       navigation: {
         nextEl: slider.querySelector('.swiper-button-next'),
         prevEl: slider.querySelector('.swiper-button-prev'),
@@ -26,13 +25,21 @@ export function initSwiper() {
           slidesPerView: 1,
           spaceBetween: 15
         },
-        576: {
-          slidesPerView: 2.15,
+        320: {
+          slidesPerView: 1,
           spaceBetween: 15
+        },
+        576: {
+          slidesPerView: 2,
+          spaceBetween: 24
+        },
+        992: {
+          slidesPerView: 3,
+          spaceBetween: 32
         },
       }
     });
-  });
+  }
 }
 
 

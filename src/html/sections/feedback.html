@@ -1,0 +1,33 @@
+<section class="feedback" id="feedback">
+    <div class="container">
+        <div class="feedback__heading section__heading">
+            <h2 class="section__title">Отправь форму</h2>
+        </div>
+        <div class="feedback__content section__content">
+            <div class="form-wrapper">
+                <form class="form">
+                    <input type="hidden" name="page" value="Страница">
+                    <input type="hidden" name="theme" value="" data-default="Заявка с сайта">
+                    <div class="form-group">
+                        <input type="text" id="name" name="name" class="form-input"  placeholder="Иван" data-minlength="3">
+                        <label for="name" class="form-label">Имя</label>
+                    </div>
+                    <div class="form-group">
+                        <input type="tel" id="tel" name="tel" class="form-input" placeholder="">
+                        <label for="tel" class="form-label">Телефон</label>
+                    </div>
+                    <div class="form-privacy">
+                        <label class="custom-checkbox">
+                            <input type="checkbox" class="custom-checkbox__field">
+                            <span class="custom-checkbox__content">
+                                <span>Согласен, отказываюсь</span>
+                            </span>
+                        </label>
+                    </div>
+                    <button type="submit" class="btn btn-primary">Отправить</button>
+                </form>
+                @include("../components/formSuccess.html")
+            </div>
+        </div>
+    </div>
+</section>

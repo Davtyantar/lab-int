@@ -1,7 +1,7 @@
 
   ::selection {
-    color: $clr-white;
-    background-color: $clr-primary;
+    color: var(--clr-white);
+    background-color: var(--clr-primary);
   }
   
   :focus {
@@ -95,7 +95,7 @@
   }
   
   a {
-    color: $clr-text;
+    color: var(--clr-text);
     text-decoration: none;
   }
   

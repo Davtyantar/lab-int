@@ -1,58 +1,42 @@
-
-.page-heading {
-    margin-bottom: 50px;
+.section__heading {
+    margin-bottom: 61px;    
+    text-align: center;
+    overflow: hidden;
+    @include small-tablet {
+        margin-bottom: 42px;
+    }
     @include mobile {
         margin-bottom: 30px;
     }
-    .page-title__wrapper {
-        overflow: hidden;
-        line-height: 130%;
-    }
-    .page-title {
-        font-size: clamp(2rem, 1.636rem + 1.55vw, 3.5rem);
-        // 32 - 56 375 - 1920
-    }
 }
   
-.section__heading {
-    margin-bottom: 40px;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    overflow: hidden;
-    padding-right: 10px;
-    margin-right: -10px;
-    @include mobile {
-        margin-bottom: 25px;
-        align-items: baseline;
-    }
-}
-
   
 h1, h2, h3, h4, h5, h6 {
-    font-weight: 700;
-    line-height: 130%;
+    font-weight: 600;
 }
   
 h1, .h1 {
-    // 32 - 80 375 - 1920
-    &:not(.page-title) {
-        font-size: clamp(2rem, 1.272rem + 3.11vw, 5rem);
-    }
+    font-size: clamp(1.5rem, 1.15rem + 1.75vw, 3.25rem);
+    //  320 - 24 _ 1920 - 52
+    line-height: 123%;
 }
 
 h2, .h2, .section__title {
-    // 24 - 32 375 - 1920
-    font-size: clamp(1.5rem, 1.379rem + 0.52vw, 2rem);
+    font-size: clamp(1.5rem, 1.3rem + 1vw, 2.5rem);
+    //  320 - 24 _ 1920 - 40
+    line-height: 140%;
 }
 
 h3, .h3 {
-    // 18 - 24 375 - 1920
-    font-size: clamp(1.125rem, 1.034rem + 0.39vw, 1.5rem);
+    font-size: 32px;
+    line-height: 125%;
+    @include small-tablet {
+        font-size: 20px;
+    }
 }
 
-.h4 {
-    // 16 - 20 375 - 19220
-    font-size: clamp(1rem, 0.939rem + 0.26vw, 1.25rem);
+h4, .h4 {
+    font-size: 16px;
+    line-height: 150%;
 }
   

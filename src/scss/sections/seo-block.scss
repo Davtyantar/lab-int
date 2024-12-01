@@ -1,0 +1,25 @@
+.seo-block {
+    &__items.grid {
+        @include small-tablet {
+            grid-template-columns: repeat(1, minmax(0, 1fr));
+            row-gap: 20px;
+        }
+    }
+    &__item {
+        &-title {
+            font-weight: 600;
+            font-size: 18px;
+            line-height: 178%;
+            margin-bottom: 17px;
+            @include small-tablet {
+                margin-bottom: 46px;
+            }
+            @include mobile {
+                margin-bottom: 16px;
+            }
+        }
+        &-description {
+            line-height: 175%;
+        }
+    }
+}

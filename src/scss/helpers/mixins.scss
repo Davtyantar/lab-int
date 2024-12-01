@@ -8,12 +8,6 @@
 	}
 }
 
-@mixin media-max($mq) {
-	@media screen and (max-width: $mq) {
-		@content;
-	}
-}
-
 @mixin any-hover {
 	@media (any-hover: hover) {
 		@content;
@@ -28,24 +22,7 @@
 	cursor: pointer;
 }
 
-@mixin for-desktop {
-	@media (min-width: (1025px)) {
-		@content;
-	}
-}
   
-@mixin big-desktop {
-	@media (max-width: (1366px)) {
-		@content;
-	}
-}
-
-@mixin desktop {
-	@media (max-width: (1199px)) {
-		@content;
-	}
-}
-
 @mixin tablet {
 	@media (max-width: (991px)) {
 		@content;
@@ -60,18 +37,6 @@
 
 @mixin mobile {
 	@media (max-width: (576px)) {
-		@content;
-	}
-}
-
-@mixin min-big-desktop {
-	@media (min-width: (1366px)) {
-		@content;
-	}
-}
-
-@mixin min-desktop {
-	@media (min-width: (1199px)) {
 		@content;
 	}
 }
@@ -93,146 +58,3 @@
 		@content;
 	}
 }
-
-
-@mixin flex-center {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-@mixin ff2 {
-    font-family: $second-family;
-}
-
-// миксин-разметка для grid блоков
-@mixin grid-items-with-media {
-    &__item {
-        border-radius: $border-radius;
-        overflow: hidden;
-        border: 1px solid $clr-gray-border;
-        transition: transform .3s, box-shadow .3s;
-        .item__link {
-            display: flex;
-            flex-direction: column;
-            height: 100%;
-        }
-        .item__img {
-            position: relative;
-            width: 100%;
-            height: 200px;
-            flex-shrink: 0;
-        }
-        .item__description {
-            padding: 25px;
-            height: 100%;
-            display: flex;
-            flex-direction: column;
-            row-gap: 40px;
-            justify-content: space-between;
-        }
-        .item__title {
-            font-family: $second-family;
-            font-size: $font-size;
-            font-weight: 400;
-            display: -webkit-box;
-            -webkit-box-orient: vertical;
-            -webkit-line-clamp: 6;
-            overflow: hidden;
-        }
-        .item__date {
-            font-family: $second-family;
-            font-weight: 400;
-            font-size: 12px;
-            line-height: 130%;
-            color: $clr-gray-light;
-        }
-        
-        @include any-hover {
-            &:not(.prof-tv__item):hover {
-                transform: translateY(-15px);
-            }
-        }
-    }
-}
-// миксин-разметка для grid блоков
-
-
-// миксин-разметка для блока с боковым меню
-@mixin flex-has-sidebar {
-    &__items {
-        display: flex;
-        flex-direction: column;
-        row-gap: 45px;
-    }
-    &__item {
-        scroll-margin-top: 85px;
-    }
-    &__item-title {
-        margin-bottom: 25px;
-    }
-    &__item-list-wrapper {
-        display: flex;
-        flex-direction: column;
-        row-gap: 40px;
-    }
-    &__item-list {
-        display: flex;
-        flex-direction: column;
-        row-gap: 10px;
-    }
-    &__item-list-title {
-        font-size: 18px;
-        margin-bottom: 10px;
-
-        @include mobile {
-            font-size: 14px;
-        }
-    }
-    &__item-list-inner {
-        font-family: $second-family;
-        position: relative;
-        display: flex;
-        align-items: center;
-        column-gap: 30px;
-        @include mobile {
-            column-gap: 15px;
-        }
-        padding: 20px;
-        box-shadow: $shadow-2;
-        border-radius: calc($border-radius / 2);
-        text-transform: capitalize;
-        transition: background $t-base;
-
-        @include mobile {
-            font-size: 12px;
-        }
-        &::before {
-            content: "";
-            width: 30px;
-            height: 30px;
-            aspect-ratio: 1;
-            flex-shrink: 0;
-            display: block;
-            background-position: center;
-            background-size: 26px;
-            background-repeat: no-repeat;
-            background-image: url("data:image/svg+xml,%3Csvg width='26' height='26' viewBox='0 0 26 26' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M24.25 16.75L24.25 18.25C24.25 20.3502 24.25 21.4003 23.8413 22.2025C23.4817 22.9081 22.9081 23.4817 22.2025 23.8413C21.4003 24.25 20.3502 24.25 18.25 24.25L7.75 24.25C5.6498 24.25 4.5997 24.25 3.79754 23.8413C3.09193 23.4817 2.51825 22.9081 2.15872 22.2025C1.75 21.4003 1.75 20.3502 1.75 18.25L1.75 16.75M19.25 10.5L13 16.75M13 16.75L6.75 10.5M13 16.75L13 1.75' stroke='%23252B33' stroke-width='2' stroke-linecap='round' stroke-linejoin='round' /%3E%3C/svg%3E");
-            @include mobile {
-                width: 20px;
-                height: 20px;
-                background-size: 20px;
-            }
-        }
-        @include any-hover {
-            &:hover {
-                background-color: $clr-primary;
-                color: $clr-white !important;
-                &::before {
-                    background-image: url("data:image/svg+xml,%3Csvg width='26' height='26' viewBox='0 0 26 26' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M24.25 16.75L24.25 18.25C24.25 20.3502 24.25 21.4003 23.8413 22.2025C23.4817 22.9081 22.9081 23.4817 22.2025 23.8413C21.4003 24.25 20.3502 24.25 18.25 24.25L7.75 24.25C5.6498 24.25 4.5997 24.25 3.79754 23.8413C3.09193 23.4817 2.51825 22.9081 2.15872 22.2025C1.75 21.4003 1.75 20.3502 1.75 18.25L1.75 16.75M19.25 10.5L13 16.75M13 16.75L6.75 10.5M13 16.75L13 1.75' stroke='white' stroke-width='2' stroke-linecap='round' stroke-linejoin='round' /%3E%3C/svg%3E");
-                }
-            }
-        }
-    }
-} 
-// миксин-разметка для блока с боковым меню

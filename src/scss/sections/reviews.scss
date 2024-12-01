@@ -1,0 +1,94 @@
+.reviews {
+    position: relative;
+    &__heading {
+        margin-bottom: 32px;
+    }
+    &__content {
+        position: relative;
+    }
+    @include min-tablet {
+        &__items {
+            padding: 0 64px;
+        }
+    }
+    
+    .swiper {
+        margin: -20px;
+        padding: 20px;
+    }
+    .review {
+        display: flex;
+        flex-direction: column;
+        row-gap: 20px;
+        height: auto;
+        background: var(--clr-white);
+        box-shadow: var(--shadow);
+        border-radius: 8px;
+        padding: 22px;
+        @include min-mobile {
+            padding-bottom: 38px;
+        }
+        transition: filter var(--t-base), transform var(--t-base);
+
+        @mixin swiper-slide-style {
+            transform: scale(0.85);
+            filter: opacity(0);
+        }
+        
+        &.swiper-slide {
+            &-prev {
+                @include swiper-slide-style;
+            }
+            &-next {
+                @include mobile {
+                    @include swiper-slide-style;
+                }
+                @include tablet {
+                    & + .swiper-slide {
+                        @include swiper-slide-style;
+                    }
+                }
+                @include min-tablet {
+                    & + .swiper-slide + .swiper-slide {
+                        @include swiper-slide-style;
+                    }
+                }
+            }
+        }
+
+        &__heading {
+            display: flex;
+            column-gap: 16px;
+        }
+        &__body {
+            font-size: 14px;
+            line-height: 171%;
+        }
+        .review__author {
+            &-img {
+                width: 44px;
+                height: 44px;
+                flex-shrink: 0;
+                border-radius: 50%;
+            }
+            &-name {
+                font-weight: 600;
+                line-height: 150%;
+                margin-bottom: 6px;
+            }
+            &-location {
+                font-size: 12px;
+                line-height: 133%;
+                color: var(--dark-gray);
+            }
+        }
+    }
+
+
+
+    @include tablet {
+        .slider-btn {
+            display: none;
+        }
+    }
+}

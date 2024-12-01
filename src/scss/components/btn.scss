@@ -3,48 +3,42 @@
     position: relative;
     display: inline-block;
     overflow: hidden;
-    color: $clr-white;
     text-align: center;
     text-overflow: ellipsis;
     vertical-align: middle;
     white-space: nowrap;
     cursor: pointer;
-    background: $clr-primary;
-	border-radius: $btn-border-radius;
+	border-radius: var(--btn-border-radius);
     display: flex;
     align-items: center;
     justify-content: center;
-    padding: 12px 20px;
-    column-gap: 10px;
-    font-weight: 700;
-    font-size: 12px;
-    line-height: 100%;
-    letter-spacing: 0.04em;
-    text-transform: uppercase;
+    padding: 20px 40px;
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 120%;
+    border: 1px solid transparent;
+    transition: color var(--t-base), background-color var(--t-base), opacity var(--t-base), border-color var(--t-base);
 
-    transition: color $t-base, background-color $t-base, opacity $t-base, border-color $t-base;
-    & > .icon {
-        width: 16px;
-        height: 16px;
+    &.btn-default {
+        background: var(--light-gray);
+        border-color: var(--light-gray);
+        @include any-hover {
+            &:hover {
+                background-color: var(--clr-white);
+                border-color: var(--mid-gray)
+            }
+        }
     }
-    &:hover {
-        background-color: $clr-primary-dark;
+    &.btn-primary {
+        background-color: var(--clr-primary);
+        color: var(--clr-white);
+        @include any-hover {
+            &:hover:not([disabled]) {
+                background-color: var(--clr-primary-hover);
+            }
+        }
     }
-}
 
-.btn-arrow {
-    &::after {
-        content: "";
-        display: block;
-        width: 14px;
-        height: 14px;
-        background-image: url("data:image/svg+xml,%3Csvg width='14' height='14' viewBox='0 0 14 14' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M5.25 10.5L8.75 7L5.25 3.5' stroke='white' stroke-width='2' stroke-linecap='round' stroke-linejoin='round' /%3E%3C/svg%3E");
-
-        transition: transform $t-base;
-    }
-    &:hover::after {
-        transform: translateX(5px);
-    }
 }
 
 .btn-reset {
@@ -64,6 +58,6 @@
 }
 
 .btn:disabled {
-	opacity: 0.7;
+    background-color: var(--primary-disabled);
 	cursor: default;
 }

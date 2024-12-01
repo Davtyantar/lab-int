@@ -2,9 +2,9 @@
     width: 100%;
     margin-right: auto;
     margin-left: auto;
-    padding: 0 $container-offset;
-    max-width: $container;
-    &.container-small {
-      max-width: $container-xs;
+    padding: 0 var(--container-offset);
+    max-width: var(--container);
+    &.container-xs {
+      max-width: var(--container-xs);
     }
   }
