@@ -2,6 +2,7 @@ import { initSwiper } from './libs/swiperInit.js';
 import { initGsap } from './libs/gsapInit.js';
 
 import { initMoveElements } from './components/moveElements.js';
+import { setPhonesMask } from './components/setPhonesMask.js';
 import { loader } from './components/loader.js';
 import { pageUp } from './components/pageUp.js';
 import { clickAnchors } from './components/clickAnchors.js';

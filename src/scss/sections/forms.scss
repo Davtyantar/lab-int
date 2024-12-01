@@ -36,14 +36,14 @@
             border-radius: 50%;
             transition: background-size var(--t-base);
         }
-        &:has(.form-input.valid) {
+        &:has(.form-input.just-validate-success-field) {
             border-color: var(--green-success);
             &::after {
                 background-image: url("data:image/svg+xml,%3Csvg width='20' height='20' viewBox='0 0 20 20' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cg clip-path='url(%23clip0_24_50)'%3E%3Cpath d='M10 0C4.48 0 0 4.48 0 10C0 15.52 4.48 20 10 20C15.52 20 20 15.52 20 10C20 4.48 15.52 0 10 0ZM8 15L3 10L4.41 8.59L8 12.17L15.59 4.58L17 6L8 15Z' fill='%2325CD82' /%3E%3C/g%3E%3Cdefs%3E%3CclipPath id='clip0_24_50'%3E%3Crect width='20' height='20' fill='white' /%3E%3C/clipPath%3E%3C/defs%3E%3C/svg%3E");
                 background-size: 20px;
             }
         }
-        &:has(.form-input.invalid) {
+        &:has(.form-input.just-validate-error-field) {
             border-color: var(--dangerous);
             &::after {
                 background-image: url("data:image/svg+xml,%3Csvg width='20' height='20' viewBox='0 0 20 20' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cg clip-path='url(%23clip0_24_96)'%3E%3Cpath d='M10 0C4.47 0 0 4.47 0 10C0 15.53 4.47 20 10 20C15.53 20 20 15.53 20 10C20 4.47 15.53 0 10 0ZM15 13.59L13.59 15L10 11.41L6.41 15L5 13.59L8.59 10L5 6.41L6.41 5L10 8.59L13.59 5L15 6.41L11.41 10L15 13.59Z' fill='%23F13636' /%3E%3C/g%3E%3Cdefs%3E%3CclipPath id='clip0_24_96'%3E%3Crect width='20' height='20' fill='white' /%3E%3C/clipPath%3E%3C/defs%3E%3C/svg%3E");
